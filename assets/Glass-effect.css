@@ -981,7 +981,7 @@ ol.classic-text>li {
         grid-template-columns: 1fr;
     }
 
-    .real-grid {
+    .real-grid, .real-onegrid, .real-twogrid {
         grid-template-columns: 1fr;
         gap: 20px;
     }
@@ -1011,6 +1011,11 @@ ol.classic-text>li {
 
     .logo {
         font-size: 22px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
