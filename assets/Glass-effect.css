@@ -1112,6 +1112,20 @@ ol.classic-text>li {
     color: var(--color-Blue);
 }
 
+.contact-list hr {
+    visibility: hidden;
+    height: 5px;
+}
+
+.cv-container a {
+    color: #555;
+    text-decoration: underline;
+}
+
+.cv-container a:hover {
+    color: var(--color-Blue)
+}
+
 .certification p.score {
     color: var(--color-Blue);
 }
