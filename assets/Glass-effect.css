@@ -280,6 +280,16 @@ nav {
     border-bottom: 1px solid var(--color-White-06);
 }
 
+.real-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+ul.real-links {
+    color: white;
+}
 
 .linck {
     border: 1px solid var(--color-White-05);
@@ -532,7 +542,7 @@ button[type="submit"] {
     transform: translateY(-10px);
 }
 
-.real-member:hover .real-avatar {
+.real-member:hover {
     border-color: var(--color-White-05);
     transform: scale(1.05);
     background: var(--color-White-025);
@@ -971,6 +981,20 @@ ol.classic-text>li {
         max-width: 200px;
         font-size: 14px;
         padding: 10px 20px;
+    }
+
+    .real-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    ul.real-links {
+        list-style: none;
+    }
+
+    .real-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .about-content, .contact-grid {
