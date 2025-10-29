@@ -1043,11 +1043,10 @@ ol.classic-text>li {
     }
 }
 
-.cv-page-content {
-    font-family: "Raleway", "Segoe UI", sans-serif;
+.cv-container {
     max-width: 900px;
     margin: 40px auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
 .colonne-gauche a {
@@ -1094,7 +1093,7 @@ ol.classic-text>li {
     flex-shrink: 0;
 }
 
-.cv-container {
+.cv-cont {
     display: flex;
 }
 
@@ -1122,13 +1121,14 @@ ol.classic-text>li {
 
 .colonne-gauche h3 {
     font-size: 1em;
-    color: #555;
+    color: #333;
     margin-top: 10px;
 }
 
 .colonne-gauche li {
     font-size: 0.9em;
     margin-bottom: 4px;
+    color: #555;
 }
 
 .contact-list li i {
@@ -1141,22 +1141,24 @@ ol.classic-text>li {
     height: 5px;
 }
 
-.cv-container a {
+.cv-cont a {
     color: #555;
     text-decoration: underline;
 }
 
-.cv-container a:hover {
+.cv-cont a:hover {
     color: var(--color-Blue)
-}
-
-.certification p.score {
-    color: var(--color-Blue);
 }
 
 .skills-list li {
     padding: 3px 0;
     font-weight: 500;
+}
+
+.interets ul, ul.skills-list>li ul{
+    list-style-type: circle;
+    margin-left: 30px;
+
 }
 
 .colonne-droite {
@@ -1232,7 +1234,7 @@ ol.classic-text>li {
         margin-bottom: 15px;
     }
     
-    .cv-container {
+    .cv-cont {
         flex-direction: column;
     }
     
