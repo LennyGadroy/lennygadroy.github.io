@@ -112,7 +112,7 @@ document.querySelector('form').addEventListener('submit', function (e) {
                 z-index: 10000;
                 animation: fadeIn 2s ease;
             `;
-    successMsg.textContent = 'Votre message n\'a pu être envoyé. Merci de bien vouloir contacter lennygadroy@gmail.com. Désolé.';
+    successMsg.textContent = 'Votre message n\'a pu être envoyé. Merci de bien vouloir contacter lennygadroy@gmail.com.';
 
     document.body.appendChild(successMsg);
 
