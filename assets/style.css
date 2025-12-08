@@ -453,7 +453,8 @@ Projects Page
 .reals h3,
 .reals .left-part h3,
 .reals .middle-part h3,
-.reals .right-part h3 {
+.reals .right-part h3,
+.albums h3 {
     font-size: var(--Title-Size);
 
     margin: 10px 0 0 0;
@@ -466,9 +467,7 @@ Projects Page
 .reals .left-part .left-right,
 .reals .middle-part .left-right,
 .reals .right-part .left-right,
-.albums .left-part .left-right,
-.albums .middle-part .left-right,
-.albums .right-part .left-right { line-height: var(--SubBody-Height); }
+.albums .left-right { line-height: var(--SubBody-Height); }
 
 .projects ul.left-right,
 .projects ul.left-right li ul li {
@@ -524,6 +523,14 @@ Reals Page
 Albums Page
 ----- */
 .albums .panel-subtitle { font-size: var(--SubTitle-Size); }
+
+.albums #cab h2,
+.albums #BDGM h2 {margin-bottom: 0;}
+
+.albums #cab h3,
+.albums #BDGM h3 {margin-bottom: 10px;}
+
+.albums #urbains img {margin-bottom: 10px;}
 
 /* ------
 Skills Page 
@@ -1203,19 +1210,20 @@ Colors
 .projects ul.left-right li,
 .cv li b {color: var(--Primary);}
 
-
 .program-list a,
+.projects .left-right em,
 .projects .left-part .left-right span,
 .projects .right-part .left-right span,
 .reals .left-right span,
 .reals .left-part .left-right span,
 .reals .middle-part .left-right span,
 .reals .right-part .left-right span,
-.projects .left-right em,
 .albums .left-right,
 .albums .left-right a,
+.albums .left-part span,
 .cv .right-part .panel-title p,
-.cv .panel>p+p {color: var(--White);}
+.cv .panel>p+p
+{color: var(--White);}
 
 
 .reals .grid-col-2,
