@@ -201,7 +201,8 @@ Default Page
     gap: 1rem;
 }
 
-.grid-col {
+.grid-col,
+.grid-col-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -449,6 +450,7 @@ Projects Page
 
 .projects .left-part h3,
 .projects .right-part h3,
+.reals h3,
 .reals .left-part h3,
 .reals .middle-part h3,
 .reals .right-part h3 {
@@ -460,6 +462,7 @@ Projects Page
 
 .projects .left-part .left-right,
 .projects .right-part .left-right,
+.reals .left-right,
 .reals .left-part .left-right,
 .reals .middle-part .left-right,
 .reals .right-part .left-right,
@@ -515,6 +518,7 @@ ul.left-right { margin-right: 50px; }
 /* ------
 Reals Page 
 ----- */
+.reals .panel:first-of-type .grid-col:first-of-type {grid-template-columns: 1fr 2fr;}
 
 /* ------
 Albums Page
@@ -1203,6 +1207,7 @@ Colors
 .program-list a,
 .projects .left-part .left-right span,
 .projects .right-part .left-right span,
+.reals .left-right span,
 .reals .left-part .left-right span,
 .reals .middle-part .left-right span,
 .reals .right-part .left-right span,
@@ -1213,14 +1218,14 @@ Colors
 .cv .panel>p+p {color: var(--White);}
 
 
-.reals .grid-col:first-of-type,
+.reals .grid-col-2,
 .skills .grid-col:first-of-type
 {grid-template-columns: 1fr 1fr;}
 
 .skills .grid-col:first-of-type
 {grid-template-columns: 3fr 1fr;}
 
-.reals .grid-col:last-of-type,
+.reals .grid-col,
 .albums .grid-col
 {grid-template-columns: 1fr 1fr 1fr;}
 
