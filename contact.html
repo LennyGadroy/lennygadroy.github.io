@@ -29,32 +29,51 @@
             </nav>
             <div class="status blink">■ SYSTEM ACTIVE</div>
         </header>
-        <main class="contact main-grid">
-            <div class="panel" id="contact-info" style="grid-column: 1 / 2;">
-                <div class="panel-title">Informations de Contact</div>
-                <ul class="file-list" style="color: var(--Primary); list-style: square; margin-left: 20px;">
-                    <li>Email : <a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" style="color: var(--White); text-decoration: underline;">lennygadroy@gmail.com</a></li>
-                    <li>LinkedIn : <a href="https://linkedin.com/in/LennyGadroy" target="_blank" style="color: var(--White); text-decoration: underline;">/in/LennyGadroy</a></li>
-                    <li>GitHub : <a href="https://github.com/LennyGadroy/" target="_blank" style="color: var(--White); text-decoration: underline;">/LennyGadroy</a></li>
-                </ul>
-            </div>
-            <div class="panel" id="contact-form" style="grid-column: 2 / 4;">
-                <div class="panel-title">Envoyer un Message</div>
-                <form action="YOUR_FORM_SUBMISSION_ENDPOINT" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-                    <label for="name" style="color: var(--Primary);">Nom :</label>
-                    <input type="text" id="name" name="name" required style="background-color: var(--Background); border: 1px solid var(--Primary); color: var(--Primary); padding: 5px; font-family: var(--Font-Special);">
-                    
-                    <label for="email" style="color: var(--Primary);">Email :</label>
-                    <input type="email" id="email" name="email" required style="background-color: var(--Background); border: 1px solid var(--Primary); color: var(--Primary); padding: 5px; font-family: var(--Font-Special);">
-                    
-                    <label for="subject" style="color: var(--Primary);">Objet :</label>
-                    <input type="text" id="subject" name="subject" required style="background-color: var(--Background); border: 1px solid var(--Primary); color: var(--Primary); padding: 5px; font-family: var(--Font-Special);">
-                    
-                    <label for="message" style="color: var(--Primary);">Message :</label>
-                    <textarea id="message" name="message" rows="8" required style="background-color: var(--Background); border: 1px solid var(--Primary); color: var(--Primary); padding: 5px; font-family: var(--Font-Special); resize: vertical;"></textarea>
-                    
-                    <button type="submit" style="align-self: flex-start; margin-top: 10px;">Envoyer la Transmission</button>
-                </form>
+        <main class="contact">
+            <div class="grid-col">
+                <div class="grid-row">
+                    <div class="panel">
+                        <div class="panel-title">Coordonées</div>
+                        <ul class="file-list">
+                            <li><a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link">[EMAIL]</a></li>
+                            <li><a href="tel:0652514919" class="footer-link">[TELEPHONE]</a></li>
+                            <li><a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GITHUB]</a></li>
+                            <li><a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LINKEDIN]</a></li>
+                            <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[INSTAGRAM]</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-title">Statut du réseau</div>
+                        <div class="left-right">
+                            <span>État du serveur</span>
+                            <span class="blink">en ligne</span>
+                        </div>
+                        <hr>
+                        <div class="left-right">
+                            <span>Temps de réponse estimé :</span>
+                            <span>< 6h</span>
+                        </div>
+                        <hr>
+                        <div class="left-right">
+                            <span><button><a href="coucou.html">Signaler un problème</a></button></span>
+                            <span><button><a href="coucou.html">Faire une suggestion</a></button></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" id="contact-form" style="grid-column: 2 / 4;">
+                    <div class="panel-title">Envoyer un Message</div>
+                    <form method="POST">
+                        <label for="name">Nom :</label>
+                            <input type="text" id="name" name="name" required>
+                        <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" required>
+                        <label for="subject">Objet :</label>
+                            <input type="text" id="subject" name="subject" required>
+                        <label for="message">Message :</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        <button type="submit">Envoyer la Transmission</button>
+                    </form>
+                </div>
             </div>
         </main>
     </div>
@@ -71,7 +90,6 @@
             <a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GITHUB]</a>
             <a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LINKEDIN]</a>
             <a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[INSTAGRAM]</a>
-            <a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link">[EMAIL]</a>
         </div>
     </footer>
     <script src="assets/script.js"></script>

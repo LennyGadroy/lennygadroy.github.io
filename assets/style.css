@@ -1192,6 +1192,59 @@ CV Page
 /* ------
 Contact Page 
 ----- */
+.contact .grid-col {
+    grid-template-columns: 2fr 5fr;
+
+    margin-top: 20px;
+}
+
+.contact .file-list {
+    color: var(--Primary);
+
+    list-style: square;
+
+    margin-left: 20px;
+}
+
+.contact .left-right span {
+    color: var(--White);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.contact form input[type=text],
+.contact form input[type=email] {
+    background-color: var(--Background);
+    border: 1px solid var(--Primary);
+    color: var(--Primary);
+    
+    font-family: var(--Font-Special);
+
+    padding: 5px;
+}
+
+.contact form textarea {
+    background-color: var(--Background);
+    border: 1px solid var(--Primary);
+    color: var(--Primary);
+    
+    font-family: var(--Font-Special);
+    
+    resize: vertical;
+
+    padding: 5px;
+}
+
+.contact form button {
+    align-self: flex-start;
+    
+    margin-top: 10px;
+}
 
 /* ------
 Terms 
@@ -1208,7 +1261,9 @@ Colors
 ----- */
 .status,
 .projects ul.left-right li,
-.cv li b {color: var(--Primary);}
+.cv li b,
+.contact label
+{color: var(--Primary);}
 
 .program-list a,
 .projects .left-right em,
