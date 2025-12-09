@@ -1268,10 +1268,15 @@ input:focus[type=number] {
 
     transform: translateX(-10px) translateY(-50%) scale(0.8);
 }
+.contact form button[type="submit"] {
+    background-color: var(--Primary);
+    border: 1px solid var(--Primary);
+    color: var(--Black);
+}
 
 .contact form button[type="reset"] {
-    color: var(--White);
     border: 1px solid var(--White);
+    color: var(--White);
 }
 
 /* ------
