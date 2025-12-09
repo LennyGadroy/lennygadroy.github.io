@@ -484,6 +484,7 @@ ul.left-right {margin-right: 50px;}
 .projects .left-right em {font-size: var(--SubBody-Size);}
 
 .projects img,
+.projects iframe,
 .reals img,
 .albums img {
     max-width: 100%;
@@ -500,6 +501,7 @@ ul.left-right {margin-right: 50px;}
 }
 
 .projects img:hover,
+.projects iframe:hover,
 .reals img:hover,
 .albums img:hover
 {opacity: 1;}
