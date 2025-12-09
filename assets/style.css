@@ -15,17 +15,17 @@
 
     /* Fonts */
     --Font-Special: 'TVA', sans-serif;
-    --Font-Serif: serif;
-    --SansSerif: system-ui, -apple-system, sans-serif;
-
+    
     --Title-Size: 2rem;
     --SubTitle-Size: 1.5rem;
     --Body-Size: 1.25rem;
     --SubBody-Size: 1rem;
+
     --Title-Weight: 600;
     --SubTitle-Weight: 500;
     --Body-Weight: 400;
     --SubBody-Weight: 300;
+
     --Title-Height: 3;
     --SubTitle-Height: 2;
     --Body-Height: 1.5;
@@ -35,6 +35,7 @@
     --Border-Color: var(--Primary);
     --Border-Style: solid;
     --Border-Width: 1px;
+    --Border: var(--Border-Width) var(--Border-Style) var(--Border-Color);
 
     /* Box Shadow */
     --shadow-primary: 0 0.75rem 1.875rem rgba(var(--Primary-RGB), 0.5);
@@ -54,7 +55,7 @@ body {
 
 button {
     background-color: var(--Background);
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Primary);
 
     font-family: var(--Font-Special);
@@ -85,7 +86,7 @@ hr {
   Default Page 
 ----- */
 .tva-container {
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     box-shadow: var(--shadow-primary);
 
     margin: 20px 200px 20px 200px;
@@ -146,7 +147,7 @@ hr {
 .tva-nav ul {
     display: flex;
 
-    border-bottom: 1px solid var(--Primary);
+    border-bottom: var(--Border);
     list-style: none;
 
     padding: 0;
@@ -211,13 +212,13 @@ hr {
     min-height: 250px;
     max-height: fit-content;
 
-    border: 1px solid var(--Primary);
+    border: var(--Border);
 
     padding: 1rem;
 }
 
 .panel-title {
-    border-bottom: 1px solid var(--Primary);
+    border-bottom: var(--Border);
 
     font-size: var(--Title-Size);
     font-weight: bold;
@@ -232,7 +233,7 @@ hr {
 }
 
 .panel-subtitle {
-    border-bottom: 1px solid var(--Primary);
+    border-bottom: var(--Border);
 
     font-size: var(--SubTitle-Size);
     font-weight: bold;
@@ -317,7 +318,7 @@ hr {
     width: 100%;
     height: 150px;
 
-    border: 1px solid var(--Primary);
+    border: var(--Border);
 
     margin-top: 1rem;
 }
@@ -325,7 +326,7 @@ hr {
 .tva-list {
     display: flex;
 
-    border-bottom: 1px solid var(--Primary);
+    border-bottom: var(--Border);
     list-style: none;
 
     padding: 0;
@@ -491,7 +492,7 @@ ul.left-right {margin-right: 50px;}
 
     display: flex;
 
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     opacity: 0.5;
 
     margin-left: auto;
@@ -568,13 +569,14 @@ ul.left-right {margin-right: 50px;}
     gap: 15px;
 }
 
+
 .hud {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 
     background: var(--Black);
-    border: 2px solid var(--Primary);
+    border: var(--Border);
     box-shadow: 0 0 15px rgba(255, 107, 45, 0.2);
 
     padding: 10px;
@@ -597,7 +599,7 @@ ul.left-right {margin-right: 50px;}
     height: 10px;
 
     background: var(--Black);
-    border: 1px solid var(--Primary);
+    border: var(--Border);
 }
 
 .xp-fill {
@@ -632,7 +634,7 @@ ul.left-right {margin-right: 50px;}
 
 .filter {
     background: transparent;
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Primary);
 
     font-family: var(--Font-Special);
@@ -651,7 +653,7 @@ ul.left-right {margin-right: 50px;}
 
 .sort {
     background: var(--Black);
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Primary);
 
     font-family: var(--Font-Special);
@@ -667,7 +669,7 @@ ul.left-right {margin-right: 50px;}
     display: flex;
 
     background: var(--Black);
-    border: 1px solid var(--Primary);
+    border: var(--Border);
 
     justify-content: space-between;
     align-items: center;
@@ -768,7 +770,7 @@ ul.left-right {margin-right: 50px;}
 
 .btn-buy-now {
     background: var(--Black);
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Primary);
 
     padding: 2px 8px;
@@ -808,7 +810,7 @@ ul.left-right {margin-right: 50px;}
 
 .btn-remove {
     background: transparent;
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Primary);
 
     cursor: pointer;
@@ -831,7 +833,7 @@ ul.left-right {margin-right: 50px;}
     display: flex;
     flex-direction: column;
 
-    border: 1px solid var(--White);
+    border: var(--Border);
     color: var(--White);
 
     text-align: center;
@@ -895,7 +897,6 @@ ul.left-right {margin-right: 50px;}
 }
 
 .toast.error {border-left-color: var(--Primary);}
-
 .toast.success {border-left-color: var(--Primary);}
 
 .hack {
@@ -973,7 +974,7 @@ ul.left-right {margin-right: 50px;}
     width: 300px;
 
     background: var(--Black);
-    border: 2px solid var(--Primary);
+    border: var(--Border);
     box-shadow: 0 0 30px rgba(var(--Primary), 0.5);
 
     text-align: center;
@@ -1048,7 +1049,7 @@ input[type=number],
 input:hover[type=number],
 input:focus[type=number] {
     background-color: var(--Background);
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Primary);
 }
 
@@ -1088,7 +1089,7 @@ input:focus[type=number] {
     object-fit: cover;
     flex-shrink: 0;
 
-    border: 1px solid var(--Primary);
+    border: var(--Border);
 
     margin-right: 40px;
 }
@@ -1227,7 +1228,7 @@ input:focus[type=number] {
     width: 97.75%;
     
     background: none;
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Primary);
 
     font-size: 18px;
@@ -1252,14 +1253,14 @@ input:focus[type=number] {
 }
 
 .contact form .input:focus, .input:valid {
-    border: 1px solid var(--Primary);
-
+    border: var(--Border);
+    
     outline: none;
 }
 
 .contact form .input:focus ~ .label, .input:valid ~ .label {
     background-color: var(--Black);
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Primary);
 
     font-size: var(--SubTitle-Size);
@@ -1270,7 +1271,7 @@ input:focus[type=number] {
 }
 .contact form button[type="submit"] {
     background-color: var(--Primary);
-    border: 1px solid var(--Primary);
+    border: var(--Border);
     color: var(--Black);
 }
 
