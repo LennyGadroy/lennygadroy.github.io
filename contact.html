@@ -59,22 +59,30 @@
                         </div>
                         <hr>
                         <div class="left-right">
-                            <span><button><a href="coucou.html">Signaler un problème</a></button></span>
-                            <span><button><a href="coucou.html">Faire une suggestion</a></button></span>
+                            <span><button><a href="">Signaler un problème</a></button></span>
+                            <span><button><a href="">Faire une suggestion</a></button></span>
                         </div>
                     </div>
                 </div>
                 <div class="panel" id="contact-form" style="grid-column: 2 / 4;">
                     <div class="panel-title">Envoyer un Message</div>
                     <form method="POST">
-                        <label for="name">Nom :</label>
-                            <input type="text" id="name" name="name" placeholder="Nom :" required>
-                        <label for="email">Email :</label>
-                            <input type="email" id="email" name="email" placeholder="Email :" required>
-                        <label for="subject">Objet :</label>
-                            <input type="text" id="subject" name="subject" placeholder="Objet :" required>
-                        <label for="message">Message :</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Message :" required></textarea>
+                        <div class="input-group">
+                            <input id="nom" type="text" name="nom" class="input" required>
+                            <label for="nom" class="label">Nom</label>
+                        </div>
+                        <div class="input-group">
+                            <input id="email" type="text" name="email" class="input" required>
+                            <label for="email" class="label">Email</label>
+                        </div>
+                        <div class="input-group">
+                            <input id="objet" type="text" name="objet" class="input" required>
+                            <label for="objet" class="label">Objet</label>
+                        </div>
+                        <div class="input-group">
+                            <input id="message" type="text" name="messagz=e" class="input" required>
+                            <label for="message" class="label">Message</label>
+                        </div>
                         <div class="left-right">
                             <button type="submit">Initialiser la Transmission</button>
                             <button type="reset">Réinitialiser le formulaire</button>
