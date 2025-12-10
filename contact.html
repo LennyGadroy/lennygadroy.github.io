@@ -66,7 +66,7 @@
                 </div>
                 <div class="panel" id="contact-form" style="grid-column: 2 / 4;">
                     <div class="panel-title">Envoyer un Transmission</div>
-                    <form method="POST">
+                    <form method="post" action="assets/contact.php">
                         <div class="input-group">
                             <input id="nom" type="text" name="nom" class="input" required>
                             <label for="nom" class="label">Nom</label>
@@ -80,7 +80,7 @@
                             <label for="objet" class="label">Objet</label>
                         </div>
                         <div class="input-group">
-                            <input id="message" type="text" name="messagz=e" class="input" required>
+                            <input id="message" type="text" name="message" class="input" required>
                             <label for="message" class="label">Message</label>
                         </div>
                         <div class="left-right">
