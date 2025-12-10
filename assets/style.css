@@ -11,7 +11,7 @@
     --Secondary-RGB: 172, 59, 0;
     --Black: #000;
     --White: #fff;
-    --Background: #000;
+    --Background: rgba(0, 0, 0, 1);
 
     /* Fonts */
     --Font-Special: 'TVA', sans-serif;
@@ -359,7 +359,7 @@ hr {
 
     display: flex;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--Background);
     border-top: 2px solid var(--Primary);
     color: var(--Primary);
 
@@ -1261,7 +1261,7 @@ input:focus[type=number] {
 }
 
 .contact form .input:focus ~ .label, .input:valid ~ .label {
-    background-color: var(--Black);
+    background-color: var(--Background);
     border: var(--Border);
     color: var(--Primary);
 
