@@ -65,16 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Opening Directory: ' + item.textContent);
         });
     });
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const status = urlParams.get('status');
-
-    if (status === 'success') {
-        alert(">> TRANSMISSION REUSSIE.\n>> Le système a bien relayé votre message à l'administrateur.");
-        window.history.replaceState({}, document.title, window.location.pathname);
-    } else if (status === 'error') {
-        alert(">> ERREUR CRITIQUE.\n>> Champs invalides ou incomplets.");
-    } else if (status === 'server_error') {
-        alert(">> ECHEC DE CONNEXION.\n>> Le serveur n'a pas pu traiter la requête.");
-    }
 });
