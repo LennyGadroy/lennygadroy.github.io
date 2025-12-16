@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.tva-nav');
+    const nav = document.querySelector('.tva-nav');
+    const navLinks = document.querySelectorAll('.tva-nav li');
 
-    if(hamburger) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+    });
 
-        document.querySelectorAll('.tva-nav li a').forEach(n => n.addEventListener('click', () => {
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
             hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }));
-    }
+                nav.classList.remove('active');
+    });
+});
 
 //    const navItems = document.querySelectorAll('.tva-nav li');
 //    navItems.forEach(item => {

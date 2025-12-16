@@ -48,7 +48,7 @@ body {
     color: var(--Primary);
 
     font-family: var(--Font);
-    font-size: var(--Body-Size);
+    font-size: var(--BodySize);
     text-transform: uppercase;
 
     margin: 0;
@@ -124,6 +124,7 @@ hr {
 
     position: sticky;
     top: 0;
+    height: 80px;
 
     display: flex;
     flex-wrap: wrap;
@@ -138,7 +139,10 @@ hr {
     gap: 1rem;
 }
 
-.tva-header a {width: 5%;}
+.tva-header a {
+    height: 100%;
+    width: auto;
+}
 
 .tva-header img {
     width: 100%;
@@ -172,6 +176,14 @@ hr {
     transition: all 0.3s ease-in-out;
 }
 
+.tva-nav {
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+}
+
 .tva-nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -191,6 +203,8 @@ hr {
     cursor: pointer;
 }
 
+.tva-nav li:hover,
+.tva-nav li:focus,
 .tva-nav li.active {
     background-color: var(--Primary);
     color: var(--Black);
@@ -199,6 +213,12 @@ hr {
 .tva-nav li a {
     color: var(--Primary);
     text-decoration: none;
+}
+
+.tva-nav li a:hover,
+.tva-nav li a:focus {
+    background-color: var(--Primary);
+    color: var(--Black);
 }
 
 .projects .tva-nav,
@@ -459,7 +479,7 @@ hr {
 .projects h2,
 .reals h2,
 .albums h2 {
-    font-size: var(--Title-Size);
+    font-size: var(--TitleSize);
     text-align: center;
 }
 
@@ -1141,7 +1161,7 @@ input:focus[type=number] {
 .cv .header h1 {
     color: var(--Primary);
 
-    font-size: var(--Title-Size);
+    font-size: var(--TitleSize);
 
     margin-bottom: 5px;
 }
@@ -1151,7 +1171,7 @@ input:focus[type=number] {
 
     color: var(--White);
 
-    font-size: var(--Body-Size);
+    font-size: var(--BodySize);
 }
 
 .photo-profil {
@@ -1353,6 +1373,7 @@ input:focus[type=number] {
 
     transform: translateX(-10px) translateY(-50%) scale(0.8);
 }
+
 .contact form button[type="submit"] {
     background-color: var(--Primary);
     border: var(--Border);
@@ -1363,10 +1384,6 @@ input:focus[type=number] {
     border: 1px solid var(--White);
     color: var(--White);
 }
-
-/* ------
-  Terms 
------- */
 
 /* ------/
   Hover 
@@ -1415,8 +1432,8 @@ input:focus[type=number] {
 ------ */
 
 
-/* Laptop */
-@media only screen and (max-width:1199px) {
+/* Desktop */
+@media only screen and (max-width:1599px) {
     .tva-container {
         width: 100%;
         max-width: 100%;
@@ -1431,6 +1448,28 @@ input:focus[type=number] {
     }
 }
 
+/* Laptop */
+@media only screen and (max-width:1199px) {
+    .tva-container {
+        width: 100%;
+        max-width: 100%;
+
+        border: none;
+        border-bottom: 1px solid var(--Primary);
+
+        box-shadow: none;
+
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    .tva-nav li {
+        font-size: var(--BodySize);
+    }
+
+    .status {display: none;}
+}
+
 /* Tablet */
 @media only screen and (max-width:991px) {
     .main-grid {
@@ -1438,23 +1477,87 @@ input:focus[type=number] {
     }
 
     .tva-header {
-        position: relative;
-
-        flex-wrap: wrap;
-
+        height: 70px;
         padding: 0.5rem;
+
+        flex-wrap: nowrap;
+    }
+
+    .tva-header img {
+        width: 100px;
+
+        padding: 0 1rem;
+    }
+    
+
+    .hamburger {
+        z-index: 1002;
+
+        display: block;
+
+        align-content: right;
+
+        rotate: 180deg;
+    }
+
+    .hamburger.active .bar:nth-child(1) {transform: translateY(8px) rotate(45deg);}
+    .hamburger.active .bar:nth-child(2) {opacity: 0;}
+    .hamburger.active .bar:nth-child(3) {transform: translateY(-8px) rotate(-45deg);}
+
+    .tva-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 70px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        
+        transform: translateX(0);
+        transition: transform 0.4s ease-in-out;
+        
+        border-bottom: 2px solid var(--Primary);
+    }
+
+    .tva-nav.active ul {transform: translateX(0%);}
+
+    .tva-nav ul {
+        z-index: 1001;
+
+        position: fixed;
+        left: -100%;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        background-color: var(--Background);
+        border-bottom: var(--Border);
+
+        text-align: center;
+
+        padding-bottom: 20px;
+
+        transition: 0.3s;
+    }
+
+    .tva-nav li {
+        width: 100%;
+
+        border-bottom: 1px dashed rgba(var(--PrimaryRGB), 0.3);
+
+        text-align: center;
+        font-size: 1.5rem;
+
+        padding: 1.5rem;
     }
 
     .projects .tva-nav,
     .reals .tva-nav,
     .albums .tva-nav {position: relative;}
-
-    .tva-nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .tva-nav li {padding: 0.5rem;}
 
     .cv .left-part,
     .cv .right-part {
@@ -1488,46 +1591,11 @@ input:focus[type=number] {
         grid-template-columns: 1fr;
     }
 
-    .tva-header {
-        height: auto;
-        max-height: 60px;
-
-        display: flex;
-        flex-direction: row;
-
-        justify-content: space-between;
-        align-items: center;
-
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .tva-header a {width: 30%;}
-
-    .tva-header button:hover,
-    .tva-header button:focus
-    {box-shadow: none;}
-
-    .tva-header img {
-        width: 120px;
-
-        padding: 0;
-    }
-
-    .hamburger {
-        z-index: 1002;
-
-        display: block;
-
-        rotate: 180deg;
-    }
-
     .tva-nav ul {
         z-index: 1001;
 
         position: fixed;
         left: -100%;
-        top: 60px;
 
         width: 100%;
 
@@ -1544,20 +1612,6 @@ input:focus[type=number] {
     }
 
     .tva-nav.active ul {left: 0;}
-
-    .tva-nav ul li {
-        width: 80%;
-
-        border-bottom: 1px dashed var(--Primary);
-
-        margin: 15px 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {transform: translateY(8px) rotate(45deg);}
-    .hamburger.active .bar:nth-child(2) {opacity: 0;}
-    .hamburger.active .bar:nth-child(3) {transform: translateY(-8px) rotate(-45deg);}
-
-    .status {display: none;}
 
     .cv .container {
         width: 100%;
@@ -1621,16 +1675,6 @@ input:focus[type=number] {
     }
 
     .panel-title {text-align: center;}
-
-    .left-right {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 5px;
-    }
-
-    ul.left-right {margin-right: 0;}
 
     .tva-footer {
         flex-direction: column;
