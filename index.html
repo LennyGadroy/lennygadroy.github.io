@@ -119,25 +119,5 @@
         </div>
     </footer>
     <script src="assets/script.js"></script>
-    <script>
-        function createParticle() {
-            let particle = document.createElement("div");
-            particle.classList.add("particle");
-            document.body.appendChild(particle);
-            
-            let size = Math.random() * 5 + 2;
-            let startX = Math.random() * window.innerWidth;
-            let duration = Math.random() * 5 + 10;
-            
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${startX}px`;
-            particle.style.animationDuration = `${duration}s`;
-            
-            setTimeout(() => particle.remove(), duration * 1000);
-        }
-
-        setInterval(createParticle, 100);
-    </script>
 </body>
 </html>
