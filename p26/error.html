@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #111111;
+            --text-color: #ffffff;
+            --font-main: 'Inter', sans-serif;
+            --font-display: 'Archivo Black', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            font-weight: 600;
+            max-width: 500px;
+            margin-bottom: 40px;
+            letter-spacing: -0.02em;
+        }
+
+        .content-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 40px 60px;
+            z-index: 20;
+            width: 100%;
+        }
+
+        .error-code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.75rem;
+            color: #888;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .error-code::before {
+            content: '•';
+            color: #fff;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background-color: #262626;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .btn-home:hover {
+            background-color: #333;
+            border-color: #444;
+        }
+
+        .arrow-icon {
+            margin-left: 12px;
+            font-size: 0.8rem;
+            transform: translateY(-1px);
+        }
+
+        .graphic-container {
+            position: absolute;
+            bottom: -8vw; 
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 1;
+            user-select: none;
+        }
+
+        .layer {
+            font-family: var(--font-display);
+            font-size: 33vw;
+            line-height: 0.75;
+            width: 100%;
+            text-align: center;
+            transform: scaleX(1.5);
+            white-space: nowrap;
+            letter-spacing: -1.5vw;
+        }
+
+        .layer-top {
+            color: #1a1a1a;
+            position: relative;
+            z-index: 1;
+        }
+
+        .layer-middle {
+            color: #3a3a3a;
+            position: relative;
+            z-index: 2;
+            margin-top: -12vw;
+        }
+
+        .layer-bottom {
+            color: #e6e8eb;
+            position: relative;
+            z-index: 3;
+            margin-top: -12vw;
+        }
+
+        @media (max-width: 768px) {
+            h1 {font-size: 1.8rem;}
+            .content-wrapper {padding: 20px;}
+            .graphic-container {bottom: -20vw;}
+            .layer {
+                font-size: 40vw;
+                transform: scaleX(1.2);
+                letter-spacing: -2vw;
+            }
+            .layer-middle {margin-top: -15vw;}
+            .layer-bottom {margin-top: -15vw;}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <div class="error-code">404 ERROR. PAGE NOT FOUND</div>
+        
+        <h1>If you're reading this, something has gone terribly, terribly wrong.</h1>
+        
+        <a href="#" class="btn-home">
+            Return home 
+            <span class="arrow-icon">↗</span>
+        </a>
+    </div>
+
+    <div class="graphic-container">
+        <div class="layer layer-top">404</div>
+        <div class="layer layer-middle">404</div>
+        <div class="layer layer-bottom">404</div>
+    </div>
+
+</body>
+</html>
