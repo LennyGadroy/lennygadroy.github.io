@@ -1,24 +1,48 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenny Gadroy - Portfolio</title>
+    
+    <meta name="description" content="Portfolio de Lenny Gadroy, étudiant développeur web et webdesigner à Reims et Charleville-Mézières. Découvrez mes projets front-end, UX/UI et mes réalisations.">
+    <meta name="keywords" content="Lenny Gadroy, Portfolio, Webdesign, Développement Web, HTML, CSS, JavaScript, Étudiant, Reims, Charleville-Mézières">
+    <meta name="author" content="Lenny Gadroy">
+    <meta name="theme-color" content="#FF6B2D">
+    
+    <link rel="canonical" href="https://lennygadroy.github.io/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lennygadroy.github.io/">
+    <meta property="og:title" content="Lenny Gadroy | Portfolio Développeur Web & Webdesign">
+    <meta property="og:description" content="Bienvenue sur le portfolio interactif de Lenny Gadroy, étudiant en développement web.">
+    <meta property="og:image" content="https://lennygadroy.github.io/assets/icon.svg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@LennyGadroy">
+    <meta name="twitter:creator" content="@LennyGadroy">
+    <meta name="twitter:title" content="Lenny Gadroy | Portfolio Développeur Web & Webdesign">
+    <meta name="twitter:description" content="Bienvenue sur le portfolio interactif de Lenny Gadroy, étudiant en développement web.">
+    <meta name="twitter:image" content="https://lennygadroy.github.io/assets/icon.svg">
+
+    <link rel="manifest" href="manifest.json">
+    
+    <title>Lenny Gadroy | Portfolio - Étudiant Développeur Web & Webdesigner</title>
+    
     <link rel="stylesheet" href="assets/style_min.css">
     <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
 <body>
     <div class="tva-container">
         <header class="tva-header">
-            <a class="logo" href="index.html"><img src="assets/logo.svg"></img></a>
-            <button class="hamburger" aria-label="Menu">
+            <a class="logo" href="index.html" aria-label="Retour à l'accueil"><img src="assets/logo.svg" alt="Logo Lenny Gadroy"></a>
+            <button class="hamburger" aria-label="Ouvrir le menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            <nav class="tva-nav">
+            <nav class="tva-nav" role="navigation">
                 <ul>
-                    <li class="active"><a href="index.html">Tableau de bord</a></li>
+                    <li class="active"><a href="index.html" aria-current="page">Tableau de bord</a></li>
                     <li><a href="projects.html">Projets</a></li>
                     <li><a href="reals.html">Réalisations</a></li>
                     <li><a href="albums.html">Albums</a></li>
@@ -27,12 +51,15 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="status blink">■ SYSTEM ACTIVE</div>
+            <div class="status blink" aria-hidden="true">■ SYSTEM ACTIVE</div>
         </header>
         <main class="main-grid">
+            
+            <h1 class="sr-only">Portfolio de Lenny Gadroy - Étudiant Développeur Web, UX/UI et Webdesigner</h1>
+
             <div class="grid-row">
                 <div class="panel" id="select">
-                    <div class="panel-title">Tous les Projets</div>
+                    <h2 class="panel-title">Tous les Projets</h2>
                     <ul class="file-list">
                         <li id="revue" class="active">Revue globale</li>
                         <li id="goon"><span>[v3.5]</span> GOON</li>
@@ -44,29 +71,29 @@
                     </ul>
                 </div>
                 <div class="panel" id="graph">
-                    <div class="panel-title-graph">Evolution temporelle</div>
+                    <h2 class="panel-title-graph">Evolution temporelle</h2>
                     <div class="panel-subtitle">De l'avancé de chaque projet</div>
                     <div class="graph-content">
                         <div class="graph-value">15 380 <span class="unit">lignes de codes</span></div>
-                        <svg class="graph-svg" viewBox="0 0 100 50">
+                        <svg class="graph-svg" viewBox="0 0 100 50" aria-label="Graphique montrant l'évolution du code">
                             <polyline fill="none" stroke="#FFF" stroke-width="1" points="0,49 5,38 10,35 20,38 30,30 40,28 50,20 60,18 70,22 80,20 90,5 100,0" />
                         </svg>
                     </div>
                 </div>
             </div>
             <div class="panel" id="action-list">
-                <div class="panel-title">Selectionner un programme</div>
+                <h2 class="panel-title">Selectionner un programme</h2>
                 <ol class="program-list">
                     <li>Select Mode :
                         <div class="action-icons">
                             <div class="icon-block">
-                                <span class="icon">[FE]</span><span>Front-end</span>
+                                <span class="icon" aria-hidden="true">[FE]</span><span>Front-end</span>
                             </div>
                             <div class="icon-block">
-                                <span class="icon">[UX]</span><span>User Experience</span>
+                                <span class="icon" aria-hidden="true">[UX]</span><span>User Experience</span>
                             </div>
                             <div class="icon-block">
-                                <span class="icon">[UI]</span><span>User Interface</span>
+                                <span class="icon" aria-hidden="true">[UI]</span><span>User Interface</span>
                             </div>
                         </div>
                     </li>
@@ -87,16 +114,17 @@
                     </li>
                 </ol>
             </div>
-            <div class="panel" id="admin"> 
-                <div class="panel-title">Compte Administrateur</div>
-                <img src="img/fallout.svg" alt="" width="300px" height="auto">
+            <div class="panel" id="admin" itemscope itemtype="https://schema.org/Person"> 
+                <h2 class="panel-title">Compte Administrateur</h2>
+                <img src="img/fallout.svg" alt="Illustration style Fallout représentant le profil de Lenny" width="300px" height="auto" itemprop="image">
                 <div class="left-right inversed">
-                    <span>Lenny Gadroy</span>
+                    <span itemprop="name">Lenny Gadroy</span>
+                    <span itemprop="jobTitle" class="sr-only">Développeur Web Étudiant</span>
                     <span>20 ans</span>
                 </div>
                 <div class="left-right">
-                    <span>Charleville-Mézières</span>
-                    <span>Reims</span>
+                    <span itemprop="addressLocality">Charleville-Mézières</span>
+                    <span itemprop="addressLocality">Reims</span>
                 </div>
             </div>
         </main>
@@ -104,16 +132,16 @@
     <footer class="tva-footer">
         <div class="footer-section left">
             <span>© 2026 LENNY GADROY</span>
-            <span class="sep">::</span>
-            <a href="/terms.html" target="_blank" class="footer-link">VERSION 2.0.4</a>
+            <span class="sep" aria-hidden="true">::</span>
+            <a href="terms.html" class="footer-link">VERSION 2.0.4</a>
         </div>    
         <div class="footer-section center">
-            <span class="blink">_WAITING FOR INPUT</span>
+            <span class="blink" aria-hidden="true">_WAITING FOR INPUT</span>
         </div>
         <div class="footer-section right">
             <a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GITHUB]</a>
             <a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LINKEDIN]</a>
-            <a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[INSTAGRAM]</a>
+            <a href="https://www.instagram.com/lennygdr19/" target="_blank" rel="nofollow" class="footer-link">[INSTAGRAM]</a>
             <a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link">[EMAIL]</a>
         </div>
     </footer>

@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenny Gadroy - Contact</title>
+    <meta name="description" content="Besoin d'un développeur web ou webdesigner ? Contactez Lenny Gadroy pour une opportunité de stage, une collaboration ou un projet à Reims et Charleville-Mézières.">
+    
+    <link rel="canonical" href="https://lennygadroy.github.io/contact.html">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lennygadroy.github.io/contact.html">
+    <meta property="og:title" content="Contactez Lenny Gadroy - Développeur Web">
+    <meta property="og:description" content="Envoyez une transmission à Lenny Gadroy pour une collaboration.">
+    <meta property="og:image" content="https://lennygadroy.github.io/assets/icon.svg">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contactez Lenny Gadroy - Développeur Web">
+
+    <link rel="manifest" href="manifest.json">
+    <title>Contactez Lenny Gadroy | Développeur Web & Webdesigner</title>
     <link rel="stylesheet" href="assets/style_min.css">
     <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
 <body>
     <div class="tva-container">
         <header class="tva-header">
-            <a class="logo" href="index.html"><img src="assets/logo.svg"></img></a>
+            <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Logo"></a>
             <button class="hamburger" aria-label="Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -24,30 +38,30 @@
                     <li><a href="albums.html">Albums</a></li>
                     <li><a href="skills.html">Compétences</a></li>
                     <li><a href="cv.html">Curriculum</a></li>
-                    <li class="active"><a href="contact.html">Contact</a></li>
+                    <li class="active"><a href="contact.html" aria-current="page">Contact</a></li>
                 </ul>
             </nav>
-            <div class="status blink">■ SYSTEM ACTIVE</div>
+            <div class="status blink" aria-hidden="true">■ SYSTEM ACTIVE</div>
         </header>
-        <main class="contact">
+        <main class="contact" itemscope itemtype="http://schema.org/ContactPage">
+            <h1 class="sr-only">Contactez Lenny Gadroy - Recherche de stage en Développement Web</h1>
             <div class="grid-col">
                 <div class="grid-row">
                     <div class="panel">
-                        <div class="panel-title">Coordonées</div>
+                        <h2 class="panel-title">Coordonées</h2>
                         <ul class="file-list">
-                            <li><a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link">[Email]</a></li>
-                            <li><a href="tel:0652514919" class="footer-link">[Téléphone]</a></li>
+                            <li><a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="footer-link" itemprop="email">[Email]</a></li>
+                            <li><a href="tel:0652514919" class="footer-link" itemprop="telephone">[Téléphone]</a></li>
                             <hr>
-                            <li><a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GitHub]</a></li>
-                            <li><a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LinkedIn]</a></li>
-                            <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[Instagram]</a></li>
+                            <li><a href="https://github.com/LennyGadroy/" target="_blank" rel="nofollow" class="footer-link">[GitHub]</a></li>
+                            <li><a href="https://linkedin.com/in/LennyGadroy" target="_blank" rel="nofollow" class="footer-link">[LinkedIn]</a></li>
+                            <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" rel="nofollow" class="footer-link">[Instagram]</a></li>
                             <hr>
-                            <li><a href="https://maps.app.goo.gl/YM9DzGUkwigesQ5cA" target="_blank" class="footer-link">[Localisation Principale]</a></li>
-                            <li><a href="https://maps.app.goo.gl/UyHfHwKkrHXFWk8h9" target="_blank" class="footer-link">[Localisation Secondaire]</a></li>
+                            <li><a href="#" class="footer-link">[Localisation Principale]</a></li>
                         </ul>
                     </div>
                     <div class="panel">
-                        <div class="panel-title">Statut du réseau</div>
+                        <h2 class="panel-title">Statut du réseau</h2>
                         <div class="left-right">
                             <span>État du serveur</span>
                             <span class="blink">en ligne</span>
@@ -55,37 +69,37 @@
                         <hr>
                         <div class="left-right">
                             <span>Temps de réponse estimé :</span>
-                            <span>< 6h</span>
+                            <span>&lt; 6h</span>
                         </div>
                         <hr>
                         <div class="left-right">
-                            <span><button><a href="">Signaler un problème</a></button></span>
-                            <span><button><a href="">Faire une suggestion</a></button></span>
+                            <span><button>Signaler un problème</button></span>
+                            <span><button>Faire une suggestion</button></span>
                         </div>
                     </div>
                 </div>
                 <div class="panel" id="contact-form" style="grid-column: 2 / 4;">
-                    <div class="panel-title">Envoyer un Transmission</div>
+                    <h2 class="panel-title">Envoyer un Transmission</h2>
                     <form method="POST" action="https://formspree.io/f/xnnegzdy">
                         <div class="input-group">
-                            <input id="nom" type="text" name="nom" class="input" required>
+                            <input id="nom" type="text" name="nom" class="input" required aria-required="true">
                             <label for="nom" class="label">Nom</label>
                         </div>
                         <div class="input-group">
-                            <input id="email" type="text" name="email" class="input" required>
+                            <input id="email" type="email" name="email" class="input" required aria-required="true">
                             <label for="email" class="label">Email</label>
                         </div>
                         <div class="input-group">
-                            <input id="objet" type="text" name="objet" class="input" required>
+                            <input id="objet" type="text" name="objet" class="input" required aria-required="true">
                             <label for="objet" class="label">Objet</label>
                         </div>
                         <div class="input-group">
-                            <textarea id="message" name="message" rows="6" class="input" required></textarea>
+                            <textarea id="message" name="message" rows="6" class="input" required aria-required="true"></textarea>
                             <label for="message" class="label">Message</label>
                         </div>
                         <div class="left-right">
-                            <button type="submit">Initialiser la Transmission</button>
-                            <button type="reset">Réinitialiser le formulaire</button>
+                            <button type="submit" aria-label="Envoyer le message">Initialiser la Transmission</button>
+                            <button type="reset" aria-label="Effacer le formulaire">Réinitialiser le formulaire</button>
                         </div>
                     </form>
                 </div>
@@ -96,15 +110,15 @@
         <div class="footer-section left">
             <span>© 2026 LENNY GADROY</span>
             <span class="sep">::</span>
-            <a href="/terms.html" target="_blank" class="footer-link">VERSION 2.0.4</a>
+            <a href="terms.html" class="footer-link">VERSION 2.0.4</a>
         </div>    
         <div class="footer-section center">
             <span class="blink">_WAITING FOR INPUT</span>
         </div>
         <div class="footer-section right">
-            <a href="https://github.com/LennyGadroy/" target="_blank" class="footer-link">[GITHUB]</a>
-            <a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="footer-link">[LINKEDIN]</a>
-            <a href="https://www.instagram.com/lennygdr19/" target="_blank" class="footer-link">[INSTAGRAM]</a>
+            <a href="https://github.com/LennyGadroy/" target="_blank" rel="nofollow" class="footer-link">[GITHUB]</a>
+            <a href="https://linkedin.com/in/LennyGadroy" target="_blank" rel="nofollow" class="footer-link">[LINKEDIN]</a>
+            <a href="https://www.instagram.com/lennygdr19/" target="_blank" rel="nofollow" class="footer-link">[INSTAGRAM]</a>
         </div>
     </footer>
     <script src="assets/script_min.js"></script>
