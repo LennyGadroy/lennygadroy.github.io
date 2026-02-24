@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.tva-nav');
-    const navLinks = document.querySelectorAll('.tva-nav li');
+    const nav = document.querySelector('.tva-header .tva-nav');
+    const navLinks = document.querySelectorAll('.tva-header .tva-nav li');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
@@ -14,14 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 nav.classList.remove('active');
     });
 });
-
-//    const navItems = document.querySelectorAll('.tva-nav li');
-//    navItems.forEach(item => {
-//        item.addEventListener('click', () => {
-//            navItems.forEach(i => i.classList.remove('active'));
-//            item.classList.add('active');
-//        });
-//    });
 
     const projectData = {
         'revue': {val: '0',points: '0,50 5,38 10,35 20,38 30,30 40,28 50,20 60,18 70,22 80,20 90,5 100,0'},

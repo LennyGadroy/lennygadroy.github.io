@@ -1523,7 +1523,7 @@ input:focus[type=number] {
     .hamburger.active .bar:nth-child(2) {opacity: 0;}
     .hamburger.active .bar:nth-child(3) {transform: translateY(-8px) rotate(-45deg);}
 
-    .tva-nav {
+    .tva-header .tva-nav {
         position: fixed;
         top: 70px;
         left: 0;
@@ -1541,9 +1541,9 @@ input:focus[type=number] {
         border-bottom: 2px solid var(--Primary);
     }
 
-    .tva-nav.active ul {transform: translateX(0%);}
+    .tva-header .tva-nav.active ul {transform: translateX(0%);}
 
-    .tva-nav ul {
+    .tva-header .tva-nav ul {
         z-index: 1001;
 
         position: fixed;
@@ -1573,10 +1573,6 @@ input:focus[type=number] {
 
         padding: 1.5rem;
     }
-
-    .projects .tva-nav,
-    .reals .tva-nav,
-    .albums .tva-nav {position: relative;}
 
     .cv .left-part,
     .cv .right-part {
@@ -1610,7 +1606,7 @@ input:focus[type=number] {
         grid-template-columns: 1fr;
     }
 
-    .tva-nav ul {
+    .tva-header.tva-nav ul {
         z-index: 1001;
 
         position: fixed;
