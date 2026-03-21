@@ -51,16 +51,9 @@
             transform: translateY(10px);
         }
 
-        .LetterGrid span.AnimLetter {
-            animation: fadeInLetter 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
-        }
-
+        .LetterGrid span.AnimLetter {animation: fadeInLetter 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;}
         @keyframes fadeInLetter {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+            to {opacity: 1; transform: translateY(0);}}
 
         .Highlights {
             position: absolute;
@@ -83,15 +76,8 @@
             animation: drawCircle 1.2s cubic-bezier(0.8, 0, 0.2, 1) forwards;
         }
 
-        .HighlightShape.AnimHighlight {
-            animation-name: drawCircle;
-        }
-
-        @keyframes drawCircle {
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
+        .HighlightShape.AnimHighlight {animation-name: drawCircle;}
+        @keyframes drawCircle {to {stroke-dashoffset: 0;}}
 
         .HighlightShape.HighlightActive {
             stroke-width: 12;
@@ -102,6 +88,8 @@
             font-weight: 700;
             color: #447794;
         }
+
+        .LetterGrid span[data-word] {cursor: pointer;}
     </style>
 </head>
 <body>
@@ -126,51 +114,6 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const Grid = document.getElementById('LetterGrid');
-            const Letters = Grid.querySelectorAll('span');
-            const Highlights = document.querySelectorAll('.HighlightShape');
-            const HeroContainer = document.getElementById('HeroContainer');
-
-            const LetterFadeStagger = 0.05;
-            const HighlightDrawDelay = Letters.length * LetterFadeStagger + 0.5;
-            const HighlightStagger = 0.6;
-
-        Letters.forEach((letter, index) => {
-            const Delay = index * LetterFadeStagger;
-            letter.style.animationDelay = Delay + 's';
-            letter.classList.add('AnimLetter');
-        });
-
-        Highlights.forEach((highlight, index) => {
-            const Delay = HighlightDrawDelay + (index * HighlightStagger);
-            highlight.style.animationDelay = Delay + 's';
-            highlight.classList.add('AnimHighlight');
-        });
-
-        HeroContainer.addEventListener('mouseover', (e) => {
-            const TargetWord = e.target.getAttribute('data-word');
-            if (TargetWord) {activateWordHighlight(TargetWord);}
-        });
-        HeroContainer.addEventListener('mouseout', (e) => {
-            const TargetWord = e.target.getAttribute('data-word');
-            if (TargetWord) {deactivateWordHighlight(TargetWord);}
-        });
-
-        function activateWordHighlight(wordName) {
-            const ActiveHighlight = document.querySelector(`.HighlightShape[data-word="${wordName}"]`);
-            if (ActiveHighlight) {ActiveHighlight.classList.add('HighlightActive');}
-            const ActiveLetters = document.querySelectorAll(`.LetterGrid span[data-word="${wordName}"]`);
-            ActiveLetters.forEach(letter => {letter.classList.add('LetterActive');});
-        }
-        function deactivateWordHighlight(wordName) {
-            const ActiveHighlight = document.querySelector(`.HighlightShape[data-word="${wordName}"]`);
-            if (ActiveHighlight) {ActiveHighlight.classList.remove('HighlightActive');}
-            const ActiveLetters = document.querySelectorAll(`.LetterGrid span[data-word="${wordName}"]`);
-            ActiveLetters.forEach(letter => {letter.classList.remove('LetterActive');});
-        }
-    });
-    </script>
+    <script src="anims.js"></script>
 
 </body>
