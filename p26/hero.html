@@ -18,28 +18,27 @@
             align-items: center;
             min-height: 100vh;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            padding: 2rem;
             overflow: hidden;
         }
 
-        .hero-container {
+        .HeroContainer {
             position: relative;
             width: 100%;
             max-width: 900px; 
             aspect-ratio: 9 / 7; 
         }
 
-        .letter-grid {
+        .LetterGrid {
             position: relative;
             z-index: 2;
-            display: grid;
-            grid-template-columns: repeat(9, 1fr);
-            grid-template-rows: repeat(7, 1fr);
+            display: Grid;
+            Grid-template-columns: repeat(9, 1fr);
+            Grid-template-rows: repeat(7, 1fr);
             width: 100%;
             height: 100%;
         }
 
-        .letter-grid span {
+        .LetterGrid span {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -52,7 +51,7 @@
             transform: translateY(10px);
         }
 
-        .letter-grid span.animate-letter {
+        .LetterGrid span.AnimLetter {
             animation: fadeInLetter 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
         }
 
@@ -63,7 +62,7 @@
             }
         }
 
-        .highlights {
+        .Highlights {
             position: absolute;
             top: 0;
             left: 0;
@@ -73,7 +72,7 @@
             pointer-events: none;
         }
 
-        .highlight-shape {
+        .HighlightShape {
             fill: none;
             stroke: #447794;
             stroke-width: 8;
@@ -84,7 +83,7 @@
             animation: drawCircle 1.2s cubic-bezier(0.8, 0, 0.2, 1) forwards;
         }
 
-        .highlight-shape.animate-highlight {
+        .HighlightShape.AnimHighlight {
             animation-name: drawCircle;
         }
 
@@ -94,12 +93,12 @@
             }
         }
 
-        .highlight-shape.highlight-active {
+        .HighlightShape.HighlightActive {
             stroke-width: 12;
             filter: drop-shadow(0 0 5px rgba(68, 119, 148, 0.4)); 
         }
 
-        .letter-grid span.letter-active {
+        .LetterGrid span.LetterActive {
             font-weight: 700;
             color: #447794;
         }
@@ -107,90 +106,71 @@
 </head>
 <body>
 
-    <div class="hero-container" id="heroContainer">
-        
-        <svg class="highlights" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet">
-            <rect class="highlight-shape" x="15" y="315" width="470" height="70" rx="35" data-word="lenny" />
-            <rect class="highlight-shape" x="211.5" y="365" width="777" height="70" rx="35" transform="rotate(45 600 400)" data-word="gadroy" />
-            <rect class="highlight-shape" x="15" y="15" width="870" height="70" rx="35" data-word="portfolio" />
-            <rect class="highlight-shape" x="115" y="515" width="170" height="70" rx="35" data-word="ui" />
-            <rect class="highlight-shape" x="415" y="515" width="170" height="70" rx="35" data-word="ux" />
-            <rect class="highlight-shape" x="15" y="615" width="770" height="70" rx="35" data-word="designer" />
+    <div class="HeroContainer" id="HeroContainer">  
+        <svg class="Highlights" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet">
+            <rect class="HighlightShape" x="15" y="315" width="470" height="70" rx="35" data-word="Lenny"/>
+            <rect class="HighlightShape" x="211.5" y="365" width="777" height="70" rx="35" transform="rotate(45 600 400)" data-word="Gadroy"/>
+            <rect class="HighlightShape" x="15" y="15" width="870" height="70" rx="35" data-word="Portfolio"/>
+            <rect class="HighlightShape" x="115" y="515" width="170" height="70" rx="35" data-word="UI"/>
+            <rect class="HighlightShape" x="415" y="515" width="170" height="70" rx="35" data-word="UX"/>
+            <rect class="HighlightShape" x="15" y="615" width="770" height="70" rx="35" data-word="Designer"/>
         </svg>
-
-        <div class="letter-grid" id="letterGrid">
-            <span data-word="portfolio">P</span><span data-word="portfolio">O</span><span data-word="portfolio">R</span><span data-word="portfolio">T</span><span data-word="portfolio">F</span><span data-word="portfolio">O</span><span data-word="portfolio">L</span><span data-word="portfolio">I</span><span data-word="portfolio">O</span>
-            <span>S</span><span>E</span><span>O</span><span data-word="gadroy">G</span><span>P</span><span>R</span><span>O</span><span>S</span><span>C</span>
-            <span>C</span><span>O</span><span>O</span><span>L</span><span data-word="gadroy">A</span><span>G</span><span>O</span><span>A</span><span>L</span>
-            <span data-word="lenny">L</span><span data-word="lenny">E</span><span data-word="lenny">N</span><span data-word="lenny">N</span><span data-word="lenny">Y</span><span data-word="gadroy">D</span><span>A</span><span>T</span><span>A</span>
-            <span>O</span><span>C</span><span>L</span><span>E</span><span>V</span><span>E</span><span data-word="gadroy">R</span><span>U</span><span>S</span>
-            <span>U</span><span data-word="ui">U</span><span data-word="ui">I</span><span>T</span><span data-word="ux">U</span><span data-word="ux">X</span><span>C</span><span data-word="gadroy">O</span><span>S</span>
-            <span data-word="designer">D</span><span data-word="designer">E</span><span data-word="designer">S</span><span data-word="designer">I</span><span data-word="designer">G</span><span data-word="designer">N</span><span data-word="designer">E</span><span data-word="designer">R</span><span data-word="gadroy">Y</span>
+        <div class="LetterGrid" id="LetterGrid">
+            <span data-word="Portfolio">P</span><span data-word="Portfolio">O</span><span data-word="Portfolio">R</span><span data-word="Portfolio">T</span><span data-word="Portfolio">F</span><span data-word="Portfolio">O</span><span data-word="Portfolio">L</span><span data-word="Portfolio">I</span><span data-word="Portfolio">O</span>
+            <span>S</span><span>E</span><span>O</span><span data-word="Gadroy">G</span><span>P</span><span>R</span><span>O</span><span>S</span><span>C</span>
+            <span>C</span><span>O</span><span>O</span><span>L</span><span data-word="Gadroy">A</span><span>G</span><span>O</span><span>A</span><span>L</span>
+            <span data-word="Lenny">L</span><span data-word="Lenny">E</span><span data-word="Lenny">N</span><span data-word="Lenny">N</span><span data-word="Lenny">Y</span><span data-word="Gadroy">D</span><span>A</span><span>T</span><span>A</span>
+            <span>O</span><span>C</span><span>L</span><span>E</span><span>V</span><span>E</span><span data-word="Gadroy">R</span><span>U</span><span>S</span>
+            <span>U</span><span data-word="UI">U</span><span data-word="UI">I</span><span>T</span><span data-word="UX">U</span><span data-word="UX">X</span><span>C</span><span data-word="Gadroy">O</span><span>S</span>
+            <span data-word="Designer">D</span><span data-word="Designer">E</span><span data-word="Designer">S</span><span data-word="Designer">I</span><span data-word="Designer">G</span><span data-word="Designer">N</span><span data-word="Designer">E</span><span data-word="Designer">R</span><span data-word="Gadroy">Y</span>
         </div>
-
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const grid = document.getElementById('letterGrid');
-            const letters = grid.querySelectorAll('span');
-            const highlights = document.querySelectorAll('.highlight-shape');
-            const heroContainer = document.getElementById('heroContainer');
+            const Grid = document.getElementById('LetterGrid');
+            const Letters = Grid.querySelectorAll('span');
+            const Highlights = document.querySelectorAll('.HighlightShape');
+            const HeroContainer = document.getElementById('HeroContainer');
 
-            const letterFadeStagger = 0.05;
-            const highlightDrawDelay = letters.length * letterFadeStagger + 0.5;
-            const highlightStagger = 0.6;
+            const LetterFadeStagger = 0.05;
+            const HighlightDrawDelay = Letters.length * LetterFadeStagger + 0.5;
+            const HighlightStagger = 0.6;
 
-            letters.forEach((letter, index) => {
-                const delay = index * letterFadeStagger;
-                letter.style.animationDelay = delay + 's';
-                letter.classList.add('animate-letter');
-            });
-
-            highlights.forEach((highlight, index) => {
-                const delay = highlightDrawDelay + (index * highlightStagger);
-                highlight.style.animationDelay = delay + 's';
-                highlight.classList.add('animate-highlight');
-            });
-
-            heroContainer.addEventListener('mouseover', (e) => {
-                const targetWord = e.target.getAttribute('data-word');
-                if (targetWord) {
-                    activateWordHighlight(targetWord);
-                }
-            });
-
-            heroContainer.addEventListener('mouseout', (e) => {
-                const targetWord = e.target.getAttribute('data-word');
-                if (targetWord) {
-                    deactivateWordHighlight(targetWord);
-                }
-            });
-
-            function activateWordHighlight(wordName) {
-                const activeHighlight = document.querySelector(`.highlight-shape[data-word="${wordName}"]`);
-                if (activeHighlight) {
-                    activeHighlight.classList.add('highlight-active');
-                }
-
-                const activeLetters = document.querySelectorAll(`.letter-grid span[data-word="${wordName}"]`);
-                activeLetters.forEach(letter => {
-                    letter.classList.add('letter-active');
-                });
-            }
-
-            function deactivateWordHighlight(wordName) {
-                const activeHighlight = document.querySelector(`.highlight-shape[data-word="${wordName}"]`);
-                if (activeHighlight) {
-                    activeHighlight.classList.remove('highlight-active');
-                }
-
-                const activeLetters = document.querySelectorAll(`.letter-grid span[data-word="${wordName}"]`);
-                activeLetters.forEach(letter => {
-                    letter.classList.remove('letter-active');
-                });
-            }
+        Letters.forEach((letter, index) => {
+            const Delay = index * LetterFadeStagger;
+            letter.style.animationDelay = Delay + 's';
+            letter.classList.add('AnimLetter');
         });
+
+        Highlights.forEach((highlight, index) => {
+            const Delay = HighlightDrawDelay + (index * HighlightStagger);
+            highlight.style.animationDelay = Delay + 's';
+            highlight.classList.add('AnimHighlight');
+        });
+
+        HeroContainer.addEventListener('mouseover', (e) => {
+            const TargetWord = e.target.getAttribute('data-word');
+            if (TargetWord) {activateWordHighlight(TargetWord);}
+        });
+        HeroContainer.addEventListener('mouseout', (e) => {
+            const TargetWord = e.target.getAttribute('data-word');
+            if (TargetWord) {deactivateWordHighlight(TargetWord);}
+        });
+
+        function activateWordHighlight(wordName) {
+            const ActiveHighlight = document.querySelector(`.HighlightShape[data-word="${wordName}"]`);
+            if (ActiveHighlight) {ActiveHighlight.classList.add('HighlightActive');}
+            const ActiveLetters = document.querySelectorAll(`.LetterGrid span[data-word="${wordName}"]`);
+            ActiveLetters.forEach(letter => {letter.classList.add('LetterActive');});
+        }
+        function deactivateWordHighlight(wordName) {
+            const ActiveHighlight = document.querySelector(`.HighlightShape[data-word="${wordName}"]`);
+            if (ActiveHighlight) {ActiveHighlight.classList.remove('HighlightActive');}
+            const ActiveLetters = document.querySelectorAll(`.LetterGrid span[data-word="${wordName}"]`);
+            ActiveLetters.forEach(letter => {letter.classList.remove('LetterActive');});
+        }
+    });
     </script>
 
 </body>
