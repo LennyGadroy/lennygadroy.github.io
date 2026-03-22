@@ -58,9 +58,9 @@
 
     html, body {
       width: 100%;
-      height: 100%;
+      min-height: 100vh;
       font-family: "myFont";
-      overflow-x: hidden;
+      overflow-x: clip;
     }
 
     body::before {
@@ -238,7 +238,8 @@ section.Ribbons>.Container {
 
     section {
       width: 100%;
-      height: 100vh;
+      min-height: 100vh;
+      height: auto;
     }
 
     section.Projects {
@@ -308,6 +309,98 @@ section.Ribbons>.Container {
     .Lennouille.LennouilleStopped {overflow: hidden;}
     .Lennouille.LennouilleSmooth iframe {pointer-events: none;}
   </style>
+  <style>
+    .Scroll {
+      height: 400vh;
+      position: relative;
+      background-color: var(--Four);
+    }
+    .Wrapper {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .TextReveal {
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      max-width: 900px;
+      line-height: 1.4;
+      padding: 20px;
+      margin: 0;
+      color: var(--PureWhite);
+    }
+    .Word {
+      display: inline-block;
+      background-color: var(--Four);
+      color: transparent;
+      padding: 0 4px;
+      margin: 2px;
+      border-radius: 3px;
+      transition: background-color 0.1s, color 0.1s;
+    }
+    .Word.Revealed {
+      background-color: transparent;
+      color: var(--PureWhite);
+    }
+  </style>
+  <style>
+    .MergeContainer {
+      background-color: var(--PureBlack);
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .ListContainer {
+      display: flex;
+      gap: 2rem;
+      position: relative;
+    }
+    .ListText {
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      font-weight: 600;
+      position: sticky;
+      top: 50vh;
+      transform: translateY(-50%);
+      height: max-content;
+      margin: 0;
+      color: var(--PureWhite);
+    }
+    .List {
+      font-size: clamp(2.5rem, 6vw, 6rem);
+      font-weight: 600;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      padding-top: 50vh;
+      padding-bottom: 50vh;
+    }
+    .List li {
+      line-height: 1.2;
+      margin-bottom: 10px;
+      opacity: 0.15;
+      transition: opacity 0.3s ease;
+      color: oklch(75% 0.2 calc(var(--i) * calc(360 / 15)));
+    }
+
+    @supports (animation-timeline: scroll()) {
+      .List li {
+        animation: Bright both linear;
+        animation-timeline: view();
+        animation-range: cover calc(50% - 1.5rem) calc(50% + 1.5rem);
+      }
+      @keyframes Bright {
+        0% {opacity: 0.15;}
+        50% {opacity: 1;}
+        100% {opacity: 0.15;}
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -353,6 +446,13 @@ section.Ribbons>.Container {
         </div>
       </div>
     </section>
+    <section class="Scroll" id="Scroll">
+        <div class="Wrapper">
+            <p class="TextReveal" id="TextReveal">
+                This is cinematography in its raw form with practical lamps, soft falloff, and the presence of grain that fills each corner of the frame. Every room functions as a set and every posture becomes a composition. Light moves across furniture and faces, shaping scenes with a natural sense of depth.
+            </p>
+        </div>
+    </section>
     <section class="Projects">
       <div class="Container" id="Project1">
         <div class="Project">
@@ -391,8 +491,54 @@ section.Ribbons>.Container {
         </div>
       </div>
     </section>
+    <section class="MergeContainer">
+        <div class="ListContainer">
+            <p class="ListText">You can</p>
+            <ul class="List">
+                <li style="--i: 0">clone.</li>
+                <li style="--i: 1">branch.</li>
+                <li style="--i: 2">commit.</li>
+                <li style="--i: 3">push.</li>
+                <li style="--i: 4">break.</li>
+                <li style="--i: 5">learn.</li>
+                <li style="--i: 6">debug.</li>
+                <li style="--i: 7">refactor.</li>
+                <li style="--i: 8">optimize.</li>
+                <li style="--i: 9">deploy.</li>
+                <li style="--i: 10">monitor.</li>
+                <li style="--i: 11">scale.</li>
+                <li style="--i: 12">solve.</li>
+                <li style="--i: 13">ship.</li>
+                <li style="--i: 14">repeat.</li>
+            </ul>
+        </div>
+    </section>
   </main>
   <footer></footer>
+  <script>
+    const textElement = document.getElementById('TextReveal');
+    const textContent = textElement.innerText;
+      textElement.innerHTML = textContent.split(' ').map(Word => {return `<span class="Word">${Word}</span>`;}).join(' ');
+
+    const Words = document.querySelectorAll('.Word');
+    const Scroll = document.getElementById('Scroll');
+    function handleScroll() {
+        if(!Scroll) return;
+        const ScrollTop = Scroll.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        const scrollableHeight = Scroll.offsetHeight - windowHeight;
+        let percentage = -ScrollTop / scrollableHeight;
+          percentage = Math.max(0, Math.min(1, percentage));
+        
+        const WordsToReveal = Math.floor(percentage * Words.length);
+        Words.forEach((Word, index) => {
+            if (index < WordsToReveal) {Word.classList.add('Revealed');}
+            else {Word.classList.remove('Revealed');}
+        });
+    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+  </script>
   <script src="anims.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
