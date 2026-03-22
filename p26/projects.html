@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+            font-family: sans-serif;
+            overflow-x: hidden;
+        }
+
+        .Spacer {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #555;
+        }
+        .Projects {
+            display: flex;
+            flex-direction: column;
+            gap: 20vh;
+            padding: 10vh 0;
+        }
+
+        .Container {
+            width: 100%;
+        }
+
+        .Project {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .Item h1 {
+            font-size: 5rem;
+            margin: 0;
+            text-transform: uppercase;
+            font-family: "Helvetica Neue", Arial, sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <div class="Spacer">Défile vers le bas ↓</div>
+    <div class="Projects">
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>Premier Projet</h1>
+                </div>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>GOON : Blindtests</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Projects">
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>Deuxième Projet</h1>
+                </div>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>Mü-Être</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Projects">
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>Troisième Projet</h1>
+                </div>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>Primaire Média</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Projects">
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>Quatrième Projet</h1>
+                </div>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>Noevell</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Projects">
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>Cinquième Projet</h1>
+                </div>
+            </div>
+        </div>
+        <div class="Container">
+            <div class="Project">
+                <div class="Item">
+                    <h1>YLIGEN</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Spacer">Fin du scroll</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="anims.js"></script>
+</body>
+</html>
