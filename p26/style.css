@@ -719,6 +719,11 @@ main.Projets ul li.active {
     font-weight: 400;
     line-height: 1.6;
 }
+
+main.Projets h2 {
+    text-align: center;
+    color: var(--One);
+}
 /* ------
   Albums Page
 ------ */
