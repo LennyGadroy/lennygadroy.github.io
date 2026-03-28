@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lenny Gadroy - Projects Sections</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <title>Lenny Gadroy | Portfolio - Étudiant UI / UX Designer</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
 <body>
   <header>
-    <nav></nav>
+    <nav>
+      <a class="logo" href="index.html" aria-label="Retour à l'accueil"><img src="" alt="Logo Lenny Gadroy"></a>
+      <ul>
+        <li class="active"><a href="index.html">Tableau de bord</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="reals.html">Réalisations</a></li>
+        <li><a href="albums.html">Albums</a></li>
+        <li><a href="skills.html">Compétences</a></li>
+        <li><a href="cv.html">Curriculum</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <main>
+  <main class="Index">
     <div class="Hero" id="Hero">
       <svg class="Highlights" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet">
         <rect class="HighlightShape" x="15" y="315" width="470" height="70" rx="35" data-word="Lenny"/>
@@ -31,7 +42,7 @@
         <span data-word="Designer">D</span><span data-word="Designer">E</span><span data-word="Designer">S</span><span data-word="Designer">I</span><span data-word="Designer">G</span><span data-word="Designer">N</span><span data-word="Designer">E</span><span data-word="Designer">R</span><span data-word="Gadroy">Y</span>
       </div>
     </div>
-    <section class="Ribbons">
+    <section class="Ribbons" id="Ribbons">
       <div class="Container">
         <div class="Strips Blue">
           <div class="Content">
@@ -54,15 +65,17 @@
     <section class="Scroll" id="Scroll">
         <div class="Wrapper">
             <p class="TextReveal" id="TextReveal">
-                This is cinematography in its raw form with practical lamps, soft falloff, and the presence of grain that fills each corner of the frame. Every room functions as a set and every posture becomes a composition. Light moves across furniture and faces, shaping scenes with a natural sense of depth.
+                Ceci est une expérience utilisateur couplée à une animation JS pour rendre un simple bloc de texte interactif avec l'internaute.
+                La simple utilisation du scroll donne l'impression à l'internaute de pouvoir contrôler le site à la seule force de ses doigts.
+                C'est aussi et surtout un moyen de se démarquer des autres portfolios "banales", tout en apportant de nouvelles fonctionnalités en terme d'UI et d'UX.
             </p>
         </div>
     </section>
-    <section class="Projects">
+    <section class="Projects" id="Projects">
       <div class="Container" id="Project1">
         <div class="Project">
           <div class="Item"><img src="img/img1.jpg" alt=""/></div>
-          <div class="Item ItemText"><h1>Unique</h1></div>
+          <div class="Item ItemText"><h1>Designs</h1></div>
           <div class="Item"><img src="img/img2.jpg" alt=""/></div>
           <div class="Item"><img src="img/img3.jpg" alt=""/></div>
           <div class="Item"><img src="img/img4.jpg" alt=""/></div>
@@ -73,14 +86,14 @@
           <div class="Item"><img src="img/img5.jpg" alt=""/></div>
           <div class="Item"><img src="img/img6.jpg" alt=""/></div>
           <div class="Item"><img src="img/img7.jpg" alt=""/></div>
-          <div class="Item ItemText"><h1>Release</h1></div>
+          <div class="Item ItemText"><h1>Uniques</h1></div>
           <div class="Item"><img src="img/img8.jpg" alt=""/></div>
         </div>
       </div>
       <div class="Container" id="Project3">
         <div class="Project">
           <div class="Item"><img src="img/img9.jpg" alt=""/></div>
-          <div class="Item ItemText"><h1>2500</h1></div>
+          <div class="Item ItemText"><h1>+250</h1></div>
           <div class="Item"><img src="img/img10.jpg" alt=""/></div>
           <div class="Item"><img src="img/img11.jpg" alt=""/></div>
           <div class="Item"><img src="img/img12.jpg" alt=""/></div>
@@ -91,12 +104,12 @@
           <div class="Item"><img src="img/img13.jpg" alt=""/></div>
           <div class="Item"><img src="img/img14.jpg" alt=""/></div>
           <div class="Item"><img src="img/img15.jpg" alt=""/></div>
-          <div class="Item ItemText"><h1>Rarity</h1></div>
+          <div class="Item ItemText"><h1>Créations</h1></div>
           <div class="Item"><img src="img/img16.jpg" alt=""/></div>
         </div>
       </div>
     </section>
-    <section class="MergeContainer">
+    <section class="Merge" id="Merge">
         <div class="ListContainer">
             <p class="ListText">You can</p>
             <ul class="List">
