@@ -1,0 +1,605 @@
+@font-face {
+    font-family: "myFont";
+    src: url("assets/myFont.ttf") format("truetype");
+}
+
+:root {
+    --One: #447794;
+    --OneRGB: 68, 119, 148;
+    --Two: #2D5B75;
+    --TwoRGB: 45, 91, 117;
+    --Three: #123249;
+    --ThreeRGB: 18, 50, 73;
+    --Four: #061222;
+    --FourRGB: 6, 18, 34;
+    --PureBlack: #000;
+    --PureBlackRGB: 0, 0, 0;
+    --PureWhite: #fff;
+    --PureWhiteRGB: 255, 255, 255;
+    --Font: 'MyFont', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: clip;
+    font-family: "myFont", sans-serif;
+}
+
+body::before {
+    z-index: -1;
+    content: "";
+    position: fixed;
+    inset: 0;
+    --dot-color: rgba(var(--FourRGB), 0.15);
+    --spacing: 24px;
+    --dot-size: 1.5px;
+    background-size: var(--spacing) var(--spacing);
+    background-position: top left;
+    background-repeat: repeat;
+    background-image:
+        radial-gradient(var(--dot-color) var(--dot-size),
+            transparent var(--dot-size));
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    mask-image:
+        radial-gradient(circle at top left,
+            #000 0%,
+            transparent 75%);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p {
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* ------
+  Index Page
+------ */
+main.Index section {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+
+.html.Lennouille,
+html.Lennouille body {
+    height: auto;
+}
+
+main.Index .Lennouille.LennouilleSmooth {
+    scroll-behavior: auto !important;
+}
+
+main.Index .Lennouille.LennouilleSmooth [data-Lennouille-prevent] {
+    overscroll-behavior: contain;
+}
+
+main.Index .Lennouille.LennouilleStopped {
+    overflow: hidden;
+}
+
+main.Index .Lennouille.LennouilleSmooth iframe {
+    pointer-events: none;
+}
+
+main.Index .Hero {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    aspect-ratio: 9 / 7;
+}
+
+main.Index .LetterGrid {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+main.Index .LetterGrid span {
+    display: flex;
+    color: #1a1a1a;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 3.5vw, 2.5rem);
+    font-weight: 400;
+    opacity: 0;
+    user-select: none;
+    transform:
+        translateY(10px);
+    transition:
+        all 0.3s ease;
+}
+
+main.Index .LetterGrid span.AnimLetter {
+    animation:
+        fadeInLetter 0.5s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+main.Index .LetterGrid span.LetterActive {
+    color: #447794;
+    font-weight: 700;
+}
+
+main.Index .LetterGrid span[data-word] {
+    cursor: pointer;
+}
+
+main.Index .Highlights {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+main.Index .HighlightShape {
+    fill: none;
+    stroke: #447794;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    transition:
+        all 0.3s ease;
+    animation:
+        drawCircle 1.2s cubic-bezier(0.8, 0, 0.2, 1) forwards;
+}
+
+main.Index .HighlightShape.AnimHighlight {
+    animation-name: drawCircle;
+}
+
+main.Index .HighlightShape.HighlightActive {
+    stroke-width: 12;
+    filter:
+        drop-shadow(0 0 5px rgba(68, 119, 148, 0.4));
+}
+
+main.Index .Ribbons {
+    z-index: 10;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    margin-top: 100px;
+    padding: 60px 0;
+}
+
+main.Index section.Ribbons>.Container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main.Index .Strips {
+    width: 110%;
+    position: absolute;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 12px 0;
+    box-shadow:
+        0 10px 20px rgba(var(--PureBlackRGB), 0.15);
+}
+
+main.Index .Blue {
+    z-index: 1;
+    background-color: var(--One);
+    color: var(--PureWhite);
+    transform:
+        rotate(-3deg) translateY(-10px);
+}
+
+main.Index .DarkBlue {
+    z-index: 2;
+    background-color: var(--Three);
+    color: var(--PureWhite);
+    transform:
+        rotate(2deg) translateY(10px);
+}
+
+main.Index .Strips .Content {
+    display: flex;
+    animation:
+        Strip 20s linear infinite;
+}
+
+main.Index .Strips .Content span {
+    padding: 0 20px;
+}
+
+main.Index .Strips .Content.ReverseAnim {
+    animation:
+        StripReverse 20s linear infinite;
+}
+
+main.Index section.Projects {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main.Index section.Projects .Container {
+    width: 125%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 1em;
+    gap: 1em;
+}
+
+main.Index .Project {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    gap: 1em;
+    transform:
+        translateY(-50%);
+}
+
+main.Index #Project1 .Project,
+main.Index #Project3 .Project {
+    left: -15%;
+}
+
+main.Index .Project .Item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.Index .Project .Item h1 {
+    font-size: 140px;
+    text-transform: uppercase;
+}
+
+main.Index .Project .Item.ItemText {
+    flex: 1.5;
+}
+
+main.Index .Scroll {
+    height: 400vh;
+    position: relative;
+    background-color: var(--Four);
+}
+
+main.Index .Wrapper {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.Index .TextReveal {
+    max-width: 900px;
+    color: var(--PureWhite);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+    padding: 20px;
+}
+
+main.Index .Word {
+    display: inline-block;
+    background-color: var(--Four);
+    color: transparent;
+    border-radius: 3px;
+    margin: 2px;
+    padding: 0 4px;
+    transition:
+        background-color 0.1s,
+        color 0.1s;
+}
+
+main.Index .Word.Revealed {
+    background-color: transparent;
+    color: var(--PureWhite);
+}
+
+main.Index .Merge {
+    max-width: 900px;
+    background-color: var(--PureBlack);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main.Index .ListContainer {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+}
+
+main.Index .ListText {
+    height: max-content;
+    position: sticky;
+    top: 50vh;
+    color: var(--PureWhite);
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-weight: 600;
+    margin: 0;
+    transform:
+        translateY(-50%);
+}
+
+main.Index .List {
+    list-style: none;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
+}
+
+main.Index .List li {
+    color: oklch(75% 0.2 calc(var(--i) * calc(360 / 15)));
+    line-height: 1.2;
+    opacity: 0.15;
+    margin-bottom: 10px;
+    transition:
+        opacity 0.3s ease;
+}
+
+@supports (animation-timeline: scroll()) {
+    main.Index .List li {
+        animation:
+            Bright both linear;
+        animation-timeline: view();
+        animation-range: cover calc(50% - 1.5rem) calc(50% + 1.5rem);
+    }
+}
+
+@keyframes fadeInLetter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes drawCircle {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes Strip {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes StripReverse {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes Bright {
+    0% {
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.15;
+    }
+}
+
+/* ------
+  Projets Page
+------ */
+main.Projets .Spacer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #555;
+}
+
+main.Projets .Projects {
+    display: flex;
+    flex-direction: column;
+    gap: 20vh;
+    padding: 10vh 0;
+}
+
+main.Projets .Container {
+    width: 100%;
+}
+
+main.Projets .Project {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main.Projets .Item h1 {
+    font-size: 5rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.Comparaisons {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    user-select: none;
+    background-color: var(--Four); 
+}
+
+.Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-right: 2px solid white;
+    background-color: var(--Four); 
+}
+
+.Comparaisons img.NewImage,
+.Overlay img.OldImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    object-position: center;
+}
+
+.OldImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: ew-resize;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.Slider::before {
+    content: '\25C0 \25B6';
+    color: white;
+    font-size: 12px;
+    letter-spacing: -1px;
+}
+
+main.Projets ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur mobile si besoin */
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+main.Projets ul li {
+    cursor: pointer;
+    padding: 10px 24px;
+    background-color: var(--Three);
+    color: var(--PureWhite);
+    border: 1px solid var(--One);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+main.Projets ul li:hover {
+    background-color: var(--Two);
+}
+
+/* Style de l'onglet sélectionné */
+main.Projets ul li.active {
+    background-color: var(--One);
+    border-color: var(--PureWhite);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ------
+  Albums Page
+------ */
+
+/* ------
+  CV Page
+------ */
+
+/* ------
+  Contact Page
+------ */
+
+/* ------
+  Responsive Design
+------ */
+@media (max-width: 900px) {
+    main.Index section.Projects {height: 100vh;}
+    main.Index section.Projects .Container {
+        width: 250%;
+        height: 150px;
+    }
+    main.Index #Project2 .Project,
+    main.Index #Project4 .Project {left: -35%;}
+    main.Index .Project .Item.ItemText {flex: 1;}
+    main.Index .Project .Item h1 {font-size: 60px;}
+}
