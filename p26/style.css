@@ -120,10 +120,76 @@ p {
     color: var(--One);
 }
 
-.NavLinks .chevron {
+.NavLinks .Chevron {
     font-size: 0.8rem;
     font-weight: 800;
     transform: scaleX(1.2);
+}
+
+.Dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.DropdownMenu {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background-color: var(--PureWhite);
+    min-width: 160px;
+    box-shadow: 0 8px 24px rgba(var(--PureBlackRGB), 0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    z-index: 1000;
+}
+
+.Dropdown:hover .DropdownMenu,
+.Dropdown:focus-within .DropdownMenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    top: 100%;
+}
+
+.DropdownMenu li {
+    width: 100%;
+}
+
+.DropdownMenu a {
+    padding: 12px 20px;
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--Four);
+    transition: all 0.2s ease;
+}
+
+.DropdownMenu a:hover {
+    background-color: rgba(var(--OneRGB), 0.1);
+    color: var(--One);
+    padding-left: 25px;
+}
+
+.Dropdown .Chevron {
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+}
+
+.Dropdown:hover .Chevron,
+.Dropdown:focus-within .Chevron {
+    transform: rotate(180deg);
 }
 
 .NavBtn {
