@@ -3,20 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Page Not Found | Portfolio</title>
-    <style>@font-face{font-family:Montserrat;src:url("assets/Montserrat.ttf") format("truetype")}@font-face{font-family:ArchivoBlack;src:url("assets/ArchivoBlack.ttf") format("truetype")}.Content,.Design{position:absolute;left:0;width:100%}.LayerTop,body{position:relative}.LayerBottom,.LayerMiddle{margin-top:-12vw;position:relative}:root{--bg-color:#111111;--text-color:#ffffff;--font-main:'Montserrat',sans-serif;--font-display:'ArchivoBlack',sans-serif}*{margin:0;padding:0;box-sizing:border-box}body{background-color:var(--bg-color);color:var(--text-color);font-family:var(--font-main);height:100vh;width:100vw;overflow:hidden}h1{font-size:2.5rem;line-height:1.1;font-weight:600;max-width:500px;margin-bottom:40px;letter-spacing:-.02em}.Content{top:0;padding:40px 60px;z-index:20}.Error{font-family:'Courier New',Courier,monospace;font-size:.75rem;color:#888;margin-bottom:30px;display:flex;align-items:center;gap:8px}.Error::before{content:'•';color:#fff}.BtnHome{display:inline-flex;align-items:center;padding:12px 24px;background-color:#262626;color:#fff;text-decoration:none;font-size:.9rem;transition:background .3s;border:1px solid transparent}.BtnHome:hover{background-color:#333;border-color:#444}.Arrow{margin-left:12px;font-size:.8rem;transform:translateY(-1px)}.Design{bottom:-8vw;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;z-index:1;user-select:none}.Layers{font-family:var(--font-display);font-size:33vw;line-height:.75;width:100%;text-align:center;transform:scaleX(1.5);white-space:nowrap;letter-spacing:-1.5vw}.LayerTop{color:#1a1a1a;z-index:1}.LayerMiddle{color:#3a3a3a;z-index:2}.LayerBottom{color:#e6e8eb;z-index:3}@media (max-width:768px){h1{font-size:1.8rem}.Content{padding:20px}.Design{bottom:-20vw}.Layers{font-size:40vw;transform:scaleX(1.2);letter-spacing:-2vw}.LayerBottom,.LayerMiddle{margin-top:-15vw}}</style>
+    <title>Lenny Gadroy | Portfolio - Contactez moi</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
 <body>
-    <div class="Content">
-        <div class="Error">404 ERROR. PAGE NOT FOUND</div>  
-        <h1>If you're reading this, something has gone terribly, terribly wrong.</h1>
-        <a href="index.html" class="BtnHome">Return home <span class="Arrow">↗</span></a>
-    </div>
-    <div class="Design">
-        <div class="Layers LayerTop">404</div>
-        <div class="Layers LayerMiddle">404</div>
-        <div class="Layers LayerBottom">404</div>
-    </div>
+    <header class="MainHeader">
+        <nav class="NavBar">
+            <a class="NavLogo" href="index.html" aria-label="Retour à l'accueil">
+                <img src="assets/icon.svg" alt="Logo de Lenny Gadroy" />
+            </a>
+            <ul class="NavLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="Dropdown">
+                    <a href="#!">Réalisations <span class="Chevron">▼</span></a>
+                    <ul class="DropdownMenu">
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="designs.html">Designs</a></li>
+                        <li><a href="code.html">Code</a></li>
+                        <li><a href="albums.html">Albums</a></li>
+                    </ul>
+                </li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="cv.html">Curriculum</a></li>
+            </ul>
+            <div class="NavBtn">
+                <a href="contact.html" class="BtnSolid">Me contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="Contact">
+        <h1 class="PageTitle sr-only">Contactez Lenny Gadroy - Recherche de stage en Développement Web</h1>
+        
+        <div class="ContactGrid">
+            <div class="ContactCol">
+                <div class="Panel">
+                    <h2 class="PanelTitle">Coordonnées</h2>
+                    <ul class="ContactList">
+                        <li><a href="mailto:lennygadroy@gmail.com?subject=Contact via Portfolio" class="ContactLink" itemprop="email">lennygadroy@gmail.com</a></li>
+                        <li><a href="tel:0652514919" class="ContactLink" itemprop="telephone">06 52 51 49 19</a></li>
+                        <hr class="Divider">
+                        <li><a href="https://github.com/LennyGadroy/" target="_blank" class="ContactLink">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/LennyGadroy" target="_blank" class="ContactLink">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" class="ContactLink">Instagram</a></li>
+                        <hr class="Divider">
+                        <li><span class="ContactInfo">Reims / Charleville-Mézières</span></li>
+                    </ul>
+                </div>
+                
+                <div class="Panel">
+                    <h2 class="PanelTitle">Statut du réseau</h2>
+                    <div class="StatusRow">
+                        <span class="StatusLabel">État du serveur</span>
+                        <span class="StatusOnline">En ligne</span>
+                    </div>
+                    <hr class="Divider">
+                    <div class="StatusRow">
+                        <span class="StatusLabel">Temps de réponse estimé :</span>
+                        <span class="StatusTime">&lt; 12h</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Panel ContactFormPanel" id="contact-form">
+                <h2 class="PanelTitle">Envoyer une Transmission</h2>
+                <form method="POST" action="https://formspree.io/f/xnnegzdy" class="Form">
+                    <div class="InputGroup">
+                        <input id="nom" type="text" name="nom" class="FormInput" required>
+                        <label for="nom" class="FormLabel">Nom</label>
+                    </div>
+                    <div class="InputGroup">
+                        <input id="email" type="email" name="email" class="FormInput" required>
+                        <label for="email" class="FormLabel">Email</label>
+                    </div>
+                    <div class="InputGroup">
+                        <input id="objet" type="text" name="objet" class="FormInput" required>
+                        <label for="objet" class="FormLabel">Objet</label>
+                    </div>
+                    <div class="InputGroup">
+                        <textarea id="message" name="message" rows="6" class="FormInput" required></textarea>
+                        <label for="message" class="FormLabel">Message</label>
+                    </div>
+                    <div class="FormActions">
+                        <button type="submit" class="BtnSolid" aria-label="Envoyer le message">Initialiser la Transmission</button>
+                        <button type="reset" class="BtnOutline" aria-label="Effacer le formulaire">Réinitialiser</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="FooterWrapper">
+        <div class="FooterBottom">
+            <p>&copy; 2026 Lenny Gadroy. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="anims.js"></script>
 </body>
 </html>
