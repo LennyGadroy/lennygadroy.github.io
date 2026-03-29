@@ -236,6 +236,90 @@ p {
     .NavLinks {display: none;}
     .NavBar {padding: 10px 20px;}
 }
+
+.MainFooter {
+    background-color: var(--Four);
+    color: var(--PureWhite);
+    padding: 60px 20px 20px;
+    font-family: "Montserrat", sans-serif;
+    margin-top: auto;
+}
+
+.FooterContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(var(--PureWhiteRGB), 0.1);
+}
+
+.FooterLogo {
+    font-family: "myFont", sans-serif;
+    font-size: 1.8rem;
+    color: var(--One);
+    margin-bottom: 15px;
+}
+
+.FooterDesc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #A0B3C1;
+    text-transform: none;
+}
+
+.FooterTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--PureWhite);
+}
+
+.FooterLinks {
+    list-style: none;
+    padding: 0;
+}
+
+.FooterLinks li {
+    margin-bottom: 12px;
+}
+
+.FooterLinks a {
+    color: #A0B3C1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.FooterLinks a:hover {
+    color: var(--One);
+    padding-left: 5px;
+}
+
+.FooterBottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #6C8293;
+}
+
+.FooterBottom p {
+    text-transform: none;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .FooterContainer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .FooterLinks a:hover {
+        padding-left: 0;
+        color: var(--One);
+    }
+}
 /* ------
   Index Page
 ------ */
