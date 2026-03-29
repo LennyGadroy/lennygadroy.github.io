@@ -66,6 +66,116 @@ p {
     text-transform: uppercase;
 }
 
+.MainHeader {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1200px;
+    z-index: 1000;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--PureWhite);
+    padding: 10px 15px 10px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px rgba(var(--PureBlackRGB), 0.25);
+}
+
+.NavLogo {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--Four);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.NavLogo img {
+    width: 36px;
+    height: 36px;
+}
+
+.NavLinks {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.NavLinks a {
+    text-decoration: none;
+    color: var(--Four);
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.NavLinks a:hover,
+.NavLinks a.active {
+    color: var(--One);
+}
+
+.NavLinks .chevron {
+    font-size: 0.8rem;
+    font-weight: 800;
+    transform: scaleX(1.2);
+}
+
+.NavBtn {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.BtnOutline {
+    text-decoration: none;
+    color: var(--Four);
+    border: 2px solid var(--Four);
+    padding: 8px 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(var(--PureBlackRGB), 0.25);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.BtnOutline:hover {
+    background-color: var(--Four);
+    color: var(--PureWhite);
+}
+
+.BtnSolid {
+    text-decoration: none;
+    color: var(--PureWhite);
+    background-color: var(--One);
+    padding: 10px 24px;
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(var(--PureBlackRGB), 0.25);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.BtnSolid:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 950px) {
+    .NavLinks {display: none;}
+    .NavBar {padding: 10px 20px;}
+}
 /* ------
   Index Page
 ------ */
@@ -80,7 +190,10 @@ html.Lennouille body {
     height: auto;
 }
 
+
 .Hero {
+    padding-top: 100px;
+    box-sizing: content-box;
     width: 100%;
     max-width: 900px;
     position: relative;
@@ -89,6 +202,7 @@ html.Lennouille body {
     align-items: center;
     font-family: sans-serif;
     aspect-ratio: 9 / 7;
+    margin: 0 auto;
 }
 
 .LetterGrid {
@@ -133,9 +247,9 @@ html.Lennouille body {
 .Highlights {
     z-index: 1;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 100px);
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
     pointer-events: none;
 }
