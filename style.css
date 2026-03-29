@@ -929,3 +929,23 @@ main.Projets h2 {
     .ProjectShowcase {flex-direction: column;}
     .ShowcaseMenu {min-width: 100%;}
 }
+
+
+
+
+
+
+
+
+
+/* ------
+  Pop-up WIP
+------ */
+.WipPopup {position: fixed;bottom: 30px;right: 30px;width: 320px;background-color: var(--PureWhite);border: 2px solid var(--One);border-radius: 12px;box-shadow: 0 8px 24px rgba(var(--PureBlackRGB), 0.2);z-index: 9999;padding: 25px 20px 20px 20px;font-family: "Montserrat", sans-serif;animation: slideInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;}
+.WipPopup .CloseBtn {position: absolute;top: 5px;right: 12px;background: none;border: none;font-size: 1.8rem;color: var(--Four);cursor: pointer;transition: color 0.3s ease;}
+.WipPopup .CloseBtn:hover {color: var(--One);}
+.WipContent .WipTitle {font-size: 1.1rem;font-weight: 700;color: var(--Four);margin-bottom: 10px;}
+.WipContent .WipText {font-size: 0.9rem;font-weight: 500;color: #555;margin-bottom: 15px;line-height: 1.5;}
+.WipPopup .WipBtn {display: inline-block;text-align: center;width: 100%;padding: 10px 0;font-size: 0.9rem;}
+@keyframes slideInUp {from {transform: translateY(150%);opacity: 0;}to {transform: translateY(0);opacity: 1;}}
+@media (max-width: 600px) {.WipPopup {bottom: 20px;right: 20px;left: 20px;width: auto;}}
