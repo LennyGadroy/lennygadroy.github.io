@@ -52,18 +52,18 @@
       <div class="Container">
         <div class="Strips Blue">
           <div class="Content">
-            <span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span>
+            <span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span>
           </div>
           <div class="Content">
-            <span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span><span>+3 Années d'Expériences ✦ </span>
+            <span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span><span>+2 Années d'Expériences ✦ </span>
           </div>
         </div>
         <div class="Strips DarkBlue">
           <div class="Content ReverseAnim">
-            <span>+50 Projets réalisés &nbsp;➔&nbsp; 99% retours positifs &nbsp;➔&nbsp;</span><span>+50 Projets réalisés &nbsp;➔&nbsp; 99% retours positifs &nbsp;➔&nbsp;</span><span>+50 Projets réalisés &nbsp;➔&nbsp; 99% retours positifs &nbsp;➔&nbsp;</span><span>+50 Projets réalisés &nbsp;➔&nbsp; 99% retours positifs &nbsp;➔&nbsp;</span>
+            <span>+20 Projets réalisés &nbsp;➔&nbsp; 98% retours positifs &nbsp;➔&nbsp;</span><span>+20 Projets réalisés &nbsp;➔&nbsp; 98% retours positifs &nbsp;➔&nbsp;</span><span>+20 Projets réalisés &nbsp;➔&nbsp; 98% retours positifs &nbsp;➔&nbsp;</span><span>+20 Projets réalisés &nbsp;➔&nbsp; 98% retours positifs &nbsp;➔&nbsp;</span>
           </div>
           <div class="Content ReverseAnim">
-            <span>+50 Projets réalisés &nbsp;➔&nbsp; 99% retours positifs &nbsp;➔&nbsp;</span><span>+50 Projets réalisés &nbsp;➔&nbsp; 99% retours positifs &nbsp;➔&nbsp;</span><span>+50 Projets réalisés &nbsp;➔&nbsp; 99% retours positifs &nbsp;➔&nbsp;</span><span>+50 Projets réalisés &nbsp;➔&nbsp; 99% retours positifs &nbsp;➔&nbsp;</span>
+            <span>+20 Projets réalisés &nbsp;➔&nbsp; 98% retours positifs &nbsp;➔&nbsp;</span><span>+20 Projets réalisés &nbsp;➔&nbsp; 98% retours positifs &nbsp;➔&nbsp;</span><span>+20 Projets réalisés &nbsp;➔&nbsp; 98% retours positifs &nbsp;➔&nbsp;</span><span>+20 Projets réalisés &nbsp;➔&nbsp; 98% retours positifs &nbsp;➔&nbsp;</span>
           </div>
         </div>
       </div>
@@ -139,30 +139,6 @@
     </section>
   </main>
   <footer></footer>
-  <script>
-    const textElement = document.getElementById('TextReveal');
-    const textContent = textElement.innerText;
-      textElement.innerHTML = textContent.split(' ').map(Word => {return `<span class="Word">${Word}</span>`;}).join(' ');
-
-    const Words = document.querySelectorAll('.Word');
-    const Scroll = document.getElementById('Scroll');
-    function handleScroll() {
-        if(!Scroll) return;
-        const ScrollTop = Scroll.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        const scrollableHeight = Scroll.offsetHeight - windowHeight;
-        let percentage = -ScrollTop / scrollableHeight;
-          percentage = Math.max(0, Math.min(1, percentage));
-        
-        const WordsToReveal = Math.floor(percentage * Words.length);
-        Words.forEach((Word, index) => {
-            if (index < WordsToReveal) {Word.classList.add('Revealed');}
-            else {Word.classList.remove('Revealed');}
-        });
-    }
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-  </script>
   <script src="anims.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>

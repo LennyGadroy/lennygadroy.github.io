@@ -1,7 +1,6 @@
-@font-face {
-    font-family: "myFont";
-    src: url("assets/myFont.ttf") format("truetype");
-}
+@font-face {font-family: "myFont"; src: url("assets/myFont.ttf") format("truetype");}
+@font-face {font-family: "Montserrat"; src: url("assets/Montserrat.ttf") format("truetype");}
+@font-face {font-family: "MontserratItalic"; src: url("assets/Montserrat_Italic.ttf") format("truetype");}
 
 :root {
     --One: #447794;
@@ -29,7 +28,7 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow-x: clip;
-    font-family: "myFont", sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 body::before {
@@ -37,21 +36,16 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    --dot-color: rgba(var(--FourRGB), 0.15);
-    --spacing: 24px;
-    --dot-size: 1.5px;
-    background-size: var(--spacing) var(--spacing);
+    --DotColor: rgba(var(--FourRGB), 0.15);
+    --Spacing: 24px;
+    --DotSize: 1.5px;
+    background-size: var(--Spacing) var(--Spacing);
     background-position: top left;
     background-repeat: repeat;
-    background-image:
-        radial-gradient(var(--dot-color) var(--dot-size),
-            transparent var(--dot-size));
+    background-image: radial-gradient(var(--DotColor) var(--DotSize),transparent var(--DotSize));
     mask-size: 100% 100%;
     mask-repeat: no-repeat;
-    mask-image:
-        radial-gradient(circle at top left,
-            #000 0%,
-            transparent 75%);
+    mask-image: radial-gradient(circle at top left, #000 0%, transparent 75%);
 }
 
 img {
@@ -200,7 +194,7 @@ html.Lennouille body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     aspect-ratio: 9 / 7;
     margin: 0 auto;
 }
@@ -300,7 +294,7 @@ main.Index .Ribbons {
     overflow: hidden;
     background: transparent;
     margin-top: 100px;
-    padding: 60px 0;
+    padding: 90px 0;
 }
 
 main.Index section.Ribbons>.Container {
@@ -316,14 +310,14 @@ main.Index .Strips {
     width: 110%;
     position: absolute;
     display: flex;
-    font-family: sans-serif;
+    font-family: "myFont", sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
     text-transform: uppercase;
     white-space: nowrap;
     padding: 12px 0;
     box-shadow:
-        0 10px 20px rgba(var(--PureBlackRGB), 0.15);
+        0 4px 4px rgba(var(--PureBlackRGB), 0.25);
 }
 
 main.Index .Blue {
@@ -362,6 +356,7 @@ main.Index section.Projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: "myFont", sans-serif;
 }
 
 main.Index section.Projects .Container {
@@ -411,6 +406,7 @@ main.Index .Scroll {
     height: 400vh;
     position: relative;
     background-color: var(--Four);
+    font-family: "myFont", sans-serif;
 }
 
 main.Index .Wrapper {
@@ -457,6 +453,7 @@ main.Index .Merge {
     background-color: var(--PureBlack);
     margin: 0 auto;
     padding: 0 20px;
+    font-family: "myFont", sans-serif;
 }
 
 main.Index .ListContainer {
@@ -700,7 +697,7 @@ main.Projets ul li.active {
     width: 100%;
     max-width: 1100px;
     margin: 4rem auto;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .ProjectShowcase svg {
