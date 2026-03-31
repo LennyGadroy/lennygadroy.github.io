@@ -225,6 +225,7 @@ p {
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;
+    border: none;
 }
 
 .BtnSolid:hover {
@@ -1158,8 +1159,7 @@ main.CV a.BtnExperience {text-decoration: none;}
   Contact Page
 ------ */
 main.Contact {
-    max-width: 1200px;
-    margin: 120px auto 60px auto;
+    margin: 30px auto 30px auto;
     padding: 0 20px;
     font-family: "Montserrat", sans-serif;
     color: var(--Four);
@@ -1288,7 +1288,7 @@ main.Contact {
 
 .InputGroup {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     width: 100%;
 }
 
