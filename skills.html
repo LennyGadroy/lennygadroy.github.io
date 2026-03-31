@@ -3,20 +3,780 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Page Not Found | Portfolio</title>
-    <style>@font-face{font-family:Montserrat;src:url("assets/Montserrat.ttf") format("truetype")}@font-face{font-family:ArchivoBlack;src:url("assets/ArchivoBlack.ttf") format("truetype")}.Content,.Design{position:absolute;left:0;width:100%}.LayerTop,body{position:relative}.LayerBottom,.LayerMiddle{margin-top:-12vw;position:relative}:root{--bg-color:#111111;--text-color:#ffffff;--font-main:'Montserrat',sans-serif;--font-display:'ArchivoBlack',sans-serif}*{margin:0;padding:0;box-sizing:border-box}body{background-color:var(--bg-color);color:var(--text-color);font-family:var(--font-main);height:100vh;width:100vw;overflow:hidden}h1{font-size:2.5rem;line-height:1.1;font-weight:600;max-width:500px;margin-bottom:40px;letter-spacing:-.02em}.Content{top:0;padding:40px 60px;z-index:20}.Error{font-family:'Courier New',Courier,monospace;font-size:.75rem;color:#888;margin-bottom:30px;display:flex;align-items:center;gap:8px}.Error::before{content:'•';color:#fff}.BtnHome{display:inline-flex;align-items:center;padding:12px 24px;background-color:#262626;color:#fff;text-decoration:none;font-size:.9rem;transition:background .3s;border:1px solid transparent}.BtnHome:hover{background-color:#333;border-color:#444}.Arrow{margin-left:12px;font-size:.8rem;transform:translateY(-1px)}.Design{bottom:-8vw;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;z-index:1;user-select:none}.Layers{font-family:var(--font-display);font-size:33vw;line-height:.75;width:100%;text-align:center;transform:scaleX(1.5);white-space:nowrap;letter-spacing:-1.5vw}.LayerTop{color:#1a1a1a;z-index:1}.LayerMiddle{color:#3a3a3a;z-index:2}.LayerBottom{color:#e6e8eb;z-index:3}@media (max-width:768px){h1{font-size:1.8rem}.Content{padding:20px}.Design{bottom:-20vw}.Layers{font-size:40vw;transform:scaleX(1.2);letter-spacing:-2vw}.LayerBottom,.LayerMiddle{margin-top:-15vw}}</style>
+    <meta name="description" content="Découvrez les compétences techniques et soft skills de Lenny Gadroy via le Skills Shop.">
+    <title>Lenny Gadroy | Portfolio - Compétences</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg" href="assets/icon.svg">
+    <style>
+        /* --- Styles spécifiques au Skills Shop (DA Portfolio) --- */
+        main.SkillsPage {
+            padding: 120px 5% 50px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            color: var(--Four);
+        }
+
+        .ShopHeader {
+            background-color: var(--PureWhite);
+            border-radius: 12px;
+            padding: 20px 30px;
+            box-shadow: 0 4px 10px rgba(var(--PureBlackRGB), 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .HudStats {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .StatItem {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--Four);
+        }
+
+        .StatItem span {
+            color: var(--One);
+            font-size: 1.5rem;
+        }
+
+        .XpContainer {
+            min-width: 200px;
+        }
+
+        .XpBarBg {
+            width: 100%;
+            height: 10px;
+            background-color: rgba(var(--FourRGB), 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+
+        .XpFill {
+            height: 100%;
+            background-color: var(--One);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .AdminControls button {
+            background: transparent;
+            border: 1px solid var(--Four);
+            color: var(--Four);
+            padding: 5px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        .AdminControls button:hover {
+            background-color: var(--Four);
+            color: var(--PureWhite);
+        }
+
+        .ShopLayout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 900px) {
+            .ShopLayout { grid-template-columns: 1fr; }
+        }
+
+        .Panel {
+            background-color: var(--PureWhite);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(var(--PureBlackRGB), 0.1);
+            margin-bottom: 30px;
+        }
+
+        .PanelTitle {
+            font-size: 1.5rem;
+            color: var(--One);
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .FilterBar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .FilterBtn {
+            border: none;
+            background: rgba(var(--OneRGB), 0.1);
+            color: var(--Four);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .FilterBtn.active, .FilterBtn:hover {
+            background: var(--One);
+            color: var(--PureWhite);
+        }
+
+        .SortSelect {
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--One);
+            color: var(--Four);
+            font-weight: 600;
+            outline: none;
+            margin-left: auto;
+        }
+
+        .CatalogGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .SkillCard {
+            border: 1px solid rgba(var(--FourRGB), 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: var(--PureWhite);
+        }
+
+        .SkillCard:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(var(--PureBlackRGB), 0.1);
+        }
+
+        .SkillCard.locked {
+            opacity: 0.6;
+            background-color: rgba(var(--FourRGB), 0.05);
+        }
+
+        .SkillCard h4 {
+            color: var(--Four);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .LvlBadge {
+            background: var(--One);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        .SkillDesc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .SkillFooter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(var(--FourRGB), 0.1);
+            padding-top: 15px;
+        }
+
+        .Price { font-weight: 800; color: var(--One); }
+
+        .BtnAdd, .BtnBuy {
+            background: var(--Four);
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        
+        .BtnBuy { background: var(--One); margin-left: 5px; }
+        .BtnAdd:hover { background: var(--Two); }
+
+        .DropZone {
+            border: 2px dashed rgba(var(--OneRGB), 0.5);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            color: rgba(var(--FourRGB), 0.6);
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: background 0.2s;
+        }
+
+        .DropZone.drag-over { background: rgba(var(--OneRGB), 0.05); }
+
+        .CartItem {
+            display: flex;
+            justify-content: space-between;
+            background: rgba(var(--FourRGB), 0.05);
+            padding: 10px 15px;
+            border-radius: 8px;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .BtnRemove {
+            background: none;
+            border: none;
+            color: red;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .BtnCheckout {
+            width: 100%;
+            background: var(--One);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .BtnCheckout:hover { background: var(--Two); }
+
+        .AcquiredGrid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .AcquiredBadge {
+            background: rgba(var(--OneRGB), 0.1);
+            color: var(--One);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--One);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .MiningForm {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .MiningForm input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(var(--FourRGB), 0.2);
+            outline: none;
+        }
+
+        /* Modales et Notifications */
+        .ToastContainer { position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
+        .Toast { background: var(--Four); color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: opacity 0.3s; font-weight: 600; }
+        .Toast.success { border-left: 4px solid #2ecc71; }
+        .Toast.error { border-left: 4px solid #e74c3c; }
+
+        .ModalOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 9999; }
+        .ModalBox { background: white; padding: 30px; border-radius: 12px; text-align: center; max-width: 400px; width: 90%; }
+        .ModalActions { display: flex; gap: 15px; justify-content: center; margin-top: 20px; }
+        .ModalActions button { padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; border: none; }
+        .BtnCancel { background: #eee; color: #333; }
+        .BtnConfirm { background: var(--One); color: white; }
+
+        /* Hack Game Restylisé */
+        .HackGame { display: none; position: fixed; inset: 0; background: rgba(var(--FourRGB), 0.95); z-index: 10000; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        .HackGrid { display: grid; grid-template-columns: repeat(5, 60px); gap: 10px; margin: 30px 0; }
+        .HackCell { width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 8px; cursor: pointer; transition: background 0.1s; }
+        .HackCell.target { background: var(--One); }
+        .BonusEntity { position: fixed; width: 40px; height: 40px; background: var(--One); color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; cursor: pointer; z-index: 9998; box-shadow: 0 0 15px var(--One); animation: pulse 1s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+    </style>
 </head>
 <body>
-    <div class="Content">
-        <div class="Error">404 ERROR. PAGE NOT FOUND</div>  
-        <h1>If you're reading this, something has gone terribly, terribly wrong.</h1>
-        <a href="index.html" class="BtnHome">Return home <span class="Arrow">↗</span></a>
+    <header class="MainHeader">
+        <nav class="NavBar">
+            <a class="NavLogo" href="index.html" aria-label="Retour à l'accueil">
+                <img src="assets/icon.svg" alt="Logo de Lenny Gadroy" />
+            </a>
+            <ul class="NavLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="Dropdown">
+                    <a href="#!">Réalisations <span class="Chevron">▼</span></a>
+                    <ul class="DropdownMenu">
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="designs.html">Designs</a></li>
+                        <li><a href="code.html">Code</a></li>
+                        <li><a href="albums.html">Albums</a></li>
+                    </ul>
+                </li>
+                <li><a href="skills.html" class="active">Compétences</a></li>
+                <li><a href="cv.html">Curriculum</a></li>
+            </ul>
+            <div class="NavBtn">
+                <a href="contact.html" class="BtnSolid">Me contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="SkillsPage">
+        <div class="ShopHeader">
+            <div class="HudStats">
+                <div class="StatItem">SOLDE: <span id="credit-amount">0</span> CR</div>
+                <div class="StatItem">LVL <span id="level-display">1</span></div>
+                <div class="XpContainer">
+                    <div class="XpBarBg"><div class="XpFill" id="xp-bar"></div></div>
+                    <div style="font-size: 0.85rem; text-align: right; color: #666;">
+                        XP: <span id="xp-amount">0</span> / <span id="xp-next">100</span>
+                    </div>
+                </div>
+            </div>
+            <div class="AdminControls">
+                <button id="admin">Admin</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+
+        <div class="ShopLayout">
+            <div class="LeftCol">
+                <div class="Panel">
+                    <h2 class="PanelTitle">Catalogue des compétences</h2>
+                    <div class="FilterBar">
+                        <button class="FilterBtn active" data-filter="all">Tous</button>
+                        <button class="FilterBtn" data-filter="dev">Développement</button>
+                        <button class="FilterBtn" data-filter="design">Design</button>
+                        <button class="FilterBtn" data-filter="social">Communication</button>
+                        <button class="FilterBtn" data-filter="soft">Soft Skills</button>
+                        <select id="sort" class="SortSelect">
+                            <option value="level">Trier par Niveau</option>
+                            <option value="price-asc">Prix Croissant</option>
+                            <option value="price-desc">Prix Décroissant</option>
+                        </select>
+                    </div>
+                    <div id="catalog-list" class="CatalogGrid"></div>
+                </div>
+            </div>
+
+            <div class="RightCol">
+                <div class="Panel">
+                    <h2 class="PanelTitle">Panier d'installation</h2>
+                    <div id="zone" class="DropZone">
+                        <p>Glissez les compétences ici</p>
+                    </div>
+                    <div style="margin-top: 20px; text-align: right;">
+                        <p style="font-size: 1.2rem; font-weight: bold; color: var(--Four);">
+                            Total: <span id="cart" style="color: var(--One);">0</span> CR
+                        </p>
+                        <button id="btn-checkout" class="BtnCheckout">Installer la sélection</button>
+                    </div>
+                </div>
+
+                <div class="Panel">
+                    <h2 class="PanelTitle">Compétences acquises</h2>
+                    <div id="acquired-list" class="AcquiredGrid"></div>
+                </div>
+
+                <div class="Panel">
+                    <h2 class="PanelTitle">Minage de Crédits</h2>
+                    <div class="MiningForm">
+                        <label for="work-time" style="font-weight: 600;">Temps de travail alloué (Heures) :</label>
+                        <input type="number" id="work-time" min="1" max="10" value="1">
+                        <button id="btn-produce" class="BtnCheckout" style="margin-top: 0;">Lancer le Minage</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="ToastContainer" id="toast-container"></div>
+    
+    <div id="confirm-modal" class="ModalOverlay">
+        <div class="ModalBox">
+            <h3 style="color: var(--Four); font-size: 1.5rem; margin-bottom: 15px;">Confirmation</h3>
+            <p>Voulez-vous installer <strong id="modal-item-name" style="color:var(--One)">...</strong> ?</p>
+            <p style="font-size: 1.5rem; margin: 20px 0; font-weight: bold;"><span id="modal-item-price">0</span> CR</p>
+            <div class="ModalActions">
+                <button id="no" class="BtnCancel">Annuler</button>
+                <button id="yes" class="BtnConfirm">Confirmer</button>
+            </div>
+        </div>
     </div>
-    <div class="Design">
-        <div class="Layers LayerTop">404</div>
-        <div class="Layers LayerMiddle">404</div>
-        <div class="Layers LayerBottom">404</div>
+
+    <div id="game" class="HackGame">
+        <h2 style="color: var(--One); font-size: 2rem; margin-bottom: 10px;">OPPORTUNITÉ DÉTECTÉE</h2>
+        <p>Cliquez rapidement sur les cibles bleues !</p>
+        <div style="font-size: 2.5rem; font-weight: bold; margin-top: 20px;" id="timer">5.00</div>
+        <div class="HackGrid" id="grid"></div>
     </div>
+
+    <script src="skills.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+    const CATALOG = [
+        {id: 1, name: "Anglais B1", price: 90, cat: "soft", level: 1, desc: "Communication orale et écrite internationale", unlock: null},
+        {id: 2, name: "HTML 5", price: 100, cat: "dev", level: 1, desc: "Structuration sémantique des pages web", unlock: null},
+        {id: 3, name: "CSS 3", price: 150, cat: "dev", level: 1, desc: "Maitrise de la mise en page avec utilisation des Flexbox ou Grid", unlock: null},
+        {id: 4, name: "JavaScript", price: 250, cat: "dev", level: 2, desc: "Maitrise de la syntaxe et de l’utilisation de Vanilla JS", unlock: null},
+        {id: 5, name: "Node.js", price: 450, cat: "dev", level: 5, desc: "Développement d'architectures backend", unlock: null},
+        {id: 6, name: "SEO", price: 300, cat: "soft", level: 4, desc: "Optimisation du référencement naturel", unlock: "https://app-eu1.hubspot.com/academy/achievements/9mx1cscc/en/1/lenny-gadroy/seo"},
+        {id: 7, name: "Figma", price: 500, cat: "design", level: 2, desc: "Conception de systèmes de design et prototypage d'interfaces UI/UX", unlock: null},
+        {id: 8, name: "Canva", price: 350, cat: "design", level: 3, desc: "Création rapide de visuels de marque et supports marketing", unlock: null},
+        {id: 9, name: "Notion", price: 300, cat: "soft", level: 3, desc: "Architecture de bases de données et gestion d'espaces collaboratifs", unlock: null},
+        {id: 10, name: "Trello", price: 120, cat: "soft", level: 5, desc: "Organisation des flux de travail", unlock: null},
+        {id: 11, name: "Slack", price: 120, cat: "soft", level: 4, desc: "Optimisation de la communication asynchrone", unlock: null},
+        {id: 12, name: "CapCut", price: 180, cat: "social", level: 3, desc: "Montage dynamique et post-production", unlock: null},
+        {id: 13, name: "SCRL", price: 200, cat: "social", level: 2, desc: "Création de narrations visuelles et carrousels", unlock: "https://www.instagram.com/p/DR65ixoja6j/"},
+        {id: 14, name: "Agile / Scrum", price: 120, cat: "soft", level: 7, desc: "Pilotage de projets itératifs", unlock: null},
+        {id: 19, name: "Suite Adobe", price: 500, cat: "design", level: 10, desc: "Expertise sur l'écosystème Adobe (Xd, Ai, Id)", unlock: null},
+    ];
+
+    const initialState = {credits: 200, xp: 0, level: 1, cart: [], acquired: []};
+    let appState = JSON.parse(localStorage.getItem('LennouilleShop')) || initialState;
+    let currentFilter = 'all';
+    let currentSort = 'level';
+
+    const dom = {
+        credits: document.getElementById('credit-amount'),
+        xpBar: document.getElementById('xp-bar'),
+        xpAmount: document.getElementById('xp-amount'),
+        xpNext: document.getElementById('xp-next'),
+        lvlDisplay: document.getElementById('level-display'),
+        catalog: document.getElementById('catalog-list'),
+        Zone: document.getElementById('zone'),
+        Cart: document.getElementById('cart'),
+        acquired: document.getElementById('acquired-list'),
+        filterBtns: document.querySelectorAll('.FilterBtn'), // Correction du sélecteur
+        Sort: document.getElementById('sort'),
+        modal: document.getElementById('confirm-modal'),
+        Yes: document.getElementById('yes'),
+        No: document.getElementById('no'),
+        hackGame: document.getElementById('game'),
+        hackGrid: document.getElementById('grid'),
+        hackTimer: document.getElementById('timer')
+    };
+
+    let pendingBuyId = null;
+
+    function notify(msg, type = 'success') {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = `Toast ${type}`;
+        toast.innerHTML = `<span>${msg}</span>`;
+        container.appendChild(toast);
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 300);
+        }, 3000);
+    }
+
+    function saveState() {
+        localStorage.setItem('LennouilleShop', JSON.stringify(appState));
+        render();
+    }
+
+    function getNextLevelXp(lvl) {
+        return lvl * 100;
+    }
+
+    function addXP(amount) {
+        appState.xp += amount;
+        const next = getNextLevelXp(appState.level);
+        if (appState.xp >= next) {
+            appState.xp -= next;
+            appState.level++;
+            notify(`LEVEL UP! Vous êtes niveau ${appState.level}`, 'success');
+        }
+        saveState();
+    }
+
+    function render() {
+        dom.credits.textContent = appState.credits;
+        dom.lvlDisplay.textContent = appState.level;
+        const nextXp = getNextLevelXp(appState.level);
+        dom.xpAmount.textContent = appState.xp;
+        dom.xpNext.textContent = nextXp;
+        dom.xpBar.style.width = `${(appState.xp / nextXp) * 100}%`;
+        dom.catalog.innerHTML = '';
+
+        let filtered = CATALOG.filter(i => {
+            if (appState.acquired.includes(i.id)) return false;
+            return currentFilter === 'all' || i.cat === currentFilter;
+        });
+
+        filtered.sort((a, b) => {
+            if (currentSort === 'price-asc') return a.price - b.price;
+            if (currentSort === 'price-desc') return b.price - a.price;
+            if (currentSort === 'level') return a.level - b.level;
+        });
+
+        filtered.forEach(item => {
+            const isLocked = item.level > appState.level;
+            const inCart = appState.cart.includes(item.id);
+
+            const div = document.createElement('div');
+            div.className = `SkillCard ${isLocked ? 'locked' : ''}`;
+            if (!isLocked) {
+                div.draggable = true;
+                div.addEventListener('dragstart', (e) => e.dataTransfer.setData('text/plain', item.id));
+            }
+
+            div.innerHTML = `
+                <h4>${item.name} <span class="LvlBadge">Lvl ${item.level}</span></h4>
+                <p class="SkillDesc">${item.desc}</p>
+                <div class="SkillFooter">
+                    <span class="Price">${item.price} CR</span>
+                    <div>
+                        ${isLocked ? '<span style="font-size:0.85rem; color:#888;">Niveau insuffisant</span>' : ''}
+                        ${!isLocked && !inCart ? `
+                            <button class="BtnAdd" onclick="addToCart(${item.id})">+</button>
+                            <button class="BtnBuy" onclick="openBuyModal(${item.id})">Acheter</button>
+                        ` : ''}
+                        ${inCart ? '<span style="font-size:0.85rem; color:var(--One); font-weight:bold;">Dans le panier</span>' : ''}
+                    </div>
+                </div>
+            `;
+            dom.catalog.appendChild(div);
+        });
+
+        const cartItems = CATALOG.filter(i => appState.cart.includes(i.id));
+        dom.Zone.innerHTML = cartItems.length ? '' : '<p>Glissez les compétences ici</p>';
+        cartItems.forEach(item => {
+            const el = document.createElement('div');
+            el.className = 'CartItem';
+            el.innerHTML = `<span>${item.name}</span> <span>${item.price} CR <button class="BtnRemove" onclick="removeFromCart(${item.id})">×</button></span>`;
+            dom.Zone.appendChild(el);
+        });
+        dom.Cart.textContent = cartItems.reduce((acc, i) => acc + i.price, 0);
+
+        dom.acquired.innerHTML = '';
+        appState.acquired.forEach(id => {
+            const item = CATALOG.find(i => i.id === id);
+            if (item) {
+                const badge = document.createElement('div');
+                badge.className = 'AcquiredBadge';
+                let linkHtml = item.unlock ? `<a href="${item.unlock}" target="_blank" style="color:var(--Four); margin-left:5px;">🔗</a>` : '';
+                badge.innerHTML = `✓ ${item.name} ${linkHtml}`;
+                dom.acquired.appendChild(badge);
+            }
+        });
+    }
+
+    dom.filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            dom.filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.dataset.filter;
+            render();
+        });
+    });
+
+    dom.Sort.addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        render();
+    });
+
+    window.addToCart = (id) => {
+        if (!appState.cart.includes(id)) {
+            appState.cart.push(id);
+            saveState();
+        }
+    };
+    
+    window.removeFromCart = (id) => {
+        appState.cart = appState.cart.filter(x => x !== id);
+        saveState();
+    };
+
+    dom.Zone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dom.Zone.classList.add('drag-over');
+    });
+
+    dom.Zone.addEventListener('dragleave', () => dom.Zone.classList.remove('drag-over'));
+    dom.Zone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dom.Zone.classList.remove('drag-over');
+        const id = parseInt(e.dataTransfer.getData('text/plain'));
+        if (id) addToCart(id);
+    });
+
+    document.getElementById('btn-checkout').addEventListener('click', () => {
+        const cartItems = CATALOG.filter(i => appState.cart.includes(i.id));
+        const total = cartItems.reduce((acc, i) => acc + i.price, 0);
+        if (total === 0) return;
+
+        if (appState.credits >= total) {
+            appState.credits -= total;
+            appState.acquired.push(...appState.cart);
+            addXP(total);
+            appState.cart = [];
+            notify("Compétences installées avec succès !");
+            saveState();
+        } else {
+            notify("Erreur : Fonds insuffisants", "error");
+        }
+    });
+
+    window.openBuyModal = (id) => {
+        pendingBuyId = id;
+        const item = CATALOG.find(i => i.id === id);
+        document.getElementById('modal-item-name').textContent = item.name;
+        document.getElementById('modal-item-price').textContent = item.price;
+        dom.modal.style.display = 'flex';
+    };
+
+    dom.No.addEventListener('click', () => dom.modal.style.display = 'none');
+    dom.Yes.addEventListener('click', () => {
+        const item = CATALOG.find(i => i.id === pendingBuyId);
+        if (appState.credits >= item.price) {
+            appState.credits -= item.price;
+            appState.acquired.push(item.id);
+            appState.cart = appState.cart.filter(x => x !== item.id);
+            addXP(item.price);
+            notify(`${item.name} acquis avec succès.`);
+            dom.modal.style.display = 'none';
+            saveState();
+        } else {
+            dom.modal.style.display = 'none';
+            notify("Fonds insuffisants", "error");
+        }
+    });
+
+    document.getElementById('reset').addEventListener('click', () => {
+        if (confirm("Réinitialiser toute la progression ?")) {
+            localStorage.removeItem('LennouilleShop');
+            location.reload();
+        }
+    });
+
+    document.getElementById('admin').addEventListener('click', () => {
+        const pwd = prompt("Mot de passe administrateur :");
+        if (pwd) {appState.credits = 99999; appState.level = 10; appState.xp = 0; notify("Mode administrateur activé.", "success"); saveState();}
+    });
+
+    document.getElementById('btn-produce').addEventListener('click', (e) => {
+        const btn = e.target;
+        const hours = parseInt(document.getElementById('work-time').value) || 1;
+        const creditGain = hours * 50;
+        const xpGain = hours * 10;
+        btn.disabled = true;
+        btn.textContent = "Calcul en cours...";
+        btn.style.opacity = "0.7";
+        setTimeout(() => {
+            appState.credits += creditGain;
+            addXP(xpGain);
+            btn.disabled = false;
+            btn.textContent = "Lancer le Minage";
+            btn.style.opacity = "1";
+            notify(`Minage terminé : +${creditGain} CR | +${xpGain} XP`);
+            saveState();
+        }, 2000); // Raccourci un peu pour une meilleure UX
+    });
+
+    function scheduleBonus() {
+        setTimeout(spawnBonusTrigger, Math.random() * 30000 + 20000);
+    }
+
+    function spawnBonusTrigger() {
+        const el = document.createElement('div');
+        el.className = 'BonusEntity';
+        el.textContent = "★";
+        el.style.left = Math.random() * (window.innerWidth - 80) + 'px';
+        el.style.top = Math.random() * (window.innerHeight - 80) + 'px';
+        el.onclick = () => {
+            el.remove();
+            startHackingGame();
+        };
+        document.body.appendChild(el);
+        setTimeout(() => {
+            if (el.parentElement) el.remove();
+            scheduleBonus();
+        }, 5000);
+    }
+
+    function startHackingGame() {
+        dom.hackGame.style.display = 'flex';
+        dom.hackGrid.innerHTML = '';
+        let score = 0;
+        let timeLeft = 5.00;
+        const totalTargets = 5;
+        for (let i = 0; i < 25; i++) {
+            const cell = document.createElement('div');
+            cell.className = 'HackCell';
+            cell.dataset.index = i;
+            cell.onclick = () => {
+                if (cell.classList.contains('target')) {
+                    cell.classList.remove('target');
+                    cell.style.background = 'rgba(255,255,255,0.1)';
+                    score++;
+                    if (score === totalTargets) endGame(true);
+                }
+            };
+            dom.hackGrid.appendChild(cell);
+        }
+
+        let targets = [];
+        while (targets.length < totalTargets) {
+            let r = Math.floor(Math.random() * 25);
+            if (!targets.includes(r)) targets.push(r);
+        }
+        targets.forEach(t => dom.hackGrid.children[t].classList.add('target'));
+
+        const interval = setInterval(() => {
+            timeLeft -= 0.1;
+            dom.hackTimer.textContent = timeLeft.toFixed(2);
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                endGame(false);
+            }
+            if (dom.hackGame.style.display === 'none') clearInterval(interval);
+        }, 100);
+
+        function endGame(win) {
+            clearInterval(interval);
+            dom.hackGame.style.display = 'none';
+            if (win) {
+                const creditGain = 200;
+                const xpGain = 100;
+                appState.credits += creditGain;
+                addXP(xpGain);
+                notify(`Bonus récupéré : +${creditGain} CR | +${xpGain} XP`, 'success');
+                saveState();
+            } else {
+                notify("Temps écoulé !", "error");
+            }
+            scheduleBonus();
+        }
+    }
+    render();
+    scheduleBonus();
+});
+    </script>
 </body>
 </html>
