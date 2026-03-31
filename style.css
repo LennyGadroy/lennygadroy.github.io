@@ -1353,6 +1353,64 @@ textarea.FormInput + .FormLabel {
     .ShowcaseMenu {min-width: 100%;}
 }
 
+/* ------
+  Print Styles
+------ */
+@media print {
+    .MainHeader, 
+    .MainFooter, 
+    .WipPopup, 
+    .NavBtn,
+    .BtnOutline,
+    .BtnSolid {
+        display: none !important;
+    }
+
+    body, html {
+        background-color: #fff !important;
+        color: #000 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    body::before {
+        display: none !important;
+    }
+
+    main.CV,
+    main.CV.Container {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .ContentCard {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        background-color: transparent !important;
+        page-break-inside: avoid;
+        margin-bottom: 15px !important;
+        padding: 15px !important;
+    }
+
+    .CV-Section {
+        page-break-inside: avoid;
+        margin-bottom: 25px !important;
+    }
+
+    a {
+        text-decoration: none !important;
+        color: #000 !important;
+        font-weight: bold !important;
+    }
+
+    @page {
+        size: A4;
+        margin: 1.5cm; 
+    }
+}
+
 
 
 
