@@ -951,6 +951,7 @@ main.Projets ul li.active {
 }
 
 .ContentCard {
+    position: relative;
     background-color: var(--PureWhite);
     border-radius: 12px;
     padding: 25px;
@@ -1052,21 +1053,26 @@ main.Projets h2 {
 .ContentCard h4 {
     font-family: "Montserrat", sans-serif;
     font-size: 1.25rem;
-    color: var(--Four);
+    color: var(--One);
     margin-bottom: 5px;
+    padding-right: 120px;
 }
 
 .CardDate {
     font-family: "MontserratItalic", sans-serif;
-    font-size: 0.9rem;
-    color: var(--One);
-    margin-bottom: 4px; 
+    position: absolute;
+    top: 50px; 
+    right: 25px; 
+    margin: 0; 
+    text-align: right;
+    font-style: italic;
+    color: var(--One) !important;
 }
 
 .CardDesc {
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
-    color: var(--Two);
+    color: var(--One);
     margin-top: 5px;
     margin-bottom: 10px;
     line-height: 1.5;
@@ -1092,7 +1098,7 @@ main.Projets h2 {
 
 .CardList li::before {
     content: "•";
-    color: var(--One);
+    color: var(--Four);
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -1117,12 +1123,34 @@ main.Projets h2 {
 }
 
 .CardLocation {
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.95rem;
-    color: var(--Three);
-    margin-bottom: 12px;
-    font-weight: 500;
+    position: absolute;
+    top: 25px; 
+    right: 25px; 
+    margin: 0; 
+    text-align: right;
+    font-weight: 600;
+    color: var(--One);
 }
+
+.BtnExperience {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    margin: 0; 
+    border-color: var(--One);
+    color: var(--One) !important;
+    transition: all 0.3s ease !important;
+}
+
+.BtnExperience:hover {
+    background-color: var(--One);
+    color: var(--PureWhite) !important;
+}
+
+main.CV a {color: inherit; text-decoration: underline; transition: text-decoration-color 0.3s ease; }
+main.CV a:hover {text-decoration-color: transparent;}
+
+main.CV a.BtnExperience {text-decoration: none;}
 
 
 /* ------
