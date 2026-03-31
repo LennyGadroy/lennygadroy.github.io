@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,68 +7,47 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
-
 <body>
-  <header class="MainHeader">
-    <nav class="NavBar">
-      <a class="NavLogo" href="index.html" aria-label="Retour à l'accueil">
-        <img src="assets/icon.svg" alt="Logo de Lenny Gadroy" />
-      </a>
-
-      <ul class="NavLinks">
-        <li><a href="index.html" class="active">Accueil</a></li>
-
-        <li class="Dropdown">
-          <a href="#!">Réalisations <span class="Chevron">▼</span></a>
-          <ul class="DropdownMenu">
-            <li><a href="projets.html">Projets</a></li>
-            <li><a href="designs.html">Designs</a></li>
-            <li><a href="code.html">Code</a></li>
-            <li><a href="albums.html">Albums</a></li>
-          </ul>
-        </li>
-        <li><a href="skills.html">Compétences</a></li>
-        <li><a href="cv.html">Curriculum</a></li>
-      </ul>
-
-      <div class="NavBtn">
-        <a href="contact.html" class="BtnSolid">Me contacter</a>
-      </div>
-    </nav>
-  </header>
-  <main class="Index">
-    <div class="Hero" id="Hero">
-      <svg class="Highlights" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet">
-        <rect class="HighlightShape" x="15" y="315" width="470" height="70" rx="35" data-word="Lenny" />
-        <rect class="HighlightShape" x="211.5" y="365" width="777" height="70" rx="35" transform="rotate(45 600 400)"
-          data-word="Gadroy" />
-        <rect class="HighlightShape" x="15" y="15" width="870" height="70" rx="35" data-word="Portfolio" />
-        <rect class="HighlightShape" x="115" y="515" width="170" height="70" rx="35" data-word="UI" />
-        <rect class="HighlightShape" x="415" y="515" width="170" height="70" rx="35" data-word="UX" />
-        <rect class="HighlightShape" x="15" y="615" width="770" height="70" rx="35" data-word="Designer" />
-      </svg>
-      <div class="LetterGrid" id="LetterGrid">
-        <span data-word="Portfolio">P</span><span data-word="Portfolio">O</span><span
-          data-word="Portfolio">R</span><span data-word="Portfolio">T</span><span data-word="Portfolio">F</span><span
-          data-word="Portfolio">O</span><span data-word="Portfolio">L</span><span data-word="Portfolio">I</span><span
-          data-word="Portfolio">O</span>
-        <span>S</span><span>E</span><span>O</span><span
-          data-word="Gadroy">G</span><span>P</span><span>R</span><span>O</span><span>S</span><span>C</span>
-        <span>C</span><span>O</span><span>O</span><span>L</span><span
-          data-word="Gadroy">A</span><span>G</span><span>O</span><span>A</span><span>L</span>
-        <span data-word="Lenny">L</span><span data-word="Lenny">E</span><span data-word="Lenny">N</span><span
-          data-word="Lenny">N</span><span data-word="Lenny">Y</span><span
-          data-word="Gadroy">D</span><span>A</span><span>T</span><span>A</span>
-        <span>O</span><span>C</span><span>L</span><span>E</span><span>V</span><span>E</span><span
-          data-word="Gadroy">R</span><span>U</span><span>S</span>
-        <span>U</span><span data-word="UI">U</span><span data-word="UI">I</span><span>T</span><span
-          data-word="UX">U</span><span data-word="UX">X</span><span>C</span><span
-          data-word="Gadroy">O</span><span>S</span>
-        <span data-word="Designer">D</span><span data-word="Designer">E</span><span data-word="Designer">S</span><span
-          data-word="Designer">I</span><span data-word="Designer">G</span><span data-word="Designer">N</span><span
-          data-word="Designer">E</span><span data-word="Designer">R</span><span data-word="Gadroy">Y</span>
-      </div>
-    </div>
+    <header class="MainHeader">
+        <nav class="NavBar">
+            <a class="NavLogo" href="index.html" aria-label="Retour à l'accueil"><img src="assets/icon.svg" alt="Logo de Lenny Gadroy"/></a>
+            <ul class="NavLinks">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li class="Dropdown">
+                    <a href="#!">Réalisations <span class="Chevron">▼</span></a>
+                    <ul class="DropdownMenu">
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="designs.html">Designs</a></li>
+                        <li><a href="code.html">Code</a></li>
+                        <li><a href="albums.html">Albums</a></li>
+                    </ul>
+                </li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="cv.html">Curriculum</a></li>
+            </ul>
+            <div class="NavBtn"><a href="contact.html" class="BtnSolid">Me contacter</a></div>
+        </nav>
+    </header>
+    <main class="Projets">
+        <div class="Hero" id="Hero">
+            <svg class="Highlights" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet">
+                <rect class="HighlightShape" x="15" y="315" width="470" height="70" rx="35" data-word="Lenny" />
+                <rect class="HighlightShape" x="211.5" y="365" width="777" height="70" rx="35"transform="rotate(45 600 400)" data-word="Gadroy" />
+                <rect class="HighlightShape" x="15" y="15" width="870" height="70" rx="35" data-word="Portfolio" />
+                <rect class="HighlightShape" x="115" y="515" width="170" height="70" rx="35" data-word="UI" />
+                <rect class="HighlightShape" x="415" y="515" width="170" height="70" rx="35" data-word="UX" />
+                <rect class="HighlightShape" x="15" y="615" width="770" height="70" rx="35" data-word="Designer" />
+            </svg>
+            <div class="LetterGrid" id="LetterGrid">
+                <span data-word="Portfolio">P</span><span data-word="Portfolio">O</span><span data-word="Portfolio">R</span><span data-word="Portfolio">T</span><span data-word="Portfolio">F</span><span data-word="Portfolio">O</span><span data-word="Portfolio">L</span><span data-word="Portfolio">I</span><span data-word="Portfolio">O</span>
+                <span>S</span><span>E</span><span>O</span><span data-word="Gadroy">G</span><span>P</span><span>R</span><span>O</span><span>S</span><span>C</span>
+                <span>C</span><span>O</span><span>O</span><span>L</span><span data-word="Gadroy">A</span><span>G</span><span>O</span><span>A</span><span>L</span>
+                <span data-word="Lenny">L</span><span data-word="Lenny">E</span><span data-word="Lenny">N</span><span data-word="Lenny">N</span><span data-word="Lenny">Y</span><span data-word="Gadroy">D</span><span>A</span><span>T</span><span>A</span>
+                <span>O</span><span>C</span><span>L</span><span>E</span><span>V</span><span>E</span><span data-word="Gadroy">R</span><span>U</span><span>S</span>
+                <span>U</span><span data-word="UI">U</span><span data-word="UI">I</span><span>T</span><span data-word="UX">U</span><span data-word="UX">X</span><span>C</span><span data-word="Gadroy">O</span><span>S</span>
+                <span data-word="Designer">D</span><span data-word="Designer">E</span><span data-word="Designer">S</span><span data-word="Designer">I</span><span data-word="Designer">G</span><span data-word="Designer">N</span><span data-word="Designer">E</span><span data-word="Designer">R</span><span data-word="Gadroy">Y</span>
+            </div>
+        </div>
     <section class="Ribbons" id="Ribbons">
       <div class="Container">
         <div class="Strips Blue">
@@ -103,7 +81,10 @@
     <section class="Scroll" id="Scroll">
       <div class="Wrapper">
         <p class="TextReveal" id="TextReveal">
-          Bienvenue dans mon univers créatif. Je suis Lenny Gadroy, étudiant passionné par l'UI et l'UX Design. Mon objectif ? Transformer des concepts complexes en expériences digitales fluides, intuitives et mémorables. Explorez ce portfolio pour découvrir ma vision du design, où l'esthétisme rencontre la fonctionnalité à chaque interaction.
+          Bienvenue dans mon univers créatif. Je suis Lenny Gadroy, étudiant passionné par l'UI et l'UX Design. Mon
+          objectif ? Transformer des concepts complexes en expériences digitales fluides, intuitives et mémorables.
+          Explorez ce portfolio pour découvrir ma vision du design, où l'esthétisme rencontre la fonctionnalité à chaque
+          interaction.
         </p>
       </div>
     </section>
@@ -176,46 +157,41 @@
       </div>
     </section> -->
   </main>
-  <footer class="MainFooter">
-    <div class="FooterContainer">
-      <div class="FooterCol">
-        <h3 class="FooterLogo">Lenny Gadroy</h3>
-        <p class="FooterDesc">Étudiant passionné par l'UI/UX Design, créant des expériences digitales fluides et mémorables.</p>
-      </div>
-
-      <div class="FooterCol">
-        <h4 class="FooterTitle">Navigation</h4>
-        <ul class="FooterLinks">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="projets.html">Réalisations</a></li>
-          <li><a href="skills.html">Compétences</a></li>
-          <li><a href="cv.html">Curriculum</a></li>
-        </ul>
-      </div>
-
-      <div class="FooterCol">
-        <h4 class="FooterTitle">Contact</h4>
-        <ul class="FooterLinks">
-          <li><a href="mailto:ton-email@email.com">Me contacter</a></li>
-          <li><a href="https://github.com/LennyGadroy/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/lennygadroy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        </ul>
-      </div>
+<footer class="MainFooter">
+        <div class="FooterContainer">
+            <div class="FooterCol">
+                <h3 class="FooterLogo">Lenny Gadroy</h3>
+                <p class="FooterDesc">Étudiant passionné par l'UI/UX Design, créant des expériences digitales fluides et mémorables.</p>
+            </div>
+            <div class="FooterCol">
+                <h4 class="FooterTitle">Navigation</h4>
+                <ul class="FooterLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Réalisations</a></li>
+                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="cv.html">Curriculum</a></li>
+                </ul>
+            </div>
+            <div class="FooterCol">
+                <h4 class="FooterTitle">Contact</h4>
+                <ul class="FooterLinks">
+                    <li><a href="mailto:ton-email@email.com">Me contacter</a></li>
+                    <li><a href="https://github.com/LennyGadroy/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/lennygadroy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="FooterBottom"><p>&copy; 2026 Lenny Gadroy. Tous droits réservés.</p></div>
+    </footer>
+    <div class="WipPopup" id="wipPopup">
+        <button class="CloseBtn" onclick="document.getElementById('wipPopup').style.display='none'" aria-label="Fermer la fenêtre">×</button>
+        <div class="WipContent">
+            <div class="WipTitle">🚧 Portfolio en construction</div>
+            <div class="WipText">Je travaille actuellement sur cette nouvelle version. Mon ancien portfolio reste consultable !</div>
+            <a href="Archives/v2/index.html" class="BtnSolid WipBtn">Voir l'ancienne version</a>
+        </div>
     </div>
-
-    <div class="FooterBottom">
-      <p>&copy; 2026 Lenny Gadroy. Tous droits réservés.</p>
-    </div>
-  </footer>
-  <div class="WipPopup" id="wipPopup">
-    <button class="CloseBtn" onclick="document.getElementById('wipPopup').style.display='none'" aria-label="Fermer la fenêtre">×</button>
-    <div class="WipContent">
-      <div class="WipTitle">🚧 Portfolio en construction</div>
-      <div class="WipText">Je travaille actuellement sur cette nouvelle version. Mon ancien portfolio reste consultable !</div>
-      <a href="Archives/v2/index.html" class="BtnSolid WipBtn">Voir l'ancienne version</a>
-    </div>
-  </div>
   <script src="anims.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
