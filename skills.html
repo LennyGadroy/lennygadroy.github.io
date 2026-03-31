@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg" href="assets/icon.svg">
     <style>
-        /* --- Styles spécifiques au Skills Shop (DA Portfolio) --- */
         main.SkillsPage {
             padding: 120px 5% 50px 5%;
             max-width: 1400px;
@@ -115,7 +114,7 @@
             flex-wrap: wrap;
         }
 
-        .FilterBtn {
+        .Filters {
             border: none;
             background: rgba(var(--OneRGB), 0.1);
             color: var(--Four);
@@ -126,7 +125,7 @@
             transition: all 0.2s ease;
         }
 
-        .FilterBtn.active, .FilterBtn:hover {
+        .Filters.active, .Filters:hover {
             background: var(--One);
             color: var(--PureWhite);
         }
@@ -177,7 +176,7 @@
 
         .LvlBadge {
             background: var(--One);
-            color: white;
+            color: var(--PureWhite);
             padding: 2px 8px;
             border-radius: 10px;
             font-size: 0.8rem;
@@ -202,7 +201,7 @@
 
         .BtnAdd, .BtnBuy {
             background: var(--Four);
-            color: white;
+            color: var(--PureWhite);
             border: none;
             padding: 6px 12px;
             border-radius: 6px;
@@ -250,7 +249,7 @@
         .BtnCheckout {
             width: 100%;
             background: var(--One);
-            color: white;
+            color: var(--PureWhite);
             border: none;
             padding: 15px;
             border-radius: 8px;
@@ -295,26 +294,21 @@
             border: 1px solid rgba(var(--FourRGB), 0.2);
             outline: none;
         }
-
-        /* Modales et Notifications */
         .ToastContainer { position: fixed; bottom: 20px; left: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px; }
-        .Toast { background: var(--Four); color: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: opacity 0.3s; font-weight: 600; }
+        .Toast { background: var(--Four); color: var(--PureWhite); padding: 15px 25px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: opacity 0.3s; font-weight: 600; }
         .Toast.success { border-left: 4px solid #2ecc71; }
         .Toast.error { border-left: 4px solid #e74c3c; }
-
         .ModalOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: none; justify-content: center; align-items: center; z-index: 9999; }
-        .ModalBox { background: white; padding: 30px; border-radius: 12px; text-align: center; max-width: 400px; width: 90%; }
+        .ModalBox { background: var(--PureWhite); padding: 30px; border-radius: 12px; text-align: center; max-width: 400px; width: 90%; }
         .ModalActions { display: flex; gap: 15px; justify-content: center; margin-top: 20px; }
         .ModalActions button { padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; border: none; }
         .BtnCancel { background: #eee; color: #333; }
-        .BtnConfirm { background: var(--One); color: white; }
-
-        /* Hack Game Restylisé */
-        .HackGame { display: none; position: fixed; inset: 0; background: rgba(var(--FourRGB), 0.95); z-index: 10000; flex-direction: column; justify-content: center; align-items: center; color: white; }
+        .BtnConfirm { background: var(--One); color: var(--PureWhite); }
+        .HackGame { display: none; position: fixed; inset: 0; background: rgba(var(--FourRGB), 0.95); z-index: 10000; flex-direction: column; justify-content: center; align-items: center; color: var(--PureWhite); }
         .HackGrid { display: grid; grid-template-columns: repeat(5, 60px); gap: 10px; margin: 30px 0; }
         .HackCell { width: 60px; height: 60px; background: rgba(255,255,255,0.1); border-radius: 8px; cursor: pointer; transition: background 0.1s; }
         .HackCell.target { background: var(--One); }
-        .BonusEntity { position: fixed; width: 40px; height: 40px; background: var(--One); color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; cursor: pointer; z-index: 9998; box-shadow: 0 0 15px var(--One); animation: pulse 1s infinite; }
+        .BonusEntity { position: fixed; width: 40px; height: 40px; background: var(--One); color: var(--PureWhite); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; cursor: pointer; z-index: 9998; box-shadow: 0 0 15px var(--One); animation: pulse 1s infinite; }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
     </style>
 </head>
@@ -347,12 +341,12 @@
     <main class="SkillsPage">
         <div class="ShopHeader">
             <div class="HudStats">
-                <div class="StatItem">SOLDE: <span id="credit-amount">0</span> CR</div>
-                <div class="StatItem">LVL <span id="level-display">1</span></div>
+                <div class="StatItem">SOLDE: <span id="CreditAmount">0</span> CR</div>
+                <div class="StatItem">LVL <span id="LvL">1</span></div>
                 <div class="XpContainer">
-                    <div class="XpBarBg"><div class="XpFill" id="xp-bar"></div></div>
+                    <div class="XpBarBg"><div class="XpFill" id="ExpBar"></div></div>
                     <div style="font-size: 0.85rem; text-align: right; color: #666;">
-                        XP: <span id="xp-amount">0</span> / <span id="xp-next">100</span>
+                        XP: <span id="Exp">0</span> / <span id="ExpNext">100</span>
                     </div>
                 </div>
             </div>
@@ -367,18 +361,18 @@
                 <div class="Panel">
                     <h2 class="PanelTitle">Catalogue des compétences</h2>
                     <div class="FilterBar">
-                        <button class="FilterBtn active" data-filter="all">Tous</button>
-                        <button class="FilterBtn" data-filter="dev">Développement</button>
-                        <button class="FilterBtn" data-filter="design">Design</button>
-                        <button class="FilterBtn" data-filter="social">Communication</button>
-                        <button class="FilterBtn" data-filter="soft">Soft Skills</button>
+                        <button class="Filters active" data-filter="all">Tous</button>
+                        <button class="Filters" data-filter="design">Design</button>
+                        <button class="Filters" data-filter="dev">Développement</button>
+                        <button class="Filters" data-filter="social">Communication</button>
+                        <button class="Filters" data-filter="soft">Soft Skills</button>
                         <select id="sort" class="SortSelect">
                             <option value="level">Trier par Niveau</option>
                             <option value="price-asc">Prix Croissant</option>
                             <option value="price-desc">Prix Décroissant</option>
                         </select>
                     </div>
-                    <div id="catalog-list" class="CatalogGrid"></div>
+                    <div id="Catalog" class="CatalogGrid"></div>
                 </div>
             </div>
 
@@ -398,7 +392,7 @@
 
                 <div class="Panel">
                     <h2 class="PanelTitle">Compétences acquises</h2>
-                    <div id="acquired-list" class="AcquiredGrid"></div>
+                    <div id="Acquired" class="AcquiredGrid"></div>
                 </div>
 
                 <div class="Panel">
@@ -415,7 +409,7 @@
 
     <div class="ToastContainer" id="toast-container"></div>
     
-    <div id="confirm-modal" class="ModalOverlay">
+    <div id="Confirm" class="ModalOverlay">
         <div class="ModalBox">
             <h3 style="color: var(--Four); font-size: 1.5rem; margin-bottom: 15px;">Confirmation</h3>
             <p>Voulez-vous installer <strong id="modal-item-name" style="color:var(--One)">...</strong> ?</p>
@@ -433,47 +427,90 @@
         <div style="font-size: 2.5rem; font-weight: bold; margin-top: 20px;" id="timer">5.00</div>
         <div class="HackGrid" id="grid"></div>
     </div>
+    <footer class="MainFooter">
+    <div class="FooterContainer">
+      <div class="FooterCol">
+        <h3 class="FooterLogo">Lenny Gadroy</h3>
+        <p class="FooterDesc">Étudiant passionné par l'UI/UX Design, créant des expériences digitales fluides et mémorables.</p>
+      </div>
 
+      <div class="FooterCol">
+        <h4 class="FooterTitle">Navigation</h4>
+        <ul class="FooterLinks">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Réalisations</a></li>
+          <li><a href="skills.html">Compétences</a></li>
+          <li><a href="cv.html">Curriculum</a></li>
+        </ul>
+      </div>
+
+      <div class="FooterCol">
+        <h4 class="FooterTitle">Contact</h4>
+        <ul class="FooterLinks">
+          <li><a href="mailto:ton-email@email.com">Me contacter</a></li>
+          <li><a href="https://github.com/LennyGadroy/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/lennygadroy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="FooterBottom">
+      <p>&copy; 2026 Lenny Gadroy. Tous droits réservés.</p>
+    </div>
+  </footer>
+  <div class="WipPopup" id="wipPopup">
+    <button class="CloseBtn" onclick="document.getElementById('wipPopup').style.display='none'" aria-label="Fermer la fenêtre">×</button>
+    <div class="WipContent">
+      <div class="WipTitle">🚧 Portfolio en construction</div>
+      <div class="WipText">Je travaille actuellement sur cette nouvelle version. Mon ancien portfolio reste consultable !</div>
+      <a href="Archives/v2/index.html" class="BtnSolid WipBtn">Voir l'ancienne version</a>
+    </div>
+  </div>
     <script src="skills.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-    const CATALOG = [
-        {id: 1, name: "Anglais B1", price: 90, cat: "soft", level: 1, desc: "Communication orale et écrite internationale", unlock: null},
-        {id: 2, name: "HTML 5", price: 100, cat: "dev", level: 1, desc: "Structuration sémantique des pages web", unlock: null},
-        {id: 3, name: "CSS 3", price: 150, cat: "dev", level: 1, desc: "Maitrise de la mise en page avec utilisation des Flexbox ou Grid", unlock: null},
-        {id: 4, name: "JavaScript", price: 250, cat: "dev", level: 2, desc: "Maitrise de la syntaxe et de l’utilisation de Vanilla JS", unlock: null},
-        {id: 5, name: "Node.js", price: 450, cat: "dev", level: 5, desc: "Développement d'architectures backend", unlock: null},
-        {id: 6, name: "SEO", price: 300, cat: "soft", level: 4, desc: "Optimisation du référencement naturel", unlock: "https://app-eu1.hubspot.com/academy/achievements/9mx1cscc/en/1/lenny-gadroy/seo"},
-        {id: 7, name: "Figma", price: 500, cat: "design", level: 2, desc: "Conception de systèmes de design et prototypage d'interfaces UI/UX", unlock: null},
-        {id: 8, name: "Canva", price: 350, cat: "design", level: 3, desc: "Création rapide de visuels de marque et supports marketing", unlock: null},
-        {id: 9, name: "Notion", price: 300, cat: "soft", level: 3, desc: "Architecture de bases de données et gestion d'espaces collaboratifs", unlock: null},
-        {id: 10, name: "Trello", price: 120, cat: "soft", level: 5, desc: "Organisation des flux de travail", unlock: null},
-        {id: 11, name: "Slack", price: 120, cat: "soft", level: 4, desc: "Optimisation de la communication asynchrone", unlock: null},
-        {id: 12, name: "CapCut", price: 180, cat: "social", level: 3, desc: "Montage dynamique et post-production", unlock: null},
-        {id: 13, name: "SCRL", price: 200, cat: "social", level: 2, desc: "Création de narrations visuelles et carrousels", unlock: "https://www.instagram.com/p/DR65ixoja6j/"},
-        {id: 14, name: "Agile / Scrum", price: 120, cat: "soft", level: 7, desc: "Pilotage de projets itératifs", unlock: null},
-        {id: 19, name: "Suite Adobe", price: 500, cat: "design", level: 10, desc: "Expertise sur l'écosystème Adobe (Xd, Ai, Id)", unlock: null},
-    ];
+const CATALOG = [
+    {id: 1, name: "Anglais B1", price: 90, cat: "soft", level: 1, desc: "Maîtrise de la communication usuelle, orale et écrite, en contexte professionnel", unlock: null},
+    {id: 2, name: "HTML", price: 100, cat: "dev", level: 1, desc: "Structuration sémantique et accessibilité des documents web", unlock: null},
+    {id: 3, name: "CSS", price: 150, cat: "dev", level: 1, desc: "Mise en forme avancée et responsive design", unlock: null},
+    {id: 4, name: "JavaScript", price: 250, cat: "dev", level: 2, desc: "Programmation logique et manipulation", unlock: null},
+    {id: 5, name: "Node.js", price: 450, cat: "dev", level: 5, desc: "Développement d'applications côté serveur et gestion d'API scalables", unlock: null},
+    {id: 6, name: "SEO", price: 300, cat: "dev", level: 4, desc: "Stratégies d'optimisation technique et sémantique pour les moteurs de recherche", unlock: "https://app-eu1.hubspot.com/academy/achievements/9mx1cscc/en/1/lenny-gadroy/seo"},
+    {id: 7, name: "Figma", price: 500, cat: "design", level: 2, desc: "Création de Design Systems, prototypage interactif et collaboration UI/UX", unlock: null},
+    {id: 8, name: "Canva", price: 350, cat: "design", level: 3, desc: "Conception rapide de supports de communication visuelle et assets social media", unlock: null},
+    {id: 9, name: "Notion", price: 300, cat: "soft", level: 3, desc: "Gestion de connaissances, modélisation de bases de données et espaces de travail collaboratifs", unlock: null},
+    {id: 10, name: "Trello", price: 120, cat: "soft", level: 5, desc: "Gestion de projet agile via la méthodologie Kanban et automatisation des workflows", unlock: null},
+    {id: 11, name: "Slack", price: 120, cat: "soft", level: 4, desc: "Administration de canaux de communication et intégration d'outils productifs", unlock: null},
+    {id: 12, name: "CapCut", price: 180, cat: "social", level: 3, desc: "Montage vidéo vertical dynamique et post-production pour les réseaux sociaux", unlock: null},
+    {id: 13, name: "SCRL", price: 200, cat: "social", level: 2, desc: "Storytelling visuel et création de carrousels panoramiques pour Instagram", unlock: "https://www.instagram.com/p/DT2O41TihSR/"},
+    {id: 14, name: "Agile / Scrum", price: 120, cat: "soft", level: 7, desc: "Pilotage de projets complexes via des cycles itératifs et gestion de backlog", unlock: null},
+    {id: 15, name: "Tailwind", price: 200, cat: "dev", level: 2, desc: "Utilisation d'un framework CSS utilitaire pour un développement UI rapide et cohérent", unlock: null},
+    {id: 16, name: "React", price: 500, cat: "dev", level: 8, desc: "Développement d'interfaces composants réutilisables et gestion d'état complexe", unlock: null},
+    {id: 17, name: "PHP", price: 400, cat: "dev", level: 4, desc: "Développement de fonctionnalités backend et interaction avec les bases de données", unlock: null},
+    {id: 18, name: "SQL", price: 300, cat: "dev", level: 3, desc: "Conception, modélisation et administration de bases de données relationnelles", unlock: null},
+    {id: 19, name: "Suite Adobe", price: 600, cat: "design", level: 10, desc: "Maîtrise avancée du flux de création graphique (Photoshop, Illustrator, InDesign)", unlock: null},
+];
 
-    const initialState = {credits: 200, xp: 0, level: 1, cart: [], acquired: []};
+    const initialState = {credits: 1000, xp: 0, level: 1, cart: [], acquired: []};
     let appState = JSON.parse(localStorage.getItem('LennouilleShop')) || initialState;
     let currentFilter = 'all';
     let currentSort = 'level';
 
     const dom = {
-        credits: document.getElementById('credit-amount'),
-        xpBar: document.getElementById('xp-bar'),
-        xpAmount: document.getElementById('xp-amount'),
-        xpNext: document.getElementById('xp-next'),
-        lvlDisplay: document.getElementById('level-display'),
-        catalog: document.getElementById('catalog-list'),
+        credits: document.getElementById('CreditAmount'),
+        xpBar: document.getElementById('ExpBar'),
+        xpAmount: document.getElementById('Exp'),
+        xpNext: document.getElementById('ExpNext'),
+        lvlDisplay: document.getElementById('LvL'),
+        catalog: document.getElementById('Catalog'),
         Zone: document.getElementById('zone'),
         Cart: document.getElementById('cart'),
-        acquired: document.getElementById('acquired-list'),
-        filterBtns: document.querySelectorAll('.FilterBtn'), // Correction du sélecteur
+        acquired: document.getElementById('Acquired'),
+        filterBtns: document.querySelectorAll('.Filters'), // Correction du sélecteur
         Sort: document.getElementById('sort'),
-        modal: document.getElementById('confirm-modal'),
+        modal: document.getElementById('Confirm'),
         Yes: document.getElementById('yes'),
         No: document.getElementById('no'),
         hackGame: document.getElementById('game'),
