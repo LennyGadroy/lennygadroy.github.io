@@ -1469,7 +1469,7 @@ main.SkillsPage {
 .PageTitle {
     font-family: "Montserrat", sans-serif;
     font-size: 2.5rem;
-    color: var(--Four);
+    color: var(--One);
     margin-bottom: 20px;
 }
 
@@ -1480,6 +1480,7 @@ main.SkillsPage {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+    text-transform: none;
 }
 
 .CV-Section {
