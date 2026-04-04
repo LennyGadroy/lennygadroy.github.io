@@ -1,22 +1,262 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Page Not Found | Portfolio</title>
-    <style>@font-face{font-family:Montserrat;src:url("assets/Montserrat.ttf") format("truetype")}@font-face{font-family:ArchivoBlack;src:url("assets/ArchivoBlack.ttf") format("truetype")}.Content,.Design{position:absolute;left:0;width:100%}.LayerTop,body{position:relative}.LayerBottom,.LayerMiddle{margin-top:-12vw;position:relative}:root{--bg-color:#111111;--text-color:#ffffff;--font-main:'Montserrat',sans-serif;--font-display:'ArchivoBlack',sans-serif}*{margin:0;padding:0;box-sizing:border-box}body{background-color:var(--bg-color);color:var(--text-color);font-family:var(--font-main);height:100vh;width:100vw;overflow:hidden}h1{font-size:2.5rem;line-height:1.1;font-weight:600;max-width:500px;margin-bottom:40px;letter-spacing:-.02em}.Content{top:0;padding:40px 60px;z-index:20}.Error{font-family:'Courier New',Courier,monospace;font-size:.75rem;color:#888;margin-bottom:30px;display:flex;align-items:center;gap:8px}.Error::before{content:'•';color:#fff}.BtnHome{display:inline-flex;align-items:center;padding:12px 24px;background-color:#262626;color:#fff;text-decoration:none;font-size:.9rem;transition:background .3s;border:1px solid transparent}.BtnHome:hover{background-color:#333;border-color:#444}.Arrow{margin-left:12px;font-size:.8rem;transform:translateY(-1px)}.Design{bottom:-8vw;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;z-index:1;user-select:none}.Layers{font-family:var(--font-display);font-size:33vw;line-height:.75;width:100%;text-align:center;transform:scaleX(1.5);white-space:nowrap;letter-spacing:-1.5vw}.LayerTop{color:#1a1a1a;z-index:1}.LayerMiddle{color:#3a3a3a;z-index:2}.LayerBottom{color:#e6e8eb;z-index:3}@media (max-width:768px){h1{font-size:1.8rem}.Content{padding:20px}.Design{bottom:-20vw}.Layers{font-size:40vw;transform:scaleX(1.2);letter-spacing:-2vw}.LayerBottom,.LayerMiddle{margin-top:-15vw}}</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenny Gadroy | Portfolio - Albums Photos</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg" href="assets/icon.svg">
+
+    <style>
+        .AlbumsPage {
+            padding: 120px 5% 50px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            color: var(--Four);
+        }
+        .PageTitle {
+            text-align: center;
+            color: var(--One);
+            margin-bottom: 60px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        .AlbumSection {
+            margin-bottom: 70px;
+            background: var(--PureWhite);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(var(--PureBlackRGB), 0.05);
+        }
+        .AlbumTitle {
+            color: var(--One);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .AlbumInfo {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--Two);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .AlbumInfo a {
+            color: var(--Two);
+            text-decoration: none;
+            transition: color 0.3s;
+            border-bottom: 1px dashed var(--Two);
+        }
+        .AlbumInfo a:hover {
+            color: var(--One);
+            border-bottom: 1px solid var(--One);
+        }
+        .SubTitle {
+            margin: 30px 0 20px 0;
+            color: var(--Three);
+            font-size: 1.5rem;
+            font-weight: 700;
+            border-left: 4px solid var(--One);
+            padding-left: 15px;
+        }
+        .AlbumGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .AlbumGrid img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        .AlbumGrid img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .AlbumSection {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="Content">
-        <div class="Error">404 ERROR. PAGE NOT FOUND</div>  
-        <h1>If you're reading this, something has gone terribly, terribly wrong.</h1>
-        <a href="index.html" class="BtnHome">Return home <span class="Arrow">↗</span></a>
-    </div>
-    <div class="Design">
-        <div class="Layers LayerTop">404</div>
-        <div class="Layers LayerMiddle">404</div>
-        <div class="Layers LayerBottom">404</div>
+    <header class="MainHeader">
+        <nav class="NavBar">
+            <a class="NavLogo" href="index.html" aria-label="Retour à l'accueil"><img src="assets/icon.svg" alt="Logo de Lenny Gadroy"/></a>
+            <ul class="NavLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="Dropdown">
+                    <a href="#!" class="active">Réalisations <span class="Chevron">▼</span></a>
+                    <ul class="DropdownMenu">
+                        <li><a href="projets.html">Projets</a></li>
+                        <li><a href="designs.html">Designs</a></li>
+                        <li><a href="code.html">Code</a></li>
+                        <li><a href="albums.html" class="active">Albums</a></li>
+                    </ul>
+                </li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="cv.html">Curriculum</a></li>
+            </ul>
+            <div class="NavBtn"><a href="contact.html" class="BtnSolid">Me contacter</a></div>
+        </nav>
+    </header>
+
+    <main class="AlbumsPage">
+        <h1 class="PageTitle">Mes Albums Photos</h1>
+
+        <section class="AlbumSection" id="musics">
+            <h2 class="AlbumTitle">Concerts</h2>
+
+            <h3 class="SubTitle">Gala des Pièces Jaunes</h3>
+            <div class="AlbumInfo">
+                <span><a href="https://www.parisladefense-arena.com/" target="_blank">La Défense Arena - Paris</a></span> • 
+                <span>Jeudi 22 Janvier 2026</span>
+            </div>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Concerts/Gala/26/1.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+                <img src="img/Albums/Concerts/Gala/26/2.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+                <img src="img/Albums/Concerts/Gala/26/3.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+                <img src="img/Albums/Concerts/Gala/26/4.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+                <img src="img/Albums/Concerts/Gala/26/5.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+                <img src="img/Albums/Concerts/Gala/26/6.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+                <img src="img/Albums/Concerts/Gala/26/7.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+                <img src="img/Albums/Concerts/Gala/26/8.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+                <img src="img/Albums/Concerts/Gala/26/9.jpg" alt="Photo du concert Gala des Pièces Jaunes 2026">
+            </div>
+
+            <h3 class="SubTitle">Keblack</h3>
+            <div class="AlbumInfo">
+                <span><a href="https://www.cartonnerie.fr/" target="_blank">Cartonnerie - Reims</a></span> • 
+                <span>Vendredi 05 Décembre 2025</span>
+            </div>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Concerts/Keblack/1.jpg" alt="Photo du concert Keblack à la Cartonnerie">
+                <img src="img/Albums/Concerts/Keblack/2.jpg" alt="Photo du concert Keblack à la Cartonnerie">
+                <img src="img/Albums/Concerts/Keblack/3.jpg" alt="Photo du concert Keblack à la Cartonnerie">
+            </div>
+            
+            <h3 class="SubTitle">Gala des Pièces Jaunes 2025</h3>
+            <div class="AlbumInfo">
+                <span><a href="https://www.parisladefense-arena.com/" target="_blank">La Défense Arena - Paris</a></span> • 
+                <span>Jeudi 23 Janvier 2025</span>
+            </div>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Concerts/Gala/2025/1.jpg" alt="Photo du concert Gala des Pièces Jaunes 2025">
+                <img src="img/Albums/Concerts/Gala/2025/2.jpg" alt="Photo du concert Gala des Pièces Jaunes 2025">
+                <img src="img/Albums/Concerts/Gala/2025/3.jpg" alt="Photo du concert Gala des Pièces Jaunes 2025">
+            </div>
+        </section>
+
+        <section class="AlbumSection" id="cab">
+            <h2 class="AlbumTitle">Cabaret Vert : édition 2025</h2>
+            <div class="AlbumInfo">
+                <span><a href="https://cabaretvert.com/" target="_blank">Charleville-Mézières</a></span> • 
+                <span>Du Jeudi 14 Août au Dimanche 18 Août 2025</span>
+            </div>
+
+            <h3 class="SubTitle">Will Smith</h3>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Cab/25/WillSmith/1.jpg" alt="Photo de Will Smith">
+                <img src="img/Albums/Cab/25/WillSmith/2.jpg" alt="Photo de Will Smith">
+                <img src="img/Albums/Cab/25/WillSmith/3.jpg" alt="Photo de Will Smith">
+            </div>
+            
+            <h3 class="SubTitle">Suki Waterhouse</h3>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Cab/25/SukiWaterhouse/1.jpg" alt="Photo de Suki Waterhouse">
+                <img src="img/Albums/Cab/25/SukiWaterhouse/2.jpg" alt="Photo de Suki Waterhouse">
+                <img src="img/Albums/Cab/25/SukiWaterhouse/3.jpg" alt="Photo de Suki Waterhouse">
+            </div>
+
+            <h3 class="SubTitle">Zaho de Sagazan</h3>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Cab/25/ZahoSagazan/1.jpg" alt="Photo de Zaho de Sagazan">
+                <img src="img/Albums/Cab/25/ZahoSagazan/2.jpg" alt="Photo de Zaho de Sagazan">
+                <img src="img/Albums/Cab/25/ZahoSagazan/3.jpg" alt="Photo de Zaho de Sagazan">
+            </div>
+
+            <h3 class="SubTitle">DJ Snake</h3>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Cab/25/DJSnake/1.jpg" alt="Photo de DJ Snake">
+                <img src="img/Albums/Cab/25/DJSnake/2.jpg" alt="Photo de DJ Snake">
+                <img src="img/Albums/Cab/25/DJSnake/3.jpg" alt="Photo de DJ Snake">
+            </div>
+
+            <h3 class="SubTitle">Bigflo & Oli</h3>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Cab/25/BigfloOli/1.jpg" alt="Photo de Bigflo & Oli">
+                <img src="img/Albums/Cab/25/BigfloOli/2.jpg" alt="Photo de Bigflo & Oli">
+                <img src="img/Albums/Cab/25/BigfloOli/3.jpg" alt="Photo de Bigflo & Oli">
+            </div>
+        </section>
+
+        <section class="AlbumSection" id="lands">
+            <h2 class="AlbumTitle">Paysages</h2>
+            <h3 class="SubTitle">Château fort</h3>
+            <div class="AlbumInfo">
+                <span><a href="https://sedan.fr/" target="_blank">Sedan</a></span> • 
+                <span>30 Novembre 2025</span>
+            </div>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Paysages/Sedan/1.jpg" alt="Paysage Sedan 1">
+                <img src="img/Albums/Paysages/Sedan/2.jpg" alt="Paysage Sedan 2">
+                <img src="img/Albums/Paysages/Sedan/3.jpg" alt="Paysage Sedan 3">
+            </div>
+        </section>
+
+        <section class="AlbumSection" id="animaux">
+            <h2 class="AlbumTitle">Animaux</h2>
+            <div class="AlbumGrid">
+                <img src="img/Albums/Animals/1.jpg" alt="Photo d'un chat à Reims">
+                <img src="img/Albums/Animals/2.jpg" alt="Photo d'un chat à Reims">
+                <img src="img/Albums/Animals/3.jpg" alt="Photo d'un chat à Reims">
+                <img src="img/Albums/Animals/4.jpg" alt="Photo d'un chat à Reims">
+                <img src="img/Albums/Animals/5.jpg" alt="Photo de Woinic, le plus grand sanglier du monde, dans les Ardennes">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="MainFooter">
+        <div class="FooterContainer">
+            <div class="FooterCol">
+                <div class="FooterLogo">Lenny</div>
+                <p class="FooterDesc">Portfolio UI/UX Designer créatif et passionné.</p>
+            </div>
+            <div class="FooterCol">
+                <h4 class="FooterTitle">Navigation</h4>
+                <ul class="FooterLinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Réalisations</a></li>
+                    <li><a href="skills.html">Compétences</a></li>
+                    <li><a href="cv.html">Curriculum</a></li>
+                </ul>
+            </div>
+            <div class="FooterCol">
+                <h4 class="FooterTitle">Contact</h4>
+                <ul class="FooterLinks">
+                    <li><a href="mailto:ton-email@email.com">Me contacter</a></li>
+                    <li><a href="https://github.com/LennyGadroy/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/lennygadroy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="FooterBottom"><p>&copy; 2026 Lenny Gadroy. Tous droits réservés.</p></div>
+    </footer>
+
+    <div class="WipPopup" id="wipPopup">
+        <button class="CloseBtn" onclick="document.getElementById('wipPopup').style.display='none'" aria-label="Fermer la fenêtre">×</button>
+        <div class="WipContent">
+            <div class="WipTitle">🚧 Portfolio en construction</div>
+            <div class="WipText">Je travaille actuellement sur cette nouvelle version. Mon ancien portfolio reste consultable !</div>
+            <a href="Archives/v2/index.html" class="BtnSolid WipBtn">Voir l'ancienne version</a>
+        </div>
     </div>
 </body>
 </html>
