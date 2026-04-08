@@ -935,14 +935,14 @@ main.Projets ul li.active .InlineTab {
 }
 
 .MenuTab.active {
-    border-color: var(--Four);
+    border-color: var(--One);
     box-shadow: 0 8px 15px rgba(var(--FourRGB), 0.15);
 }
 
 .MenuTab.active .TabHeader h3,
 .MenuTab.active .TabHeader svg,
 .MenuTab.active .Chevron {
-    color: var(--Four);
+    color: var(--One);
 }
 
 .MenuTab.active .TabDesc {
