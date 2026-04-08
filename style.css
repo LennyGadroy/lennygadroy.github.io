@@ -720,7 +720,7 @@ main.Index .List li {
   Projets Page
 ------ */
 main.Projets .Spacer {
-    height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -832,6 +832,10 @@ main.Projets ul {
 }
 
 main.Projets ul li {
+    flex-shrink: 0;
+}
+
+.InlineTab {
     cursor: pointer;
     padding: 10px 24px;
     background-color: var(--Three);
@@ -840,17 +844,19 @@ main.Projets ul li {
     border-radius: 8px;
     font-size: 1.1rem;
     font-weight: 600;
+    font-family: "Montserrat", sans-serif;
     transition: all 0.3s ease;
     user-select: none;
     white-space: nowrap;
-    flex-shrink: 0;
+    display: inline-block;
 }
 
-main.Projets ul li:hover {
+.InlineTab:hover {
     background-color: var(--Two);
 }
 
-main.Projets ul li.active {
+.InlineTab.active,
+main.Projets ul li.active .InlineTab {
     background-color: var(--One);
     border-color: var(--PureWhite);
     transform: scale(1.05);
