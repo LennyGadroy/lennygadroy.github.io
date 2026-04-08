@@ -617,7 +617,6 @@ main.Index .Word.Revealed {
 
 main.Index .Merge {
     max-width: 900px;
-    background-color: var(--PureBlack);
     margin: 0 auto;
     padding: 0 20px;
     font-family: "myFont", sans-serif;
@@ -633,12 +632,12 @@ main.Index .ListText {
     height: max-content;
     position: sticky;
     top: 50vh;
-    color: var(--PureWhite);
+    color: var(--PureBlack);
     font-size: clamp(2.5rem, 6vw, 6rem);
     font-weight: 600;
     margin: 0;
-    transform:
-        translateY(-50%);
+    transform: translateY(-50%);
+    white-space: nowrap;
 }
 
 main.Index .List {
@@ -652,20 +651,18 @@ main.Index .List {
 }
 
 main.Index .List li {
-    color: oklch(75% 0.2 calc(var(--i) * calc(360 / 15)));
+    color: oklch(75% 0.2 calc(var(--i) * calc(360 / 20)));
     line-height: 1.2;
     opacity: 0.15;
     margin-bottom: 10px;
-    transition:
-        opacity 0.3s ease;
+    transition: opacity 0.3s ease-in-out;
 }
 
 @supports (animation-timeline: scroll()) {
     main.Index .List li {
-        animation:
-            Bright both linear;
+        animation: Bright both linear;
         animation-timeline: view();
-        animation-range: cover calc(50% - 1.5rem) calc(50% + 1.5rem);
+        animation-range: cover calc(50% - 9rem) calc(50% + 9rem);
     }
 }
 
@@ -677,43 +674,23 @@ main.Index .List li {
 }
 
 @keyframes drawCircle {
-    to {
-        stroke-dashoffset: 0;
-    }
+    to {stroke-dashoffset: 0;}
 }
 
 @keyframes Strip {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
 }
 
 @keyframes StripReverse {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
 }
 
 @keyframes Bright {
-    0% {
-        opacity: 0.15;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.15;
-    }
+    0% {opacity: 0.15;}
+    50% {opacity: 1;}
+    100% {opacity: 0.15;}
 }
 
 /* ------
