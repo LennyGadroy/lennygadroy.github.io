@@ -674,23 +674,43 @@ main.Index .List li {
 }
 
 @keyframes drawCircle {
-    to {stroke-dashoffset: 0;}
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes Strip {
-    0% {transform: translateX(0);}
-    100% {transform: translateX(-100%);}
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 @keyframes StripReverse {
-    0% {transform: translateX(-100%);}
-    100% {transform: translateX(0);}
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @keyframes Bright {
-    0% {opacity: 0.15;}
-    50% {opacity: 1;}
-    100% {opacity: 0.15;}
+    0% {
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.15;
+    }
 }
 
 /* ------
@@ -1708,10 +1728,13 @@ main.CV a.BtnExperience {
   Contact Page
 ------ */
 main.Contact {
-    margin: 30px auto 30px auto;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
     font-family: "Montserrat", sans-serif;
     color: var(--Four);
+    gap: 40px;
+    margin: 30px auto 30px auto;
+    padding: 50px;
 }
 
 .sr-only {
@@ -1901,6 +1924,75 @@ textarea.FormInput+.FormLabel {
     gap: 1rem;
     margin-top: 1rem;
     flex-wrap: wrap;
+    top: -10px;
+    font-size: 0.85rem;
+    color: var(--One);
+}
+
+.CreateContainer {
+    color: #000;
+    text-transform: uppercase;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+}
+
+.FlipWrapper {
+    height: 50px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.FlipTrack {
+    display: flex;
+    flex-direction: column;
+}
+
+.FlipItem {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 4px 14px;
+}
+
+.FlipTrack {
+    animation: flip 6s infinite;
+}
+
+.Portfolio {
+    background: var(--One);
+}
+
+.Website {
+    background: var(--Two);
+}
+
+.Shop {
+    background: var(--Three);
+}
+
+@keyframes flip {
+
+    0%,
+    20% {
+        transform: translateY(0px);
+    }
+
+    33%,
+    53% {
+        transform: translateY(-50px);
+    }
+
+    66%,
+    86% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(-150px);
+    }
 }
 
 /* ------
@@ -1939,7 +2031,7 @@ textarea.FormInput+.FormLabel {
 }
 
 .SideNav {
-    display: none; 
+    display: none;
 }
 
 @media (min-width: 992px) {
