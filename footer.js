@@ -9,9 +9,10 @@ const footerHTML = `
             <h4 class="FooterTitle">Navigation</h4>
             <ul class="FooterLinks">
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Réalisations</a></li>
+                <li><a href="projets.html">Mes projets</a></li>
+                <li><a href="albums.html">Mes albums</a></li>
                 <li><a href="skills.html">Compétences</a></li>
-                <li><a href="cv.html">Curriculum</a></li>
+                <li><a href="cv.html">Mon CV</a></li>
             </ul>
         </div>
         <div class="FooterCol">

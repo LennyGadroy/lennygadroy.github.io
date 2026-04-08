@@ -1957,42 +1957,18 @@ textarea.FormInput+.FormLabel {
     padding: 4px 14px;
 }
 
-.FlipTrack {
-    animation: flip 6s infinite;
-}
+.FlipTrack {animation: flip 6s infinite;}
 
-.Portfolio {
-    background: var(--One);
-}
-
-.Website {
-    background: var(--Two);
-}
-
-.Shop {
-    background: var(--Three);
-}
+.Portfolio {background: var(--One);}
+.Website {background: var(--Two);}
+.Shop {background: var(--Three);}
 
 @keyframes flip {
 
-    0%,
-    20% {
-        transform: translateY(0px);
-    }
-
-    33%,
-    53% {
-        transform: translateY(-50px);
-    }
-
-    66%,
-    86% {
-        transform: translateY(-100px);
-    }
-
-    100% {
-        transform: translateY(-150px);
-    }
+    0%, 20% {transform: translateY(0px);}
+    33%,53% {transform: translateY(-50px);}
+    66%,86% {transform: translateY(-100px);}
+    100% {transform: translateY(-150px);}
 }
 
 /* ------
