@@ -1067,7 +1067,7 @@ main.Projets h2 {
 
 .SubTitle {
     margin: 30px 0 20px 0;
-    color: var(--Three);
+    color: var(--One);
     font-size: 1.5rem;
     font-weight: 700;
     border-left: 4px solid var(--One);
@@ -1958,6 +1958,69 @@ textarea.FormInput+.FormLabel {
 
     .ShowcaseMenu {
         min-width: 100%;
+    }
+}
+
+.SideNav {
+    display: none; 
+}
+
+@media (min-width: 992px) {
+    .SideNav {
+        display: block;
+        position: fixed;
+        top: 200px;
+        left: 6vw;
+        background-color: var(--PureWhite);
+        box-shadow: 0 4px 15px rgba(var(--PureBlackRGB), 0.08);
+        border-radius: 12px;
+        padding: 20px 0;
+        z-index: 900;
+    }
+
+    .SideNav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .SideNav a {
+        text-decoration: none;
+        color: var(--Four);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        padding: 12px 25px 12px 20px;
+        display: block;
+        border-left: 4px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .SideNav a:hover {
+        color: var(--One);
+        background-color: rgba(var(--OneRGB), 0.08);
+        border-left: 4px solid var(--One);
+    }
+
+    .SideNavSub {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        margin-top: 5px;
+        gap: 2px;
+    }
+
+    .SideNavSub a {
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 8px 20px 8px 15px;
+        border-left: 2px solid transparent;
+    }
+
+    .SideNavSub a:hover {
+        border-left: 2px solid var(--One);
     }
 }
 
