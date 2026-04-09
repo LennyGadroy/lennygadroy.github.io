@@ -18,8 +18,8 @@ const footerHTML = `
         <div class="FooterCol">
             <h4 class="FooterTitle">Contact</h4>
             <ul class="FooterLinks">
-                <li><a href="https://www.linkedin.com/in/lennygadroy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="https://www.instagram.com/lennygdr19/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="https://linkedin.com/in/lennygadroy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://instagram.com/lennygdr19/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 <li><a href="https://github.com/LennyGadroy/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                 <li><a href="contact.html">Me contacter</a></li>
             </ul>
