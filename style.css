@@ -340,17 +340,11 @@ p {
 /* ------
   Index Page
 ------ */
-main.Index section {
+main.Index section, main.Projets section {
     width: 100%;
     min-height: 100vh;
     height: auto;
 }
-
-.html.Lennouille,
-html.Lennouille body {
-    height: auto;
-}
-
 
 .Hero {
     padding-top: 100px;
@@ -615,20 +609,21 @@ main.Index .Word.Revealed {
     color: var(--PureWhite);
 }
 
-main.Index .Merge {
+.Merge {
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
     font-family: "myFont", sans-serif;
 }
+main.Projets .Merge, main.Skills .Merge {margin-top: 100px;}
 
-main.Index .ListContainer {
+.ListContainer {
     position: relative;
     display: flex;
     gap: 2rem;
 }
 
-main.Index .ListText {
+.ListText {
     height: max-content;
     position: sticky;
     top: 50vh;
@@ -640,7 +635,7 @@ main.Index .ListText {
     white-space: nowrap;
 }
 
-main.Index .List {
+.List {
     list-style: none;
     font-size: clamp(2.5rem, 6vw, 6rem);
     font-weight: 600;
@@ -650,7 +645,7 @@ main.Index .List {
     padding-bottom: 50vh;
 }
 
-main.Index .List li {
+.List li {
     color: oklch(75% 0.2 calc(var(--i) * calc(360 / 20)));
     line-height: 1.2;
     opacity: 0.15;
@@ -659,7 +654,7 @@ main.Index .List li {
 }
 
 @supports (animation-timeline: scroll()) {
-    main.Index .List li {
+    .List li {
         animation: Bright both linear;
         animation-timeline: view();
         animation-range: cover calc(50% - 9rem) calc(50% + 9rem);
@@ -814,7 +809,7 @@ main.Projets .Item h1 {
     letter-spacing: -1px;
 }
 
-main.Projets ul {
+main.Projets ul.InlineMenu {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -828,8 +823,15 @@ main.Projets ul {
     overflow: clip;
 }
 
-main.Projets ul li {
+main.Projets ul.InlineMenu li {
     flex-shrink: 0;
+}
+
+.InlineMenu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .InlineTab {
@@ -1099,7 +1101,7 @@ main.Projets h2 {
 /* ------
   Skills Page
 ------ */
-main.SkillsPage {
+main.Skills {
     padding: 120px 5% 50px 5%;
     max-width: 1400px;
     margin: 0 auto;
@@ -1929,7 +1931,7 @@ textarea.FormInput+.FormLabel {
     color: var(--One);
 }
 
-.CreateContainer {
+.Create {
     color: #000;
     text-transform: uppercase;
     font-size: clamp(24px, 4vw, 36px);
