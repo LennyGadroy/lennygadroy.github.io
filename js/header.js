@@ -9,7 +9,7 @@ const headerHTML = `
                 <ul class="DropdownMenu">
                     <li><a href="projets.html">Projets</a></li>
                     <li><a href="designs.html">Designs</a></li>
-                    <!-- <li><a href="code.html">Code</a></li> -->
+                    <li><a href="code.html">Code</a></li>
                     <li><a href="albums.html">Albums</a></li>
                 </ul>
             </li>
