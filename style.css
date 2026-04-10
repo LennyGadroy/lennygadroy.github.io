@@ -798,7 +798,7 @@ main.Projets .Item h1 {
     transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
-    background-color: transparent;
+    background-color: var(--Four);
     border: 2px solid white;
     border-radius: 50%;
     cursor: ew-resize;
@@ -1575,15 +1575,13 @@ main.Skills {
     gap: 60px;
 }
 
-.CV-Header {
-    text-align: center;
-}
+.CvHeader {text-align: center;}
 
-.PageTitle {
+.CV .PageTitle {
     font-family: "Montserrat", sans-serif;
     font-size: 2.5rem;
     color: var(--One);
-    margin-bottom: 20px;
+    margin: 100px 0 0 20px;
 }
 
 .IntroText {
@@ -1596,7 +1594,7 @@ main.Skills {
     text-transform: none;
 }
 
-.CV-Section {
+.CvSection {
     display: flex;
     flex-direction: column;
     gap: 25px;
