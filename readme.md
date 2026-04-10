@@ -1,7 +1,6 @@
 # 🚀 Portfolio | Lenny Gadroy
 
 Bienvenue sur le dépôt de mon portfolio personnel. C'est ici que je centralise mes projets, mes expérimentations et mon parcours de développeur.
-
 🔗 **Lien du site :** [lennygadroy.github.io](https://lennygadroy.github.io)
 
 ---
@@ -16,13 +15,13 @@ Ce projet me sert de vitrine numérique. L'objectif est de présenter mes compé
 
 ---
 
-## 🛠️ Stack Technique
+## 🛠️ Technique
 
 Voici les outils et technologies que j'ai utilisés pour bâtir ce site :
 
 | Technologie | Usage |
 | :--- | :--- |
-| **HTML / CSS** | Structure et mise en page moderne (Grid/Flexbox) |
+| **HTML / CSS** | Structure et mise en page moderne |
 | **JavaScript** | Interactions, filtrage de projets et animations |
 | **GitHub Pages** | Hébergement et déploiement automatisé |
 | **Lucide Icons** | Iconographie légère et vectorielle |
@@ -32,10 +31,10 @@ Voici les outils et technologies que j'ai utilisés pour bâtir ce site :
 ## ✨ Fonctionnalités
 
 * 📱 **Responsive Design :** Navigation fluide sur smartphone, tablette et desktop.
-* 🌙 **Dark Mode :** Support du mode sombre pour le confort visuel.
+* 📃 **Multi-blocs :** Utilisation de JavaScript pour insérer/modifier les mêmes blocs dans toutes les pages.
 * ⚡ **Chargement Rapide :** Optimisation des assets et du code.
 * 📂 **Showcase :** Galerie de projets avec descriptions et liens vers les dépôts.
-* 📃 **Multi-blocs :** Utilisation de JavaScript pour insérer/modifier les mêmes blocs dans toutes les pages.
+* 🌙 **Dark Mode :** Support du mode sombre pour le confort visuel.
 
 ---
 
@@ -44,9 +43,9 @@ Voici les outils et technologies que j'ai utilisés pour bâtir ce site :
 Une opportunité, une question ou simplement envie d'échanger ?
 
 * **LinkedIn :** [Lenny GADROY](https://linkedin.com/in/lennygadroy)
-* **Email :** [lennygadroy@gmail.com](mailto:lennygadroy@gmail.com)
 * **Instagram :** [@LennyGadroy](https://instagram.com/lennygdr19)
 * **GitHub :** [@LennyGadroy](https://github.com/LennyGadroy)
+* **Email :** [lennygadroy@gmail.com](mailto:lennygadroy@gmail.com)
 
 ---
 
