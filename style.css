@@ -753,6 +753,13 @@ main.Projets .Item h1 {
     margin: 0 auto;
     user-select: none;
     background-color: var(--Four);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+
+.Comparaisons:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
 }
 
 .Overlay {
@@ -1097,6 +1104,20 @@ main.Projets h2 {
         padding: 20px;
     }
 }
+
+/* ------
+  Reals Page
+------ */
+.LogoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: start;
+    margin-top: 20px;
+}
+.LogoGrid .Comparaisons {width: 100%;}
+.LogoItem .SubTitle {margin-top: 0; }
+@media (max-width: 900px) {.LogoGrid {grid-template-columns: 1fr;}}
 
 /* ------
   Skills Page
