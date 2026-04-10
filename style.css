@@ -1019,7 +1019,7 @@ main.Projets h2 {
 /* ------
   Albums Page
 ------ */
-.AlbumsPage {
+.Albums {
     padding: 120px 5% 50px 5%;
     max-width: 1400px;
     margin: 0 auto;
@@ -1098,6 +1098,8 @@ main.Projets h2 {
     transform: scale(1.02);
     box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
 }
+
+.Albums .Create {color: var(--One); margin: 100px 0;}
 
 @media (max-width: 768px) {
     .AlbumSection {
