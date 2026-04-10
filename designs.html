@@ -1,22 +1,164 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Page Not Found | Portfolio</title>
-    <style>@font-face{font-family:Montserrat;src:url("assets/Montserrat.ttf") format("truetype")}@font-face{font-family:ArchivoBlack;src:url("assets/ArchivoBlack.ttf") format("truetype")}.Content,.Design{position:absolute;left:0;width:100%}.LayerTop,body{position:relative}.LayerBottom,.LayerMiddle{margin-top:-12vw;position:relative}:root{--bg-color:#111111;--text-color:#ffffff;--font-main:'Montserrat',sans-serif;--font-display:'ArchivoBlack',sans-serif}*{margin:0;padding:0;box-sizing:border-box}body{background-color:var(--bg-color);color:var(--text-color);font-family:var(--font-main);height:100vh;width:100vw;overflow:hidden}h1{font-size:2.5rem;line-height:1.1;font-weight:600;max-width:500px;margin-bottom:40px;letter-spacing:-.02em}.Content{top:0;padding:40px 60px;z-index:20}.Error{font-family:'Courier New',Courier,monospace;font-size:.75rem;color:#888;margin-bottom:30px;display:flex;align-items:center;gap:8px}.Error::before{content:'•';color:#fff}.BtnHome{display:inline-flex;align-items:center;padding:12px 24px;background-color:#262626;color:#fff;text-decoration:none;font-size:.9rem;transition:background .3s;border:1px solid transparent}.BtnHome:hover{background-color:#333;border-color:#444}.Arrow{margin-left:12px;font-size:.8rem;transform:translateY(-1px)}.Design{bottom:-8vw;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;z-index:1;user-select:none}.Layers{font-family:var(--font-display);font-size:33vw;line-height:.75;width:100%;text-align:center;transform:scaleX(1.5);white-space:nowrap;letter-spacing:-1.5vw}.LayerTop{color:#1a1a1a;z-index:1}.LayerMiddle{color:#3a3a3a;z-index:2}.LayerBottom{color:#e6e8eb;z-index:3}@media (max-width:768px){h1{font-size:1.8rem}.Content{padding:20px}.Design{bottom:-20vw}.Layers{font-size:40vw;transform:scaleX(1.2);letter-spacing:-2vw}.LayerBottom,.LayerMiddle{margin-top:-15vw}}</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explorez les réalisations graphiques de Lenny Gadroy : créations de logos, affiches publicitaires, design d'interfaces et visuels pour les réseaux sociaux.">
+    <title>Lenny Gadroy | Portfolio - Réalisations</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
 <body>
-    <div class="Content">
-        <div class="Error">404 ERROR. PAGE NOT FOUND</div>  
-        <h1>If you're reading this, something has gone terribly, terribly wrong.</h1>
-        <a href="index.html" class="BtnHome">Return home <span class="Arrow">↗</span></a>
-    </div>
-    <div class="Design">
-        <div class="Layers LayerTop">404</div>
-        <div class="Layers LayerMiddle">404</div>
-        <div class="Layers LayerBottom">404</div>
-    </div>
+    <div id="HeaderPlaceHolder"></div><script src="header.js"></script>
+    <nav class="SideNav">
+        <ul>
+            <li><a href="#publications">Publications</a></li>
+            <ul class="SideNavSub">
+                <li><a href="#mu">Mü-être</a></li>
+                <li><a href="#citroën">Citroën</a></li>
+                <li><a href="#demarle">Guy Demarle</a></li>
+            </ul>
+            <li><a href="#logos">Logos</a></li>
+            <ul class="SideNavSub">
+                <li><a href="#goon">GOON</a></li>
+                <li><a href="#yligen">Yligen</a></li>
+                <li><a href="#filrouge">Fil Rouge</a></li>
+                <li><a href="#gl">GL</a></li>
+                <li><a href="#geoptime">GeopTime</a></li>
+                <li><a href="#ndrc">NDRC e-learning</a></li>
+            </ul>
+            <li><a href="#affiches">Affiches</a></li>
+            <ul class="SideNavSub">
+                <li><a href="#chess">Échecs</a></li>
+                <li><a href="#carrefour">Carrefour</a></li>
+            </ul>
+        </ul>
+    </nav>
+    <main class="AlbumsPage">
+        <h1 class="PageTitle">Réalisations Graphiques, Logos et Affiches</h1>
+        <section class="AlbumSection" id="display">
+            <h2 class="AlbumTitle">Publications</h2>
+            <h3 class="SubTitle">Citroën</h3>
+            <div class="AlbumInfo">
+                <span>Promotions de biens</span> • 
+                <span><u>Aperçu du rendu</u></span>
+            </div>
+            <div class="AlbumGrid">
+                <a href="https://www.facebook.com/profile.php?id=61552989314245" target="_blank"><img src="img/Designs/Display/Citroen.jpg" alt="Aperçu du rendu de la publication Citroën"></a>
+            </div>
+            <h3 class="SubTitle">Guy Demarle</h3>
+            <div class="AlbumInfo">
+                <span>Annonce de recrutement</span> • 
+                <span><u>Aperçu des rendus</u></span>
+            </div>
+            <div class="AlbumGrid">
+                <a href="https://www.guydemarle.com/" target="_blank"><img src="img/Designs/Display/GuyDemarle.jpg" alt="Aperçu du rendu de l'annonce de recrutement Guy Demarle"></a>
+                <a href="https://www.guydemarle.com/" target="_blank"><img src="img/Designs/Display/GuyDemarle2.jpg" alt="Aperçu du rendu de l'annonce de recrutement Guy Demarle"></a>
+            </div>
+            <h3 class="SubTitle">Mü-être</h3>
+            <div class="AlbumInfo">
+                <span>Présentation, Recrutement et Nouveauté</span> • 
+                <span><u>Aperçu des rendus</u></span>
+            </div>
+            <div class="AlbumGrid">
+                <a href="https://www.mu-etre.fr" target="_blank"><img src="img/Designs/Display/Mu1.svg" alt="Aperçu du rendu de la publication Mü-être"></a>
+                <a href="https://www.mu-etre.fr" target="_blank"><img src="img/Designs/Display/Mu2.svg" alt="Aperçu du rendu de la publication Mü-être"></a>
+                <a href="https://www.mu-etre.fr" target="_blank"><img src="img/Designs/Display/Mu3.svg" alt="Aperçu du rendu de la publication Mü-être"></a>
+            </div>
+        </section>
+        <section class="AlbumSection" id="logo">
+            <h2 class="AlbumTitle">Logos</h2>
+            <h3 class="SubTitle">GOON</h3>
+            <div class="AlbumInfo">
+                <span>Évolution (Plus récent au plus ancien)</span> • 
+                <span><u>Aperçu des rendus</u></span>
+            </div>
+            <div class="Comparaisons">
+                <img src="img/Projects/Goon/new_logo.svg" alt="Aperçu du nouveau logo de GOON" class="NewImage">
+                <div class="Overlay"><img src="img/Projects/Goon/old_logo.svg" alt="Aperçu de l'ancien logo de GOON" class="OldImage"></div>
+                <div class="Slider"></div>
+            </div>
+            <h3 class="SubTitle">Yligen</h3>
+            <div class="AlbumInfo">
+                <span>Évolution (Plus récent au plus ancien)</span> • 
+                <span><u>Aperçu des rendus</u></span>
+            </div>
+            <div class="Comparaisons">
+                <img src="img/Projects/Yligen/new_logo.svg" alt="Aperçu du nouveau logo de Yligen" class="NewImage">
+                <div class="Overlay"><img src="img/Projects/Yligen/old_logo.png" alt="Aperçu de l'ancien logo de Yligen" class="OldImage"></div>
+                <div class="Slider"></div>
+            </div>
+            <h3 class="SubTitle">Fil Rouge</h3>
+            <div class="AlbumInfo">
+                <span>Évolution (Plus récent au plus ancien)</span> • 
+                <span><u>Aperçu des rendus</u></span>
+            </div>
+            <div class="Comparaisons">
+                <img src="img/Projects/FilRouge/new_logo.svg" alt="Aperçu du nouveau logo de Fil Rouge" class="NewImage">
+                <div class="Overlay"><img src="img/Projects/FilRouge/old_logo.png" alt="Aperçu de l'ancien logo de Fil Rouge" class="OldImage"></div>
+                <div class="Slider"></div>
+            </div>
+            <h3 class="SubTitle">Gadroy Lenny</h3>
+            <div class="AlbumInfo">
+                <span>Évolution (Plus récent au plus ancien)</span> • 
+                <span><u>Aperçu des rendus</u></span>
+            </div>
+            <div class="Comparaisons">
+                <img src="assets/logo.svg" alt="Aperçu du nouveau logo de GL : Gadroy Lenny" class="NewImage">
+                <div class="Overlay"><img src="img/Designs/Logo/GL.svg" alt="Aperçu de la troisième version logo de GL : Gadroy Lenny" class="OldImage"></div>
+                <div class="Slider"></div>
+            </div>
+            <h3 class="SubTitle">GeopTime</h3>
+            <div class="AlbumInfo">
+                <span>Déclinaisons du logo</span> • 
+                <span><u>Aperçu des rendus</u></span>
+            </div>
+            <div class="Comparaisons">
+                <img src="img/Projects/GeopTime/new_logo.svg" alt="Aperçu du nouveau logo de GeopTime" class="NewImage">
+                <div class="Overlay"><img src="img/Projects/GeopTime/old_logo.svg" alt="Aperçu de l'ancien logo de GeopTime" class="OldImage"></div>
+                <div class="Slider"></div>
+            </div>
+            <h3 class="SubTitle">NDRC e-learning</h3>
+            <div class="AlbumInfo">
+                <span>Création de logo</span> • 
+                <span><u>Aperçu du rendu</u></span>
+            </div>
+            <div class="AlbumGrid">
+                <a href="https://ndrc-colbert.odoo.com/" target="_blank"><img src="img/Designs/Logo/NDRC.png" alt="Aperçu du logo de NDRC e-learning"></a>
+            </div>
+        </section>
+        <section class="AlbumSection" id="poster">
+            <h2 class="AlbumTitle">Affiches</h2>
+            <h3 class="SubTitle">Gourmandises & Beaux objets</h3>
+            <div class="AlbumInfo">
+                <span>Rubrique décoration</span> • 
+                <span><u>Aperçu du rendu</u></span>
+            </div>
+            <div class="AlbumGrid">
+                <a href="https://www.gourmandisesetbeauxobjets.fr/" target="_blank"><img src="img/Designs/Poster/Gourmandises.jpg" alt="Aperçu du rendu de la rubrique décoration"></a>
+            </div>
+            <h3 class="SubTitle">Semaine des Échecs</h3>
+            <div class="AlbumInfo">
+                <span>Affiche publicitaire</span> • 
+                <span><u>Aperçu du rendu</u></span>
+            </div>
+            <div class="AlbumGrid">
+                <a href="https://www.mjepcormontreuil.com/" target="_blank"><img src="img/Designs/Poster/Chess.png" alt="Aperçu du rendu de l'affiche de la Semaine des Échecs"></a>
+            </div>
+            <h3 class="SubTitle">Carrefour</h3>
+            <div class="AlbumInfo">
+                <span>Affiche promotionnelle</span> • 
+                <span><u>Aperçu du rendu</u></span>
+            </div>
+            <div class="AlbumGrid">
+                <a href="https://www.carrefour.com/" target="_blank"><img src="img/Designs/Poster/Carrefour.png" alt="Aperçu du rendu de l'affiche Carrefour"></a>
+            </div>
+        </section>
+    </main>
+    <div id="FooterPlaceHolder"></div><script src="footer.js"></script>
+    <script src="anims.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".Comparaisons");e.forEach(function(e){let t=e.querySelector(".Overlay"),n=e.querySelector(".Slider"),d=e.querySelector(".OldImage"),o=!1;function i(){d&&(d.style.width=e.offsetWidth+"px")}function s(e){e.preventDefault(),o=!0}function r(){o=!1}function l(d){var i;if(!o)return;let s,r,l=(i=d,r=0,i=i||window.event,s=e.getBoundingClientRect(),r=i.changedTouches?i.changedTouches[0].clientX-s.left:i.clientX-s.left);l<0&&(l=0),l>e.offsetWidth&&(l=e.offsetWidth),t.style.width=l+"px",n.style.left=l+"px"}window.addEventListener("resize",i),i(),n&&(n.addEventListener("mousedown",s),window.addEventListener("mouseup",r),window.addEventListener("mousemove",l),n.addEventListener("touchstart",s,{passive:!1}),window.addEventListener("touchend",r),window.addEventListener("touchmove",l,{passive:!1}))})});
+    </script>
 </body>
 </html>
