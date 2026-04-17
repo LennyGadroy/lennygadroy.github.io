@@ -154,6 +154,7 @@
         <div id="MergePlaceHolder"></div><script src="js/merge.js"></script>
     </main>
     <div id="FooterPlaceHolder"></div><script src="js/footer.js"></script>
+    <script src="script.js"></script>
     <script src="anims.js"></script>
     <script>document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".Comparaisons");e.forEach(function(e){let t=e.querySelector(".Overlay"),n=e.querySelector(".Slider"),d=e.querySelector(".OldImage"),o=!1;function i(){d&&(d.style.width=e.offsetWidth+"px")}function s(e){e.preventDefault(),o=!0}function r(){o=!1}function l(d){var i;if(!o)return;let s,r,l=(i=d,r=0,i=i||window.event,s=e.getBoundingClientRect(),r=i.changedTouches?i.changedTouches[0].clientX-s.left:i.clientX-s.left);l<0&&(l=0),l>e.offsetWidth&&(l=e.offsetWidth),t.style.width=l+"px",n.style.left=l+"px"}window.addEventListener("resize",i),i(),n&&(n.addEventListener("mousedown",s),window.addEventListener("mouseup",r),window.addEventListener("mousemove",l),n.addEventListener("touchstart",s,{passive:!1}),window.addEventListener("touchend",r),window.addEventListener("touchmove",l,{passive:!1}))})});</script>
 </body>

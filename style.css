@@ -340,7 +340,8 @@ p {
 /* ------
   Index Page
 ------ */
-main.Index section, main.Projets section {
+main.Index section,
+main.Projets section {
     width: 100%;
     min-height: 100vh;
     height: auto;
@@ -615,7 +616,11 @@ main.Index .Word.Revealed {
     padding: 0 20px;
     font-family: "myFont", sans-serif;
 }
-main.Projets .Merge, main.Skills .Merge {margin-top: 100px;}
+
+main.Projets .Merge,
+main.Skills .Merge {
+    margin-top: 100px;
+}
 
 .ListContainer {
     position: relative;
@@ -1099,7 +1104,10 @@ main.Projets h2 {
     box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
 }
 
-.Albums .Create {color: var(--One); margin: 100px 0;}
+.Albums .Create {
+    color: var(--One);
+    margin: 100px 0;
+}
 
 @media (max-width: 768px) {
     .AlbumSection {
@@ -1117,9 +1125,20 @@ main.Projets h2 {
     align-items: start;
     margin-top: 20px;
 }
-.LogoGrid .Comparaisons {width: 100%;}
-.LogoItem .SubTitle {margin-top: 0; }
-@media (max-width: 900px) {.LogoGrid {grid-template-columns: 1fr;}}
+
+.LogoGrid .Comparaisons {
+    width: 100%;
+}
+
+.LogoItem .SubTitle {
+    margin-top: 0;
+}
+
+@media (max-width: 900px) {
+    .LogoGrid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ------
   Skills Page
@@ -1575,7 +1594,9 @@ main.Skills {
     gap: 60px;
 }
 
-.CvHeader {text-align: center;}
+.CvHeader {
+    text-align: center;
+}
 
 .CV .PageTitle {
     font-family: "Montserrat", sans-serif;
@@ -1980,18 +2001,42 @@ textarea.FormInput+.FormLabel {
     padding: 4px 14px;
 }
 
-.FlipTrack {animation: flip 6s infinite;}
+.FlipTrack {
+    animation: flip 6s infinite;
+}
 
-.Portfolio {background: var(--One);}
-.Website {background: var(--Two);}
-.Shop {background: var(--Three);}
+.Portfolio {
+    background: var(--One);
+}
+
+.Website {
+    background: var(--Two);
+}
+
+.Shop {
+    background: var(--Three);
+}
 
 @keyframes flip {
 
-    0%, 20% {transform: translateY(0px);}
-    33%,53% {transform: translateY(-50px);}
-    66%,86% {transform: translateY(-100px);}
-    100% {transform: translateY(-150px);}
+    0%,
+    20% {
+        transform: translateY(0px);
+    }
+
+    33%,
+    53% {
+        transform: translateY(-50px);
+    }
+
+    66%,
+    86% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(-150px);
+    }
 }
 
 /* ------
@@ -2149,6 +2194,364 @@ textarea.FormInput+.FormLabel {
     @page {
         size: A4;
         margin: 1.5cm;
+    }
+}
+
+/* ------
+  Dark Mode
+------ */
+[data-theme="dark"] body {
+    background-color: #0c1c2c;
+    color: var(--PureWhite);
+}
+
+[data-theme="dark"] body::before {
+    --DotColor: rgba(68, 119, 148, 0.1);
+}
+
+[data-theme="dark"] .NavBar,
+[data-theme="dark"] .DropdownMenu {
+    background-color: #112233;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .NavLinks a,
+[data-theme="dark"] .NavLogo {
+    color: #fff;
+}
+
+[data-theme="dark"] .NavLinks a:hover,
+[data-theme="dark"] .NavLinks a.active,
+[data-theme="dark"] .NavLogo:hover {
+    color: var(--One);
+}
+
+[data-theme="dark"] .DropdownMenu a {
+    color: #fff;
+}
+
+[data-theme="dark"] .BtnOutline {
+    color: #fff;
+    border-color: #fff;
+}
+
+[data-theme="dark"] .BtnOutline:hover {
+    background-color: #fff;
+    color: #0c1c2c;
+}
+
+[data-theme="dark"] .ContentCard,
+[data-theme="dark"] .Panel,
+[data-theme="dark"] .FormWrapper,
+[data-theme="dark"] .WipPopup {
+    background-color: #112233;
+    border-color: rgba(68, 119, 148, 0.3);
+    color: #fff;
+}
+
+[data-theme="dark"] .ContentCard h4,
+[data-theme="dark"] .Panel h2,
+[data-theme="dark"] .Panel h3,
+[data-theme="dark"] .PanelTitle,
+[data-theme="dark"] .SectionTitle,
+[data-theme="dark"] .PageTitle,
+[data-theme="dark"] .AlbumTitle,
+[data-theme="dark"] .SubTitle,
+[data-theme="dark"] .Create,
+[data-theme="dark"] .CardLocation,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+    color: #fff;
+}
+
+[data-theme="dark"] .CardDesc,
+[data-theme="dark"] .CardDate,
+[data-theme="dark"] .IntroText,
+[data-theme="dark"] p {
+    color: #a8c0d0;
+}
+
+[data-theme="dark"] .CardList li,
+[data-theme="dark"] .InfoList li,
+[data-theme="dark"] .FooterDesc {
+    color: #a8c0d0;
+}
+
+[data-theme="dark"] .MainFooter {
+    background-color: #040f1e;
+}
+
+[data-theme="dark"] .LetterGrid span {
+    color: #fff;
+}
+
+[data-theme="dark"] .LetterGrid span.LetterActive {
+    color: var(--One);
+}
+
+[data-theme="dark"] .FormInput {
+    color: #fff;
+    border-color: var(--One);
+    background-color: transparent;
+}
+
+[data-theme="dark"] .FormLabel {
+    background-color: #112233;
+    color: var(--One);
+}
+
+[data-theme="dark"] .SkillCard,
+[data-theme="dark"] .ShopLayout .Panel {
+    background-color: #112233;
+    border-color: rgba(68, 119, 148, 0.25);
+}
+
+[data-theme="dark"] .SkillCard h4,
+[data-theme="dark"] .SkillCard .SkillDesc {
+    color: #fff;
+}
+
+[data-theme="dark"] .AcquiredBadge {
+    background-color: rgba(68, 119, 148, 0.15);
+    color: #fff;
+}
+
+[data-theme="dark"] .SideNav {
+    background-color: #112233;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .SideNav a {
+    color: #fff;
+}
+
+[data-theme="dark"] .Comparaisons {
+    border-color: rgba(68, 119, 148, 0.3);
+}
+
+[data-theme="dark"] .InlineTab,
+[data-theme="dark"] .MenuTab {
+    color: #fff;
+    border-color: rgba(68, 119, 148, 0.2);
+}
+
+[data-theme="dark"] .InlineTab.active,
+[data-theme="dark"] .MenuTab.active {
+    background-color: var(--One);
+    color: #fff;
+}
+
+[data-theme="dark"] .StatusCard {
+    background-color: #112233;
+}
+
+.ThemeToggle {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: var(--PureWhite);
+    border: 2px solid var(--One);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    z-index: 9997;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    line-height: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+}
+
+.ThemeToggle:hover {
+    transform: scale(1.12) rotate(15deg);
+    box-shadow: 0 6px 20px rgba(68, 119, 148, 0.35);
+}
+
+@media (max-width: 600px) {
+    .ThemeToggle {
+        bottom: 20px;
+        left: 20px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ContentGrid .reveal:nth-child(2) {
+    transition-delay: 0.08s;
+}
+
+.ContentGrid .reveal:nth-child(3) {
+    transition-delay: 0.16s;
+}
+
+.ContentGrid .reveal:nth-child(4) {
+    transition-delay: 0.24s;
+}
+
+.ContentStack .reveal:nth-child(2) {
+    transition-delay: 0.06s;
+}
+
+.ContentStack .reveal:nth-child(3) {
+    transition-delay: 0.12s;
+}
+
+.ContentStack .reveal:nth-child(4) {
+    transition-delay: 0.18s;
+}
+
+.ContentStack .reveal:nth-child(5) {
+    transition-delay: 0.24s;
+}
+
+.ContentStack .reveal:nth-child(6) {
+    transition-delay: 0.30s;
+}
+
+main.Index .Project .Item:not(.ItemText) {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+main.Index .Project .Item:not(.ItemText) img {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+main.Index .Project .Item:not(.ItemText):hover img {
+    transform: scale(1.06);
+}
+
+.AlbumGrid a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.AlbumGrid a img {
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: block;
+}
+
+.AlbumGrid a:hover img {
+    transform: scale(1.04);
+}
+
+.AlbumGrid a::after {
+    content: "Voir →";
+    position: absolute;
+    inset: 0;
+    background: rgba(68, 119, 148, 0.6);
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.AlbumGrid a:hover::after {
+    opacity: 1;
+}
+
+.ContentCard {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ContentCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(68, 119, 148, 0.18);
+}
+
+.BtnExperience {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.88rem;
+}
+
+.LangToggle {
+    position: fixed;
+    bottom: 90px;
+    left: 30px;
+    background-color: var(--PureWhite);
+    border: 2px solid var(--One);
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+    z-index: 9997;
+    display: flex;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.LangBtn {
+    padding: 6px 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--Four);
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.LangBtn.active {
+    background-color: var(--One);
+    color: #fff;
+}
+
+.LangBtn:hover:not(.active) {
+    background-color: rgba(68, 119, 148, 0.1);
+}
+
+@media (max-width: 600px) {
+    .LangToggle {
+        bottom: 80px;
+        left: 20px;
+    }
+}
+
+.Filters,
+.InlineTab {
+    transition: background-color 0.25s ease, color 0.25s ease,
+        transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Filters:hover:not(.active),
+.InlineTab:hover:not(.active) {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(68, 119, 148, 0.2);
+}
+
+@media print {
+
+    .ThemeToggle,
+    .LangToggle,
+    .CvActions {
+        display: none !important;
     }
 }
 
