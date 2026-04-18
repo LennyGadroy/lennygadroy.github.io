@@ -757,7 +757,7 @@ main.Projets .Item h1 {
     overflow: hidden;
     margin: 0 auto;
     user-select: none;
-    background-color: var(--Four);
+    background-color: var(--PureWhite);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 12px;
 }
@@ -775,7 +775,7 @@ main.Projets .Item h1 {
     height: 100%;
     overflow: hidden;
     border-right: 2px solid white;
-    background-color: var(--Four);
+    background-color: var(--PureWhite);
 }
 
 .Comparaisons img.NewImage,
@@ -1104,24 +1104,41 @@ main.Projets h2 {
     letter-spacing: 0.05em;
     border: 1.5px solid;
 }
-.ProjectTag.refonte {
-    background: rgba(68,119,148,0.1);
-    color: var(--Two);
-    border-color: rgba(68,119,148,0.3);
-}
-.ProjectTag.refonte::before { content: "⟳ "; }
-.ProjectTag.creation {
-    background: rgba(18,50,73,0.08);
+.ProjectTag.UI {
+    background-color: rgba(var(--OneRGB),0.1);
+    color: var(--One);
+    border-color: rgba(var(--OneRGB),0.3);
+} .ProjectTag.UI::before {content:"🎨 ";}
+
+.ProjectTag.UX {
+    background: rgba(var(--OneRGB),0.1);
+    color: var(--One);
+    border-color: rgba(var(--OneRGB),0.3);
+} .ProjectTag.UX::before {content:"🖼️ ";}
+
+.ProjectTag.Refonte {
+    background: rgba(var(--ThreeRGB),0.1);
     color: var(--Three);
-    border-color: rgba(18,50,73,0.25);
-}
-.ProjectTag.creation::before { content: "✦ "; }
-.ProjectTag.wip {
-    background: rgba(180,120,30,0.08);
+    border-color: rgba(var(--ThreeRGB),0.3);
+} .ProjectTag.Refonte::before {content:"🖌️ ";}
+
+.ProjectTag.Creation {
+    background: rgba(154,205,0,0.08);
+    color: yellowgreen;
+    border-color: rgba(154,205,0,0.25);
+} .ProjectTag.Creation::before {content:"✨ ";}
+
+.ProjectTag.NI {
+    background: rgba(0,128,0,0.08);
+    color: #008000;
+    border-color: rgba(0,128,0,0.25);
+} .ProjectTag.NI::before {content:"✅ ";}
+
+.ProjectTag.WIP {
+    background: rgba(160,96,16,0.08);
     color: #a06010;
-    border-color: rgba(180,120,30,0.3);
-}
-.ProjectTag.wip::before { content: "🚧 "; }
+    border-color: rgba(var(--OneRGB),0.3);
+} .ProjectTag.WIP::before {content:"🚧 ";}
  
 .ProjectBlock {
     transition: opacity 0.35s ease, transform 0.35s ease;
@@ -2288,9 +2305,7 @@ textarea.FormInput+.FormLabel {
 .ContentStack .reveal:nth-child(5) { transition-delay: 0.24s; }
 
 main.Index .Project .Item:not(.ItemText) { overflow: hidden; border-radius: 6px; }
-main.Index .Project .Item:not(.ItemText) img {
-    transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94); will-change: transform;
-}
+main.Index .Project .Item:not(.ItemText) img {transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94); will-change: transform;}
 main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
 
 .AlbumGrid a { display: block; overflow: hidden; border-radius: 8px; position: relative; }
