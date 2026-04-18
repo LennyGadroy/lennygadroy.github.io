@@ -1,5 +1,5 @@
 const YligenHTML = `
-<div class="ProjectBlock" data-category="refonte" id="Yligen">
+<div class="ProjectBlock" data-category="refonte" data-tags="refonte ni ui ux" id="Yligen">
     <div class="Projects">
         <div class="Container">
             <div class="Project">

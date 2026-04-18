@@ -1,5 +1,5 @@
 const GoonHTML = `
-<div class="ProjectBlock" data-category="creation" id="GOON">
+<div class="ProjectBlock" data-category="creation" data-tags="refonte ni ui ux" id="GOON">
     <div class="Projects">
         <div class="Container">
             <div class="Project">

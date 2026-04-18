@@ -1,5 +1,5 @@
 const NoevellHTML = `
-<div class="ProjectBlock" data-category="creation" id="Noevell">
+<div class="ProjectBlock" data-category="creation" data-tags="creation ui ux" id="Noevell">
     <div class="Projects">
         <div class="Container">
             <div class="Project">

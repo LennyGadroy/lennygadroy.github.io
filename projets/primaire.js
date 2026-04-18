@@ -1,5 +1,5 @@
 const PrimaireHTML = `
-<div class="ProjectBlock" data-category="creation" id="Primaire">
+<div class="ProjectBlock" data-category="creation" data-tags="creation ui ux" id="Primaire">
     <div class="Projects">
         <div class="Container">
             <div class="Project">

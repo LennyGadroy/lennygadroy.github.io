@@ -95,6 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var blocks = document.querySelectorAll(".ProjectBlock");
     var countEl = document.getElementById("PFBCount");
 
+    function refreshScrollTrigger() {
+        if (typeof ScrollTrigger !== "undefined") {
+            setTimeout(function () { ScrollTrigger.refresh(); }, 420);
+        }
+    }
+
     function applyFilter(filter) {
         var visible = 0;
 
@@ -103,7 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         blocks.forEach(function (block) {
-            var match = filter === "all" || block.dataset.category === filter;
+            var tags = (block.dataset.tags || "").split(" ");
+            var match = filter === "all" || tags.includes(filter);
             if (match) {
                 block.style.display = "";
                 block.classList.remove("PB-hidden");
@@ -121,6 +128,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (countEl) {
             countEl.textContent = visible + " projet" + (visible > 1 ? "s" : "");
         }
+
+        refreshScrollTrigger();
     }
 
     filterBtns.forEach(function (btn) {
@@ -133,13 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (hash) {
         var target = document.getElementById(hash);
         if (target) {
-            var cat = target.dataset.category;
-            if (cat) applyFilter(cat);
+            var tags = (target.dataset.tags || "").split(" ");
+            var firstTag = tags.find(function (t) { return t && t !== "ui" && t !== "ux"; });
+            if (firstTag) applyFilter(firstTag);
             setTimeout(function () {
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
             }, 400);
         }
     }

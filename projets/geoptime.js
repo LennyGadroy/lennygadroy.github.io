@@ -1,5 +1,5 @@
 const GeoptimeHTML = `
-<div class="ProjectBlock" data-category="creation" id="GeopTime">
+<div class="ProjectBlock" data-category="creation" data-tags="creation ni ui ux" id="GeopTime">
     <div class="Projects">
         <div class="Container">
             <div class="Project">
@@ -20,6 +20,7 @@ const GeoptimeHTML = `
         <span class="ProjectTag UI">UI</span>
         <span class="ProjectTag UX">UX</span>
         <span class="ProjectTag Creation">Création</span>
+        <span class="ProjectTag NI">Nouvelle identité</span>
     </div>
     <h2>Création intégrale de site web de l'entreprise</h2>
     <div class="ProjectShowcase">
