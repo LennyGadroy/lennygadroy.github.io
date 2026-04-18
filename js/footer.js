@@ -8,11 +8,11 @@ const footerHTML = `
         <div class="FooterCol">
             <h4 class="FooterTitle">Navigation</h4>
             <ul class="FooterLinks">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="projets.html">Mes projets</a></li>
-                <li><a href="albums.html">Mes albums</a></li>
-                <li><a href="skills.html">Compétences</a></li>
-                <li><a href="cv.html">Mon CV</a></li>
+                <li><a href="/index">Accueil</a></li>
+                <li><a href="/projets">Mes projets</a></li>
+                <li><a href="/albums">Mes albums</a></li>
+                <li><a href="/skills">Compétences</a></li>
+                <li><a href="/cv">Mon CV</a></li>
             </ul>
         </div>
         <div class="FooterCol">
@@ -21,7 +21,7 @@ const footerHTML = `
                 <li><a href="https://linkedin.com/in/lennygadroy/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                 <li><a href="https://instagram.com/lennygdr19/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
                 <li><a href="https://github.com/LennyGadroy/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="contact.html">Me contacter</a></li>
+                <li><a href="/contact">Me contacter</a></li>
             </ul>
         </div>
     </div>
