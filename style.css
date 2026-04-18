@@ -1021,6 +1021,139 @@ main.Projets h2 {
     color: var(--One);
 }
 
+.ProjectsFilterBar {
+    position: sticky;
+    top: 74px;
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 14px 28px;
+    margin: 0 auto 60px;
+    max-width: 900px;
+    background: var(--PureWhite);
+    border-radius: 50px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    border: 1px solid rgba(68,119,148,0.15);
+}
+ 
+.PFB-count {
+    font-family: "myFont", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--One);
+    white-space: nowrap;
+    min-width: 80px;
+}
+ 
+.PFB-btns {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+ 
+.PFB-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 20px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(68,119,148,0.2);
+    background: rgba(68,119,148,0.06);
+    color: var(--Four);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    white-space: nowrap;
+}
+.PFB-btn svg { flex-shrink: 0; stroke: currentColor; }
+.PFB-btn:hover { background: rgba(68,119,148,0.14); border-color: var(--One); color: var(--One); transform: translateY(-1px); }
+.PFB-btn.active {
+    background: var(--One);
+    border-color: var(--One);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(68,119,148,0.4);
+    transform: translateY(-1px);
+}
+.PFB-btn.active svg { stroke: #fff; }
+ 
+.ProjectMeta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 0 5%;
+    margin: -10px 0 20px;
+    flex-wrap: wrap;
+}
+ 
+.ProjectTag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 16px;
+    border-radius: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1.5px solid;
+}
+.ProjectTag.refonte {
+    background: rgba(68,119,148,0.1);
+    color: var(--Two);
+    border-color: rgba(68,119,148,0.3);
+}
+.ProjectTag.refonte::before { content: "⟳ "; }
+.ProjectTag.creation {
+    background: rgba(18,50,73,0.08);
+    color: var(--Three);
+    border-color: rgba(18,50,73,0.25);
+}
+.ProjectTag.creation::before { content: "✦ "; }
+.ProjectTag.wip {
+    background: rgba(180,120,30,0.08);
+    color: #a06010;
+    border-color: rgba(180,120,30,0.3);
+}
+.ProjectTag.wip::before { content: "🚧 "; }
+ 
+.ProjectBlock {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.ProjectBlock.PB-hidden {
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+}
+ 
+.ProjectsEmpty {
+    display: none;
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--Two);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+}
+ 
+@media (max-width: 600px) {
+    .ProjectsFilterBar {
+        border-radius: 16px;
+        padding: 14px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 16px 40px;
+        max-width: calc(100% - 32px);
+    }
+    .PFB-btns { width: 100%; }
+    .PFB-btn { flex: 1; justify-content: center; font-size: 0.82rem; padding: 8px 12px; }
+}
+
 /* ------
   Albums Page
 ------ */
@@ -2039,102 +2172,220 @@ textarea.FormInput+.FormLabel {
     }
 }
 
+
+/* ------
+  unsorted
+------ */
+.ThemeToggle {
+    position: fixed;
+    bottom: 30px; left: 30px;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background-color: var(--PureWhite);
+    border: 2px solid var(--One);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    cursor: pointer;
+    z-index: 9997;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; line-height: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0;
+}
+.ThemeToggle:hover { transform: scale(1.12) rotate(15deg); box-shadow: 0 6px 20px rgba(68,119,148,0.35); }
+
+.LangToggle {
+    position: fixed;
+    bottom: 90px; left: 30px;
+    background-color: var(--PureWhite);
+    border: 2px solid var(--One);
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+    z-index: 9997;
+    display: flex; overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.78rem; font-weight: 700;
+}
+.LangBtn {
+    padding: 6px 12px; background: none; border: none;
+    cursor: pointer; color: var(--Four);
+    font-family: "Montserrat", sans-serif; font-weight: 700;
+    transition: background 0.25s, color 0.25s;
+}
+.LangBtn.active { background-color: var(--One); color: #fff; }
+.LangBtn:hover:not(.active) { background-color: rgba(68,119,148,0.1); }
+
+.HamburgerBtn {
+    display: none;
+    background: none; border: none;
+    cursor: pointer; padding: 6px;
+    flex-direction: column; justify-content: center;
+    align-items: center; gap: 5px;
+    width: 38px; height: 38px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+.HamburgerBtn:hover { background: rgba(68,119,148,0.1); }
+
+.HamburgerLine {
+    display: block; width: 22px; height: 2px;
+    background-color: var(--Four);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.HamburgerBtn.open .HamburgerLine:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.HamburgerBtn.open .HamburgerLine:nth-child(2) { opacity: 0; }
+.HamburgerBtn.open .HamburgerLine:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.MobileNav {
+    display: none;
+    position: fixed;
+    top: 72px; left: 50%;
+    transform: translateX(-50%);
+    width: 95%; max-width: 1200px;
+    background-color: var(--PureWhite);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    z-index: 999;
+    padding: 16px;
+    flex-direction: column; gap: 4px;
+    border-top: 3px solid var(--One);
+    animation: mobileNavIn 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.MobileNav.open { display: flex; }
+
+.MobileNav a {
+    display: block; padding: 11px 16px;
+    text-decoration: none; color: var(--Four);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.MobileNav a:hover { background: rgba(68,119,148,0.1); color: var(--One); }
+.MobileNavDivider { height: 1px; background: rgba(68,119,148,0.15); margin: 6px 0; }
+.MobileNavSub { display: flex; flex-direction: column; gap: 0; padding-left: 10px; }
+.MobileNavSub a { font-size: 0.88rem; font-weight: 500; padding: 8px 14px; color: var(--Two); }
+.MobileNavCTA { margin-top: 8px; }
+.MobileNavCTA .BtnSolid { display: block; width: 100%; text-align: center; padding: 12px 0; }
+
+@keyframes mobileNavIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.5s cubic-bezier(0.22,1,0.36,1),
+                transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+
+.ContentGrid .reveal:nth-child(2) { transition-delay: 0.08s; }
+.ContentGrid .reveal:nth-child(3) { transition-delay: 0.16s; }
+.ContentStack .reveal:nth-child(2) { transition-delay: 0.06s; }
+.ContentStack .reveal:nth-child(3) { transition-delay: 0.12s; }
+.ContentStack .reveal:nth-child(4) { transition-delay: 0.18s; }
+.ContentStack .reveal:nth-child(5) { transition-delay: 0.24s; }
+
+main.Index .Project .Item:not(.ItemText) { overflow: hidden; border-radius: 6px; }
+main.Index .Project .Item:not(.ItemText) img {
+    transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94); will-change: transform;
+}
+main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
+
+.AlbumGrid a { display: block; overflow: hidden; border-radius: 8px; position: relative; }
+.AlbumGrid a img { transition: transform 0.4s ease; display: block; }
+.AlbumGrid a:hover img { transform: scale(1.04); }
+.AlbumGrid a::after {
+    content: "Voir →"; position: absolute; inset: 0;
+    background: rgba(68,119,148,0.55); color: #fff;
+    font-family: "Montserrat", sans-serif; font-weight: 700;
+    font-size: 1rem; text-transform: uppercase;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s ease;
+}
+.AlbumGrid a:hover::after { opacity: 1; }
+
+.HeroCTA {
+    display: flex; justify-content: center;
+    align-items: center; gap: 14px;
+    padding: 36px 20px 0;
+    flex-wrap: wrap; position: relative; z-index: 10;
+}
+.HeroCTA .BtnSolid,
+.HeroCTA .BtnOutline { font-size: 0.95rem; padding: 11px 26px; }
+
+.CvActions {
+    display: flex; gap: 12px; margin-top: 24px;
+    flex-wrap: wrap; justify-content: center;
+}
+.CvActions button, .CvActions a {
+    display: inline-flex; align-items: center; gap: 8px;
+    cursor: pointer; font-family: "Montserrat", sans-serif; font-size: 0.95rem;
+}
+
 /* ------
   Responsive Design
 ------ */
-@media (max-width: 900px) {
-    main.Index section.Projects {
-        height: 100vh;
-    }
-
-    main.Index section.Projects .Container {
-        width: 250%;
-        height: 150px;
-    }
-
-    main.Index #Project2 .Project,
-    main.Index #Project4 .Project {
-        left: -35%;
-    }
-
-    main.Index .Project .Item.ItemText {
-        flex: 1;
-    }
-
-    main.Index .Project .Item h1 {
-        font-size: 60px;
-    }
-
-    .ProjectShowcase {
-        flex-direction: column;
-    }
-
-    .ShowcaseMenu {
-        min-width: 100%;
-    }
-}
-
-.SideNav {
-    display: none;
-}
+.SideNav {display: none;}
 
 @media (min-width: 992px) {
-    .SideNav {
-        display: block;
-        position: fixed;
-        top: 200px;
-        left: 6vw;
-        background-color: var(--PureWhite);
-        box-shadow: 0 4px 15px rgba(var(--PureBlackRGB), 0.08);
-        border-radius: 12px;
-        padding: 20px 0;
-        z-index: 900;
-    }
+    .SideNav {display: block; position: fixed; top: 200px; left: 6vw; background-color: var(--PureWhite); box-shadow: 0 4px 15px rgba(var(--PureBlackRGB), 0.08); border-radius: 12px; padding: 20px 0; z-index: 900;}
+    .SideNav ul {list-style: none; display: flex; flex-direction: column; gap: 5px;}
+    .SideNav a {text-decoration: none; color: var(--Four); font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.9rem; padding: 12px 25px 12px 20px; display: block; border-left: 4px solid transparent; transition: all 0.3s ease;}
+    .SideNav a:hover {color: var(--One); background-color: rgba(var(--OneRGB), 0.08); border-left: 4px solid var(--One);}
+    .SideNavSub {list-style: none; display: flex; flex-direction: column; padding-left: 20px; margin-top: 5px; gap: 2px;}
+    .SideNavSub a {font-size: 0.8rem; font-weight: 500; padding: 8px 20px 8px 15px; border-left: 2px solid transparent;}
+    .SideNavSub a:hover {border-left: 2px solid var(--One);}
+}
 
-    .SideNav ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
+@media (max-width: 900px) {
+    .HamburgerBtn { display: flex; }
+    main.Index section.Projects {height: 100vh;}
+    main.Index section.Projects .Container {width: 250%; height: 150px;}
+    main.Index #Project2 .Project, main.Index #Project4 .Project {left: -35%;}
+    main.Index .Project .Item.ItemText {flex: 1;}
+    main.Index .Project .Item h1 {font-size: 60px;}
+    .ProjectShowcase {flex-direction: column;}
+    .ShowcaseMenu {min-width: 100%;}
+}
 
-    .SideNav a {
-        text-decoration: none;
-        color: var(--Four);
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        font-size: 0.9rem;
-        padding: 12px 25px 12px 20px;
-        display: block;
-        border-left: 4px solid transparent;
-        transition: all 0.3s ease;
-    }
+@media (max-width: 768px) {
+    main.Contact { padding: 80px 20px 40px; margin-top: 0; }
+    .ProjectShowcase { flex-direction: column !important; }
+    .ShowcaseMenu { min-width: 0 !important; width: 100%; }
+    main.Projets ul.InlineMenu {flex-wrap: nowrap !important; overflow-x: auto !important; overflow-y: visible !important; justify-content: flex-start !important; padding-bottom: 8px; -webkit-overflow-scrolling: touch; scrollbar-width: none;}
+    main.Projets ul.InlineMenu::-webkit-scrollbar { display: none; }
+    .InlineMenu { flex-wrap: wrap !important; gap: 10px; }
+    .InlineTab { font-size: 0.9rem !important; padding: 8px 16px !important; }
+}
 
-    .SideNav a:hover {
-        color: var(--One);
-        background-color: rgba(var(--OneRGB), 0.08);
-        border-left: 4px solid var(--One);
-    }
+@media (max-width: 640px) {
+    .ContentCard h4 { padding-right: 0 !important; }
+    .CardDesc { padding-right: 0 !important; }
+    .CardLocation {position: static !important; top: auto; right: auto; text-align: left; font-size: 0.9rem; margin-top: 4px;}
+    .CardDate {position: static !important; top: auto; right: auto; text-align: left; font-size: 0.85rem; margin-top: 2px;}
+    .BtnExperience {position: static !important; bottom: auto; right: auto; display: inline-block; margin-top: 14px;}
+    .ContentCard { padding-bottom: 20px !important; }
+}
 
-    .SideNavSub {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        padding-left: 20px;
-        margin-top: 5px;
-        gap: 2px;
-    }
+@media (max-width: 600px) {
+    .Albums { padding: 90px 16px 40px; }
+    main.Skills { padding: 90px 16px 40px; }
+    .HudStats { flex-wrap: wrap; gap: 15px; }
+    .XpContainer { min-width: 100%; }
+    .CV.Container { margin-top: 80px !important; gap: 40px !important; }
+    .CV .PageTitle { font-size: 1.6rem !important; margin: 60px 0 0 0 !important; }
+    .CvActions { justify-content: flex-start; }
+    .WipPopup { bottom: 20px; right: 20px; left: 20px; width: auto; }
+    .ThemeToggle { bottom: 20px; left: 20px; width: 42px; height: 42px; }
+    .LangToggle  { bottom: 78px; left: 20px; }
+}
 
-    .SideNavSub a {
-        font-size: 0.8rem;
-        font-weight: 500;
-        padding: 8px 20px 8px 15px;
-        border-left: 2px solid transparent;
-    }
-
-    .SideNavSub a:hover {
-        border-left: 2px solid var(--One);
-    }
+@media (max-width: 500px) {
+    .HeroCTA { flex-direction: column; align-items: stretch; padding: 24px 16px 0; }
+    .HeroCTA .BtnSolid,
+    .HeroCTA .BtnOutline { text-align: center; }
 }
 
 /* ------
@@ -2197,363 +2448,15 @@ textarea.FormInput+.FormLabel {
     }
 }
 
+@media print {
+    .ThemeToggle, .LangToggle, .CvActions,
+    .HamburgerBtn, .MobileNav { display: none !important; }
+}
+
 /* ------
   Dark Mode
 ------ */
-[data-theme="dark"] body {
-    background-color: #0c1c2c;
-    color: var(--PureWhite);
-}
-
-[data-theme="dark"] body::before {
-    --DotColor: rgba(68, 119, 148, 0.1);
-}
-
-[data-theme="dark"] .NavBar,
-[data-theme="dark"] .DropdownMenu {
-    background-color: #112233;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-}
-
-[data-theme="dark"] .NavLinks a,
-[data-theme="dark"] .NavLogo {
-    color: #fff;
-}
-
-[data-theme="dark"] .NavLinks a:hover,
-[data-theme="dark"] .NavLinks a.active,
-[data-theme="dark"] .NavLogo:hover {
-    color: var(--One);
-}
-
-[data-theme="dark"] .DropdownMenu a {
-    color: #fff;
-}
-
-[data-theme="dark"] .BtnOutline {
-    color: #fff;
-    border-color: #fff;
-}
-
-[data-theme="dark"] .BtnOutline:hover {
-    background-color: #fff;
-    color: #0c1c2c;
-}
-
-[data-theme="dark"] .ContentCard,
-[data-theme="dark"] .Panel,
-[data-theme="dark"] .FormWrapper,
-[data-theme="dark"] .WipPopup {
-    background-color: #112233;
-    border-color: rgba(68, 119, 148, 0.3);
-    color: #fff;
-}
-
-[data-theme="dark"] .ContentCard h4,
-[data-theme="dark"] .Panel h2,
-[data-theme="dark"] .Panel h3,
-[data-theme="dark"] .PanelTitle,
-[data-theme="dark"] .SectionTitle,
-[data-theme="dark"] .PageTitle,
-[data-theme="dark"] .AlbumTitle,
-[data-theme="dark"] .SubTitle,
-[data-theme="dark"] .Create,
-[data-theme="dark"] .CardLocation,
-[data-theme="dark"] h1,
-[data-theme="dark"] h2,
-[data-theme="dark"] h3,
-[data-theme="dark"] h4 {
-    color: #fff;
-}
-
-[data-theme="dark"] .CardDesc,
-[data-theme="dark"] .CardDate,
-[data-theme="dark"] .IntroText,
-[data-theme="dark"] p {
-    color: #a8c0d0;
-}
-
-[data-theme="dark"] .CardList li,
-[data-theme="dark"] .InfoList li,
-[data-theme="dark"] .FooterDesc {
-    color: #a8c0d0;
-}
-
-[data-theme="dark"] .MainFooter {
-    background-color: #040f1e;
-}
-
-[data-theme="dark"] .LetterGrid span {
-    color: #fff;
-}
-
-[data-theme="dark"] .LetterGrid span.LetterActive {
-    color: var(--One);
-}
-
-[data-theme="dark"] .FormInput {
-    color: #fff;
-    border-color: var(--One);
-    background-color: transparent;
-}
-
-[data-theme="dark"] .FormLabel {
-    background-color: #112233;
-    color: var(--One);
-}
-
-[data-theme="dark"] .SkillCard,
-[data-theme="dark"] .ShopLayout .Panel {
-    background-color: #112233;
-    border-color: rgba(68, 119, 148, 0.25);
-}
-
-[data-theme="dark"] .SkillCard h4,
-[data-theme="dark"] .SkillCard .SkillDesc {
-    color: #fff;
-}
-
-[data-theme="dark"] .AcquiredBadge {
-    background-color: rgba(68, 119, 148, 0.15);
-    color: #fff;
-}
-
-[data-theme="dark"] .SideNav {
-    background-color: #112233;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-[data-theme="dark"] .SideNav a {
-    color: #fff;
-}
-
-[data-theme="dark"] .Comparaisons {
-    border-color: rgba(68, 119, 148, 0.3);
-}
-
-[data-theme="dark"] .InlineTab,
-[data-theme="dark"] .MenuTab {
-    color: #fff;
-    border-color: rgba(68, 119, 148, 0.2);
-}
-
-[data-theme="dark"] .InlineTab.active,
-[data-theme="dark"] .MenuTab.active {
-    background-color: var(--One);
-    color: #fff;
-}
-
-[data-theme="dark"] .StatusCard {
-    background-color: #112233;
-}
-
-.ThemeToggle {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background-color: var(--PureWhite);
-    border: 2px solid var(--One);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-    cursor: pointer;
-    z-index: 9997;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    line-height: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 0;
-}
-
-.ThemeToggle:hover {
-    transform: scale(1.12) rotate(15deg);
-    box-shadow: 0 6px 20px rgba(68, 119, 148, 0.35);
-}
-
-@media (max-width: 600px) {
-    .ThemeToggle {
-        bottom: 20px;
-        left: 20px;
-        width: 42px;
-        height: 42px;
-    }
-}
-
-.reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.ContentGrid .reveal:nth-child(2) {
-    transition-delay: 0.08s;
-}
-
-.ContentGrid .reveal:nth-child(3) {
-    transition-delay: 0.16s;
-}
-
-.ContentGrid .reveal:nth-child(4) {
-    transition-delay: 0.24s;
-}
-
-.ContentStack .reveal:nth-child(2) {
-    transition-delay: 0.06s;
-}
-
-.ContentStack .reveal:nth-child(3) {
-    transition-delay: 0.12s;
-}
-
-.ContentStack .reveal:nth-child(4) {
-    transition-delay: 0.18s;
-}
-
-.ContentStack .reveal:nth-child(5) {
-    transition-delay: 0.24s;
-}
-
-.ContentStack .reveal:nth-child(6) {
-    transition-delay: 0.30s;
-}
-
-main.Index .Project .Item:not(.ItemText) {
-    overflow: hidden;
-    border-radius: 6px;
-}
-
-main.Index .Project .Item:not(.ItemText) img {
-    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform;
-}
-
-main.Index .Project .Item:not(.ItemText):hover img {
-    transform: scale(1.06);
-}
-
-.AlbumGrid a {
-    display: block;
-    overflow: hidden;
-    border-radius: 8px;
-    position: relative;
-}
-
-.AlbumGrid a img {
-    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    display: block;
-}
-
-.AlbumGrid a:hover img {
-    transform: scale(1.04);
-}
-
-.AlbumGrid a::after {
-    content: "Voir →";
-    position: absolute;
-    inset: 0;
-    background: rgba(68, 119, 148, 0.6);
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-}
-
-.AlbumGrid a:hover::after {
-    opacity: 1;
-}
-
-.ContentCard {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.ContentCard:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(68, 119, 148, 0.18);
-}
-
-.BtnExperience {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 0.88rem;
-}
-
-.LangToggle {
-    position: fixed;
-    bottom: 90px;
-    left: 30px;
-    background-color: var(--PureWhite);
-    border: 2px solid var(--One);
-    border-radius: 50px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
-    z-index: 9997;
-    display: flex;
-    overflow: hidden;
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.78rem;
-    font-weight: 700;
-}
-
-.LangBtn {
-    padding: 6px 12px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--Four);
-    transition: background 0.25s ease, color 0.25s ease;
-}
-
-.LangBtn.active {
-    background-color: var(--One);
-    color: #fff;
-}
-
-.LangBtn:hover:not(.active) {
-    background-color: rgba(68, 119, 148, 0.1);
-}
-
-@media (max-width: 600px) {
-    .LangToggle {
-        bottom: 80px;
-        left: 20px;
-    }
-}
-
-.Filters,
-.InlineTab {
-    transition: background-color 0.25s ease, color 0.25s ease,
-        transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.Filters:hover:not(.active),
-.InlineTab:hover:not(.active) {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(68, 119, 148, 0.2);
-}
-
-@media print {
-
-    .ThemeToggle,
-    .LangToggle,
-    .CvActions {
-        display: none !important;
-    }
-}
+[data-theme="dark"] body {background-color: #0c1c2c; color: #ddeaf4;}
 
 
 
