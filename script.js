@@ -1,135 +1,94 @@
 (function () {
   'use strict';
-  const savedTheme = localStorage.getItem('lg-theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  document.addEventListener('DOMContentLoaded', () => {
 
-    const themeBtn = document.createElement('button');
+  var savedTheme = localStorage.getItem('lg-theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    var themeBtn = document.createElement('button');
     themeBtn.className = 'ThemeToggle';
-    themeBtn.setAttribute('aria-label', 'Basculer le mode sombre');
-    themeBtn.title = 'Changer le thème';
+    themeBtn.setAttribute('aria-label', 'Basculer le mode sombre / clair');
     themeBtn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
     document.body.appendChild(themeBtn);
 
-    themeBtn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
+    themeBtn.addEventListener('click', function () {
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('lg-theme', next);
       themeBtn.textContent = next === 'dark' ? '☀️' : '🌙';
     });
 
-    const savedLang = localStorage.getItem('lg-lang') || 'fr';
-    const langWrap = document.createElement('div');
-    langWrap.className = 'LangToggle';
-    langWrap.setAttribute('aria-label', 'Changer la langue');
-    const btnFR = document.createElement('button');
-    btnFR.className = 'LangBtn' + (savedLang === 'fr' ? ' active' : '');
-    btnFR.dataset.lang = 'fr';
-    btnFR.textContent = 'FR';
-    const btnEN = document.createElement('button');
-    btnEN.className = 'LangBtn' + (savedLang === 'en' ? ' active' : '');
-    btnEN.dataset.lang = 'en';
-    btnEN.textContent = 'EN';
-    langWrap.appendChild(btnFR);
-    langWrap.appendChild(btnEN);
-    document.body.appendChild(langWrap);
-
-    langWrap.addEventListener('click', (e) => {
-      const btn = e.target.closest('.LangBtn');
-      if (!btn) return;
-      const lang = btn.dataset.lang;
-      localStorage.setItem('lg-lang', lang);
-      langWrap.querySelectorAll('.LangBtn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      applyLang(lang);
-    });
-
-    if (savedLang === 'en') applyLang('en');
-
+    initHamburger();
     initScrollReveal();
   });
 
-  function initScrollReveal() {
-    const selectors = [
-      '.ContentCard',
-      '.Panel',
-      '.CvSection',
-      '.AlbumSection',
-      '.ContactCol',
-      '.ContactFormPanel',
-      '.SkillCard',
-      '.LogoItem',
-      '.AlbumGrid',
-    ];
+  function initHamburger() {
+    var navbar = document.querySelector('.NavBar');
+    if (!navbar) return;
 
-    selectors.forEach(sel => {
-      document.querySelectorAll(sel).forEach(el => {
-        if (!el.classList.contains('reveal')) {
-          el.classList.add('reveal');
-        }
-      });
+    var btn = document.createElement('button');
+    btn.className = 'HamburgerBtn';
+    btn.setAttribute('aria-label', 'Ouvrir le menu navigation');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span class="HamburgerLine"></span><span class="HamburgerLine"></span><span class="HamburgerLine"></span>';
+    navbar.appendChild(btn);
+
+    var nav = document.createElement('nav');
+    nav.className = 'MobileNav';
+    nav.setAttribute('role', 'navigation');
+    nav.setAttribute('aria-label', 'Navigation mobile');
+    nav.innerHTML =
+      '<a href="index.html">Accueil</a>' +
+      '<div class="MobileNavDivider"></div>' +
+      '<span style="padding:6px 16px;font-size:0.75rem;font-weight:700;color:var(--One);text-transform:uppercase;letter-spacing:0.08em;">Réalisations</span>' +
+      '<div class="MobileNavSub">' +
+        '<a href="projets.html">Projets</a>' +
+        '<a href="designs.html">Designs</a>' +
+        '<a href="albums.html">Albums</a>' +
+      '</div>' +
+      '<div class="MobileNavDivider"></div>' +
+      '<a href="skills.html">Compétences</a>' +
+      '<a href="cv.html">Curriculum</a>' +
+      '<div class="MobileNavDivider"></div>' +
+      '<div class="MobileNavCTA"><a href="contact.html" class="BtnSolid">Me contacter</a></div>';
+    document.body.appendChild(nav);
+
+    function toggle(force) {
+      var open = (force !== undefined) ? force : !nav.classList.contains('open');
+      nav.classList.toggle('open', open);
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    }
+
+    btn.addEventListener('click', function (e) { e.stopPropagation(); toggle(); });
+
+    document.addEventListener('click', function (e) {
+      if (!navbar.contains(e.target) && !nav.contains(e.target)) toggle(false);
     });
 
-    const revealEls = document.querySelectorAll('.reveal');
-    if (!revealEls.length) return;
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -40px 0px',
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { toggle(false); });
     });
 
-    revealEls.forEach(el => observer.observe(el));
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 950) toggle(false);
+    });
   }
 
-  const translations = {
-    fr: {
-      nav_home:       'Accueil',
-      nav_projects:   'Projets',
-      nav_skills:     'Compétences',
-      nav_cv:         'CV',
-      nav_contact:    'Contact',
-      nav_designs:    'Réalisations',
-      nav_albums:     'Albums',
-      btn_download_cv: '⬇ Télécharger le CV',
-      btn_contact:    'Me contacter',
-      btn_projects:   'Voir mes projets',
-      footer_rights:  'Tous droits réservés.',
-    },
-    en: {
-      nav_home:       'Home',
-      nav_projects:   'Projects',
-      nav_skills:     'Skills',
-      nav_cv:         'Resume',
-      nav_contact:    'Contact',
-      nav_designs:    'Designs',
-      nav_albums:     'Albums',
-      btn_download_cv: '⬇ Download Resume',
-      btn_contact:    'Contact me',
-      btn_projects:   'See my projects',
-      footer_rights:  'All rights reserved.',
-    },
-  };
-
-  function applyLang(lang) {
-    document.querySelectorAll('[data-fr]').forEach(el => {
-      const text = lang === 'fr' ? el.dataset.fr : el.dataset.en;
-      if (text !== undefined) el.textContent = text;
+  function initScrollReveal() {
+    var sels = ['.ContentCard','.Panel','.CvSection','.AlbumSection','.ContactCol','.ContactFormPanel','.SkillCard','.LogoItem','.AlbumGrid'];
+    sels.forEach(function (s) {
+      document.querySelectorAll(s).forEach(function (el) {
+        if (!el.classList.contains('reveal')) el.classList.add('reveal');
+      });
     });
-
-    document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.dataset.i18n;
-      const t = translations[lang];
-      if (t && t[key]) el.textContent = t[key];
-    });
+    var els = document.querySelectorAll('.reveal');
+    if (!els.length) return;
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { obs.observe(el); });
   }
 
 })();

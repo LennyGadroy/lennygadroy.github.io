@@ -22,3 +22,13 @@ const headerHTML = `
 `;
 
 document.getElementById('HeaderPlaceHolder').innerHTML = headerHTML;
+ 
+(function () {
+    var path = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.NavLinks a').forEach(function (a) {
+        var href = a.getAttribute('href');
+        if (href && href !== '#!' && path === href) {
+            a.classList.add('active');
+        }
+    });
+})();
