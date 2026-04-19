@@ -56,14 +56,14 @@ const YligenHTML = `
         <div class="ShowcaseContent">
             <div class="ContentPanel active" id="p9-tab1">
                 <div class="ContentCard">
-                    <h4>Une base à revoir..</h4>
+                    <h4>Une base à améliorer..</h4>
                     <p>YLIGEN avait un site sur Odoo — fonctionnel mais rigide, avec une identité visuelle générique et des limites importantes côté personnalisation.</p>
                     <p>L'enjeu : refondre l'identité complète et migrer vers un site codé en HTML/CSS/JS pour gagner en liberté créative, tout en restant compatible avec leur écosystème Odoo.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p9-tab2">
                 <div class="ContentCard">
-                    <h4>Du benchmarking au zoning</h4>
+                    <h4>Les limites du CMS / Les avantages du code</h4>
                     <p>Ce projet avait une contrainte technique forte dès le départ : la migration CMS → code.</p>
                     <p>J'ai commencé par auditer ce qui existait sur Odoo : qu'est-ce qui était inutilement contraint par le CMS ? Qu'est-ce qui pouvait être repris, qu'est-ce qui devait être repensé ?</p>
                     <p>La refonte de l'identité visuelle a été menée en parallèle : nouveau logo, nouvelle palette, nouvelle charte - avec l'idée de projeter une image plus premium et plus professionnelle que le template Odoo d'origine.</p>
@@ -77,7 +77,7 @@ const YligenHTML = `
             </div>
             <div class="ContentPanel" id="p9-tab4">
                 <div class="ContentCard">
-                    <h4>Optimisation de ma méthode de travail</h4>
+                    <h4>Libération de ma créativité</h4>
                     <p>Ce projet m'a appris à gérer la tension entre liberté créative et contraintes d'intégration.</p>
                     <p>Travailler avec Odoo implique de comprendre son architecture — impossible de designer sans comprendre ce que le CMS peut ou ne peut pas accueillir.</p>
                     <p>Ça m'a aussi confronté à la question de la maintenabilité : un design brillant qui est impossible à maintenir par le client n'est pas un bon design.</p>

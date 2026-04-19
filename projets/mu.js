@@ -56,7 +56,7 @@ const MuHTML = `
     <div class="ShowcaseContent">
       <div class="ContentPanel active" id="p3-tab1">
         <div class="ContentCard">
-          <h4>Un bon forme mais une mauvaise forme</h4>
+          <h4>Une bonne forme mais une mauvaise forme</h4>
           <p>Mü-Être est une marque dans le bien-être et le développement personnel.</p>
           <p>Le site existant posait un problème fondamental : l'identité visuelle ne reflétait pas la douceur et la confiance que la marque cherchait à transmettre.</p>
           <p>Navigation confuse, hiérarchie de contenu absente, aucune cohérence typographique : le fond était bon, la forme sabotait tout.</p>
@@ -68,7 +68,7 @@ const MuHTML = `
           <p>Avant le moindre trait de crayon, j'ai passé du temps à comprendre la cible : qui consulte ce site, dans quel état d'esprit, avec quelle intention ?</p>
           <p>Les visiteurs cherchent de la réassurance, de la clarté, pas de la stimulation. Cette insight a orienté toutes les décisions de design : espaces généreux, typographie lisible, palette apaisante, parcours simple.</p>
           <p>Le zoning a d'abord cartographié les 8 zones clés à retravailler.</p>
-          <p>Les wireframes ont testé plusieurs organisations pour la FAQ, les étapes d'accompagnement, et les articles de blog — des contenus denses qui nécessitaient une vraie réflexion sur la lisibilité.</p>
+          <p>Les wireframes ont testé plusieurs organisations pour la FAQ, les étapes d'accompagnement, et les articles de blog, des contenus denses qui nécessitaient une vraie réflexion sur la lisibilité.</p>
         </div>
       </div>
       <div class="ContentPanel" id="p3-tab3">

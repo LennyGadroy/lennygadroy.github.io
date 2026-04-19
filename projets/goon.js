@@ -78,7 +78,7 @@ const GoonHTML = `
             </div>
             <div class="ContentPanel" id="p2-tab3">
                 <div class="ContentCard">
-                    <h4>Identité visuelle</h4>
+                    <h4>Lorem</h4>
                     <p>Lorem</p>
                 </div>
             </div>

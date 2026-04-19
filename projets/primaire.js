@@ -58,7 +58,7 @@ const PrimaireHTML = `
                 <div class="ContentCard">
                     <h4>Une base à revoir..</h4>
                     <p>Primaire est un projet de création intégrale pour une marque e-commerce. Point de départ quasi nul : un site existant mais dépourvu d'identité établie.</p>
-                    <p>Le challenge d'une création from scratch, c'est l'absence de repères — tout est à inventer, ce qui est autant une liberté qu'une responsabilité.</p>
+                    <p>Le challenge d'une création from scratch, c'est l'absence de repères, tout est à inventer, ce qui est autant une liberté qu'une responsabilité.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p4-tab2">
