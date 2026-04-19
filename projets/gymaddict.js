@@ -1,5 +1,5 @@
 const GymAddictHTML = `
-<div class="ProjectBlock" data-category="refonte" data-tags="refonte ni ui ux" id="GymAddict">
+<div class="ProjectBlock" data-category="creation" data-tags="creation ni ui ux" id="GymAddict">
     <div class="Projects">
         <div class="Container">
             <div class="Project">
