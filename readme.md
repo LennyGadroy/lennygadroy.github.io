@@ -34,7 +34,8 @@ Voici les outils et technologies que j'ai utilisés pour bâtir ce site :
 * 📃 **Multi-blocs :** Utilisation de JavaScript pour insérer/modifier les mêmes blocs dans toutes les pages.
 * ⚡ **Chargement Rapide :** Optimisation des assets et du code.
 * 📂 **Showcase :** Galerie de projets avec descriptions et liens vers les dépôts.
-* 🌙 **Dark Mode :** Support du mode sombre pour le confort visuel.
+* 🌙 **Dark Mode :** Fonction JS pour le confort visuel des utilisateurs.
+* 📑 **Traduction :** Fonction JS de traduction de français à anglais.
 
 ---
 
@@ -43,7 +44,7 @@ Voici les outils et technologies que j'ai utilisés pour bâtir ce site :
 Une opportunité, une question ou simplement envie d'échanger ?
 
 * **LinkedIn :** [Lenny GADROY](https://linkedin.com/in/lennygadroy)
-* **Instagram :** [@LennyGadroy](https://instagram.com/lennygdr19)
+* **Instagram :** [@lennygdr19](https://instagram.com/lennygdr19)
 * **GitHub :** [@LennyGadroy](https://github.com/LennyGadroy)
 * **Email :** [lennygadroy@gmail.com](mailto:lennygadroy@gmail.com)
 
@@ -52,6 +53,9 @@ Une opportunité, une question ou simplement envie d'échanger ?
 ## 📄 Licence
 
 Ce projet est sous licence **MIT**. Vous êtes libre de vous en inspirer pour votre propre portfolio !
+
+Soyez gentil de ne pas tout copier-coller non plus 🙃
+Ou au moins ayez la décence de m'en informer ! Merci d'avance !
 
 ---
 *Fait avec originalité par Lenny Gadroy.*
