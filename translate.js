@@ -54,8 +54,8 @@
     "Voir l'ancienne version": "See the old version",
 
     /* ── Index ── */
-    "+2 Années d'Expériences ✦ ":"+2 Years of Experience ✦ ",
-    "+20 Projets réalisés \u00a0➔\u00a0 98% retours positifs \u00a0➔\u00a0":"+20 Completed Projects \u00a0➔\u00a0 98% Positive Reviews \u00a0➔\u00a0",
+    "+2 Années d'expériences ✦":"+2 Years of Experience ✦ ",
+    "+20 Projets réalisés ➔ 98% retours positifs ➔":"+20 Completed Projects ➔ 98% Positive Reviews ➔",
     "Bienvenue dans mon univers créatif. Je suis Lenny Gadroy, étudiant passionné par l'UI et l'UX Design. Mon objectif ? Transformer des concepts complexes en expériences digitales fluides, intuitives et mémorables. Explorez mon portfolio pour découvrir ma vision du design, où l'esthétisme rencontre la fonctionnalité à chaque interaction.":"Welcome to my creative universe. I'm Lenny Gadroy, a student passionate about UI and UX Design. My goal? Transforming complex concepts into smooth, intuitive and memorable digital experiences. Explore my portfolio to discover my vision of design, where aesthetics meet functionality at every interaction.",
     "Designs": "Designs",
     "Uniques": "Unique",
