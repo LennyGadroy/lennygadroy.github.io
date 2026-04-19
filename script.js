@@ -41,7 +41,7 @@
     nav.innerHTML =
       '<a href="index.html">Accueil</a>' +
       '<div class="MobileNavDivider"></div>' +
-      '<span style="padding:6px 16px;font-size:0.75rem;font-weight:700;color:var(--One);text-transform:uppercase;letter-spacing:0.08em;">Réalisations</span>' +
+      '<span style="padding:6px 16px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Réalisations</span>' +
       '<div class="MobileNavSub">' +
         '<a href="projets.html">Projets</a>' +
         '<a href="designs.html">Designs</a>' +

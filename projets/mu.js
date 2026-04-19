@@ -1,5 +1,5 @@
 const MuHTML = `
-<div class="ProjectBlock" data-category="refonte" data-tags="refonte ni ui ux"id="Mü">
+<div class="ProjectBlock" data-category="refonte" data-tags="refonte ni ui ux" id="Mü">
   <div class="Projects">
     <div class="Container">
       <div class="Project">
@@ -27,46 +27,62 @@ const MuHTML = `
     <div class="ShowcaseMenu">
       <div class="MenuTab active" data-target="p3-tab1">
         <div class="TabHeader">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.349a12.24 12.24 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
-          <h3>Partie visuelle</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><line x1="16.8" y1="16.8" x2="21.5" y2="21.5"/></svg>
+          <h3>Contexte & Problématique</h3>
           <span class="Chevron">›</span>
         </div>
       </div>
       <div class="MenuTab" data-target="p3-tab2">
         <div class="TabHeader">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-          <h3>Partie technique</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="15.5" width="5.5" height="7" rx="1.5"/><rect x="9.25" y="9.5" width="5.5" height="13" rx="1.5"/><rect x="17" y="3.5" width="5.5" height="19" rx="1.5"/></svg>
+          <h3>Ma démarche</h3>
+          <span class="Chevron">›</span>
+        </div>
+      </div>
+      <div class="MenuTab" data-target="p3-tab3">
+        <div class="TabHeader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3>Résultats</h3>
+          <span class="Chevron">›</span>
+        </div>
+      </div>
+      <div class="MenuTab" data-target="p3-tab4">
+        <div class="TabHeader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13 16 8 11 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          <h3>Ce que ça m'a apporté</h3>
           <span class="Chevron">›</span>
         </div>
       </div>
     </div>
     <div class="ShowcaseContent">
       <div class="ContentPanel active" id="p3-tab1">
-        <div class="ContentGrid">
-          <div class="ContentCard">
-            <h4>Zoning</h4>
-            <p>Hiérarchisation et structure globale de l'interface.</p>
-          </div>
-          <div class="ContentCard">
-            <h4>Wireframe</h4>
-            <p>Ergonomie et maquettes basse fidélité.</p>
-          </div>
-          <div class="ContentCard">
-            <h4>Maquettes</h4>
-            <p>Design final et rendu haute fidélité.</p>
-          </div>
+        <div class="ContentCard">
+          <h4>Un bon forme mais une mauvaise forme</h4>
+          <p>Mü-Être est une marque dans le bien-être et le développement personnel.</p>
+          <p>Le site existant posait un problème fondamental : l'identité visuelle ne reflétait pas la douceur et la confiance que la marque cherchait à transmettre.</p>
+          <p>Navigation confuse, hiérarchie de contenu absente, aucune cohérence typographique : le fond était bon, la forme sabotait tout.</p>
         </div>
       </div>
       <div class="ContentPanel" id="p3-tab2">
-        <div class="ContentGrid">
-          <div class="ContentCard">
-            <h4>CMS</h4>
-            <p>WordPress</p>
-          </div>
-          <div class="ContentCard">
-            <h4>Illustrations</h4>
-            <p>Figma, Suite Adobe</p>
-          </div>
+        <div class="ContentCard">
+          <h4>La QVCT commence avant tout sur le site</h4>
+          <p>Avant le moindre trait de crayon, j'ai passé du temps à comprendre la cible : qui consulte ce site, dans quel état d'esprit, avec quelle intention ?</p>
+          <p>Les visiteurs cherchent de la réassurance, de la clarté, pas de la stimulation. Cette insight a orienté toutes les décisions de design : espaces généreux, typographie lisible, palette apaisante, parcours simple.</p>
+          <p>Le zoning a d'abord cartographié les 8 zones clés à retravailler.</p>
+          <p>Les wireframes ont testé plusieurs organisations pour la FAQ, les étapes d'accompagnement, et les articles de blog — des contenus denses qui nécessitaient une vraie réflexion sur la lisibilité.</p>
+        </div>
+      </div>
+      <div class="ContentPanel" id="p3-tab3">
+        <div class="ContentCard">
+          <h4>Lorem</h4>
+          <p>Lorem</p>
+        </div>
+      </div>
+      <div class="ContentPanel" id="p3-tab4">
+        <div class="ContentCard">
+          <h4>Prise en compte du sujet</h4>
+          <p>Ce projet m'a appris à designer pour une émotion précise plutôt que pour un effet visuel.</p>
+          <p>Sur un site bien-être, la sobre efficacité vaut mieux qu'une mise en page spectaculaire.</p>
         </div>
       </div>
     </div>

@@ -1000,6 +1000,10 @@ main.Projets ul li.active .InlineTab {
     box-shadow: 0 4px 10px rgba(var(--PureBlackRGB), 0.1);
 }
 
+.ContentCard~.ContentCard {
+    margin-top: 20px;
+}
+
 .ContentCard h4 {
     color: var(--One);
     font-size: 1.4rem;
@@ -1014,6 +1018,19 @@ main.Projets ul li.active .InlineTab {
     text-transform: none;
     font-weight: 400;
     line-height: 1.6;
+}
+
+.ContentCard p~p {
+    margin-top: 10px;
+}
+
+.ContentCard ul {
+    color: #555;
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-left: 20px;
 }
 
 main.Projets h2 {
@@ -2281,9 +2298,9 @@ textarea.FormInput+.FormLabel {
 .MobileNav a:hover { background: rgba(68,119,148,0.1); color: var(--One); }
 .MobileNavDivider { height: 1px; background: rgba(68,119,148,0.15); margin: 6px 0; }
 .MobileNavSub { display: flex; flex-direction: column; gap: 0; padding-left: 10px; }
-.MobileNavSub a { font-size: 0.88rem; font-weight: 500; padding: 8px 14px; color: var(--Two); }
+.MobileNavSub a { font-size: 0.88rem; font-weight: 500; padding: 8px 14px; }
 .MobileNavCTA { margin-top: 8px; }
-.MobileNavCTA .BtnSolid { display: block; width: 100%; text-align: center; padding: 12px 0; }
+.MobileNavCTA .BtnSolid { display: block; width: 100%; text-align: center; padding: 12px 0; color: var(--PureWhite); }
 
 @keyframes mobileNavIn {
     from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
@@ -2399,8 +2416,7 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
 
 @media (max-width: 500px) {
     .HeroCTA { flex-direction: column; align-items: stretch; padding: 24px 16px 0; }
-    .HeroCTA .BtnSolid,
-    .HeroCTA .BtnOutline { text-align: center; }
+    .HeroCTA .BtnSolid, .HeroCTA .BtnOutline { text-align: center; }
 }
 
 /* ------

@@ -27,77 +27,73 @@ const GoonHTML = `
         <div class="ShowcaseMenu">
             <div class="MenuTab active" data-target="p2-tab1">
                 <div class="TabHeader">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    <h3>Améliorations</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><line x1="16.8" y1="16.8" x2="21.5" y2="21.5"/></svg>
+                    <h3>Contexte & Problématique</h3>
                     <span class="Chevron">›</span>
                 </div>
             </div>
             <div class="MenuTab" data-target="p2-tab2">
                 <div class="TabHeader">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.349a12.24 12.24 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
-                    <h3>Partie visuelle</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="15.5" width="5.5" height="7" rx="1.5"/><rect x="9.25" y="9.5" width="5.5" height="13" rx="1.5"/><rect x="17" y="3.5" width="5.5" height="19" rx="1.5"/></svg>
+                    <h3>Ma démarche</h3>
                     <span class="Chevron">›</span>
                 </div>
             </div>
             <div class="MenuTab" data-target="p2-tab3">
                 <div class="TabHeader">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-                    <h3>Partie technique</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3.5"/></svg>
+                    <h3>Identité visuelle</h3>
+                    <span class="Chevron">›</span>
+                </div>
+            </div>
+            <div class="MenuTab" data-target="p2-tab4">
+                <div class="TabHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <h3>Résultats</h3>
+                    <span class="Chevron">›</span>
+                </div>
+            </div>
+            <div class="MenuTab" data-target="p2-tab5">
+                <div class="TabHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13 16 8 11 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                    <h3>Ce que ça m'a apporté</h3>
                     <span class="Chevron">›</span>
                 </div>
             </div>
         </div>
         <div class="ShowcaseContent">
             <div class="ContentPanel active" id="p2-tab1">
-                <div class="ContentGrid">
-                    <div class="ContentCard">
-                        <h4>3 niveaux de difficultés</h4>
-                        <p>Facile, Normal, Difficile pour s'adapter à tous les joueurs</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Événements aléatoires</h4>
-                        <p>Mécaniques surprises qui relancent la partie</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Bonus stratégiques</h4>
-                        <p>Sabotages et aides pour intensifier la compétition</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Rapidité des réponses</h4>
-                        <p>Système de score pondéré par le temps de réponse</p>
-                    </div>
+                <div class="ContentCard">
+                    <h4>Améliorer l'expérience des joueurs</h4>
+                    <p>GOON existait déjà sous une première forme fonctionnelle mais visuellement datée et techniquement limitée : une seule session de jeu à la fois, pas de gestion des scores en temps réel, une identité visuelle qui ne reflétait pas l'énergie d'un blindtest multijoueur.</p>
+                    <p>Le défi : refonte complète de l'expérience des joueurs, identité, interface et architecture technique, pour que le produit soit à la hauteur de ce qu'il promettait.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p2-tab2">
-                <div class="ContentGrid">
-                    <div class="ContentCard">
-                        <h4>Identité visuelle</h4>
-                        <p>Nouvelle palette, logo et charte graphique complète</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Wireframe et Maquettes</h4>
-                        <p>Designs finaux et rendu haute fidélité.</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Designs</h4>
-                        <p>Figma, Canva</p>
-                    </div>
+                <div class="ContentCard">
+                    <h4>Perspective utilisateur</h4>
+                    <p>J'ai commencé par analyser les pain points utilisateurs identifiés lors de parties de test : désorientations pendant la partie, manque de feedback visuel sur les scores, absence de tension dramatique dans l'interface.</p>
+                    <p>Ces observations ont directement alimenté les 4 améliorations clés : niveaux de difficulté, événements aléatoires, bonus stratégiques, et scoring pondéré par le temps.</p>
+                    <p>Le wireframe m'a permis de tester plusieurs structures pour l'écran de jeu : l'enjeu était de rendre lisibles simultanément ; la question, le timer, les scores, les bonus actifs, sans surcharger l'écran.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p2-tab3">
-                <div class="ContentGrid">
-                    <div class="ContentCard">
-                        <h4>Front-End</h4>
-                        <p>HTML, CSS, JavaScript</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Back-End</h4>
-                        <p>SQL, Node.js, Socket.io</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Déploiement</h4>
-                        <p>GitHub, Render</p>
-                    </div>
+                <div class="ContentCard">
+                    <h4>Identité visuelle</h4>
+                    <p>Lorem</p>
+                </div>
+            </div>
+            <div class="ContentPanel" id="p2-tab4">
+                <div class="ContentCard">
+                    <h4>Lorem</h4>
+                    <p>Lorem</p>
+                </div>
+            </div>
+            <div class="ContentPanel" id="p2-tab5">
+                <div class="ContentCard">
+                    <h4>Coordination de l'interface utilisateur</h4>
+                    <p>Ce projet m'a confronté pour la première fois à la complexité d'une interface temps réel : les états de l'UI (en attente, en jeu, fin de manche, bonus actif…) doivent tous être anticipés dès le wireframe.</p>
+                    <p>J'ai également appris à coordonner le design avec des contraintes back-end concrètes (Socket.io, latence réseau), cela m'a rendu bien plus pragmatique dans mes choix UI.</p>
                 </div>
             </div>
         </div>
@@ -113,8 +109,7 @@ const GoonHTML = `
         <div class="Slider"></div>
     </div>
     <div class="Comparaisons" id="p2-comp2"><img src="img/Projects/Goon/new_game.png" alt="Nouvel écran de jeu GOON" class="NewImage">
-        <div class="Overlay"><img src="img/Projects/Goon/old_game.png" alt="Ancien écran de jeu GOON" class="OldImage">
-        </div>
+        <div class="Overlay"><img src="img/Projects/Goon/old_game.png" alt="Ancien écran de jeu GOON" class="OldImage"></div>
         <div class="Slider"></div>
     </div>
     <div class="Comparaisons" id="p2-comp3"><img src="img/Projects/Goon/new_login.png" alt="Nouvel espace de connexion GOON" class="NewImage">

@@ -27,66 +27,76 @@ const PortfolioHTML = `
     <div class="ShowcaseMenu">
       <div class="MenuTab active" data-target="p1-tab1">
         <div class="TabHeader">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-          <h3>Nouvelle identité</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><line x1="16.8" y1="16.8" x2="21.5" y2="21.5"/></svg>
+          <h3>Contexte & Problématique</h3>
           <span class="Chevron">›</span>
         </div>
       </div>
       <div class="MenuTab" data-target="p1-tab2">
         <div class="TabHeader">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.349a12.24 12.24 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
-          <h3>Partie visuelle</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="15.5" width="5.5" height="7" rx="1.5"/><rect x="9.25" y="9.5" width="5.5" height="13" rx="1.5"/><rect x="17" y="3.5" width="5.5" height="19" rx="1.5"/></svg>
+          <h3>Ma démarche</h3>
           <span class="Chevron">›</span>
         </div>
       </div>
       <div class="MenuTab" data-target="p1-tab3">
         <div class="TabHeader">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-          <h3>Partie technique</h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3.5"/></svg>
+          <h3>Identité visuelle</h3>
+          <span class="Chevron">›</span>
+        </div>
+      </div>
+      <div class="MenuTab" data-target="p1-tab4">
+        <div class="TabHeader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3>Résultats</h3>
+          <span class="Chevron">›</span>
+        </div>
+      </div>
+      <div class="MenuTab" data-target="p1-tab5">
+        <div class="TabHeader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13 16 8 11 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          <h3>Ce que ça m'a apporté</h3>
           <span class="Chevron">›</span>
         </div>
       </div>
     </div>
     <div class="ShowcaseContent">
       <div class="ContentPanel active" id="p1-tab1">
-        <div class="ContentGrid">
-          <div class="ContentCard">
-            <h4>Identité visuelle</h4>
-            <p>Nouvelle palette de couleurs, nouveau logo, nouvelle bannière</p>
-          </div>
-          <div class="ContentCard">
-            <h4>Designs</h4>
-            <p>Figma, Affinity, Canva</p>
-          </div>
+        <div class="ContentCard">
+          <h4>Vision des éléments</h4>
+          <p>Un portfolio, c'est le projet le plus difficile à designer : tu es à la fois le client, l'utilisateur et le designer.</p>
+          <p>La v2 souffrait d'une identité visuelle générique, d'une navigation peu intuitive et d'une hiérarchie de l'information bancale. Les projets noyaient le reste du contenu.</p>
+          <p>L'objectif de la v3 : transformer un simple catalogue en outil de conversion, capable de décrocher des entretiens.</p>
         </div>
       </div>
       <div class="ContentPanel" id="p1-tab2">
-        <div class="ContentGrid">
-          <div class="ContentCard">
-            <h4>Zoning</h4>
-            <p>Hiérarchisation et structure globale de l'interface.</p>
-          </div>
-          <div class="ContentCard">
-            <h4>Wireframe</h4>
-            <p>Ergonomie et maquettes basse fidélité.</p>
-          </div>
-          <div class="ContentCard">
-            <h4>Maquettes</h4>
-            <p>Design final et rendu haute fidélité.</p>
-          </div>
+        <div class="ContentCard">
+          <h4>Auditer la situation actuelle</h4>
+          <p>Avant de toucher à Figma, j'ai commencé par auditer la v2 : qu'est-ce qui marchait ? Qu'est-ce qui freinait ?</p>
+          <p>J'ai listé les frictions utilisateur (chemin trop long vers les projets, absence de hiérarchie visuelle, identité trop neutre) et défini des objectifs clairs pour chaque page.</p>
+          <p>Le zoning m'a permis de prioriser l'information : la home devait convaincre en 5 secondes, la page projets devait donner envie d'explorer, le CV devait rassurer sur les compétences techniques.</p>
+          <p>J'ai ensuite travaillé les wireframes pour valider l'ergonomie avant d'investir dans le design.</p>
         </div>
       </div>
       <div class="ContentPanel" id="p1-tab3">
-        <div class="ContentGrid">
-          <div class="ContentCard">
-            <h4>Front-End</h4>
-            <p>HTML, CSS, JavaScript</p>
-          </div>
-          <div class="ContentCard">
-            <h4>Déploiement</h4>
-            <p>GitHub, Formspree</p>
-          </div>
+        <div class="ContentCard">
+          <h4>Lorem</h4>
+          <p>Lorem</p>
+        </div>
+      </div>
+      <div class="ContentPanel" id="p1-tab4">
+        <div class="ContentCard">
+          <h4>Lorem</h4>
+          <p>Lorem</p>
+        </div>
+      </div>
+      <div class="ContentPanel" id="p1-tab5">
+        <div class="ContentCard">
+          <h4>M'auto challenger</h4>
+          <p>Ce projet m'a appris à me challenger moi-même sans client externe pour me pousser.</p>
+          <p>C'est là que la discipline de méthode compte vraiment. J'ai aussi compris que designer pour soi est un exercice d'ego : il faut savoir se mettre à la place de l'autre (recruteur, client potentiel) et non pas de soi.</p>
+          <p>La contrainte de "se vendre sans se survendre" a affiné mon sens de la hiérarchie visuelle.</p>
         </div>
       </div>
     </div>

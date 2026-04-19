@@ -4,7 +4,7 @@ const YligenHTML = `
         <div class="Container">
             <div class="Project">
                 <div class="Item">
-                    <h1>Septième Projet</h1>
+                    <h1>Neuvième Projet</h1>
                 </div>
             </div>
         </div>
@@ -25,90 +25,86 @@ const YligenHTML = `
     <h2>Refonte et adaption d'un CMS à un site codé</h2>
     <div class="ProjectShowcase">
         <div class="ShowcaseMenu">
-            <div class="MenuTab active" data-target="p7-tab1">
+            <div class="MenuTab active" data-target="p9-tab1">
                 <div class="TabHeader">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-                    <h3>Nouvelle identité</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><line x1="16.8" y1="16.8" x2="21.5" y2="21.5"/></svg>
+                    <h3>Contexte & Problématique</h3>
                     <span class="Chevron">›</span>
                 </div>
             </div>
-            <div class="MenuTab" data-target="p7-tab2">
+            <div class="MenuTab" data-target="p9-tab2">
                 <div class="TabHeader">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.349a12.24 12.24 0 0 1 19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
-                    <h3>Partie visuelle</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="15.5" width="5.5" height="7" rx="1.5"/><rect x="9.25" y="9.5" width="5.5" height="13" rx="1.5"/><rect x="17" y="3.5" width="5.5" height="19" rx="1.5"/></svg>
+                    <h3>Ma démarche</h3>
                     <span class="Chevron">›</span>
                 </div>
             </div>
-            <div class="MenuTab" data-target="p7-tab3">
+            <div class="MenuTab" data-target="p9-tab3">
                 <div class="TabHeader">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-                    <h3>Partie technique</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <h3>Résultats</h3>
+                    <span class="Chevron">›</span>
+                </div>
+            </div>
+            <div class="MenuTab" data-target="p9-tab4">
+                <div class="TabHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13 16 8 11 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                    <h3>Ce que ça m'a apporté</h3>
                     <span class="Chevron">›</span>
                 </div>
             </div>
         </div>
         <div class="ShowcaseContent">
-            <div class="ContentPanel active" id="p7-tab1">
-                <div class="ContentGrid">
-                    <div class="ContentCard">
-                        <h4>Identité visuelle</h4>
-                        <p>Nouvelle palette de couleurs, nouveau logo, nouvelle bannière</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Designs</h4>
-                        <p>Figma, Canva</p>
-                    </div>
+            <div class="ContentPanel active" id="p9-tab1">
+                <div class="ContentCard">
+                    <h4>Une base à revoir..</h4>
+                    <p>YLIGEN avait un site sur Odoo — fonctionnel mais rigide, avec une identité visuelle générique et des limites importantes côté personnalisation.</p>
+                    <p>L'enjeu : refondre l'identité complète et migrer vers un site codé en HTML/CSS/JS pour gagner en liberté créative, tout en restant compatible avec leur écosystème Odoo.</p>
                 </div>
             </div>
-            <div class="ContentPanel" id="p7-tab2">
-                <div class="ContentGrid">
-                    <div class="ContentCard">
-                        <h4>Zoning</h4>
-                        <p>Hiérarchisation et structure globale de l'interface.</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Wireframe</h4>
-                        <p>Ergonomie et maquettes basse fidélité.</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>Maquettes</h4>
-                        <p>Design final et rendu haute fidélité.</p>
-                    </div>
+            <div class="ContentPanel" id="p9-tab2">
+                <div class="ContentCard">
+                    <h4>Du benchmarking au zoning</h4>
+                    <p>Ce projet avait une contrainte technique forte dès le départ : la migration CMS → code.</p>
+                    <p>J'ai commencé par auditer ce qui existait sur Odoo : qu'est-ce qui était inutilement contraint par le CMS ? Qu'est-ce qui pouvait être repris, qu'est-ce qui devait être repensé ?</p>
+                    <p>La refonte de l'identité visuelle a été menée en parallèle : nouveau logo, nouvelle palette, nouvelle charte - avec l'idée de projeter une image plus premium et plus professionnelle que le template Odoo d'origine.</p>
                 </div>
             </div>
-            <div class="ContentPanel" id="p7-tab3">
-                <div class="ContentGrid">
-                    <div class="ContentCard">
-                        <h4>Front-End</h4>
-                        <p>HTML, CSS, JavaScript</p>
-                    </div>
-                    <div class="ContentCard">
-                        <h4>CMS</h4>
-                        <p>Odoo</p>
-                    </div>
+            <div class="ContentPanel" id="p9-tab3">
+                <div class="ContentCard">
+                    <h4>Lorem</h4>
+                    <p>Lorem</p>
+                </div>
+            </div>
+            <div class="ContentPanel" id="p9-tab4">
+                <div class="ContentCard">
+                    <h4>Optimisation de ma méthode de travail</h4>
+                    <p>Ce projet m'a appris à gérer la tension entre liberté créative et contraintes d'intégration.</p>
+                    <p>Travailler avec Odoo implique de comprendre son architecture — impossible de designer sans comprendre ce que le CMS peut ou ne peut pas accueillir.</p>
+                    <p>Ça m'a aussi confronté à la question de la maintenabilité : un design brillant qui est impossible à maintenir par le client n'est pas un bon design.</p>
                 </div>
             </div>
         </div>
     </div>
     <ul class="InlineMenu">
-        <li><button class="InlineTab active" data-target="p7-comp1">Hero</button></li>
-        <li><button class="InlineTab" data-target="p7-comp2">Formulaire de contact</button></li>
-        <li><button class="InlineTab" data-target="p7-comp3">Footer</button></li>
-        <li><button class="InlineTab" data-target="p7-comp4">Logo</button></li>
+        <li><button class="InlineTab active" data-target="p9-comp1">Hero</button></li>
+        <li><button class="InlineTab" data-target="p9-comp2">Formulaire de contact</button></li>
+        <li><button class="InlineTab" data-target="p9-comp3">Footer</button></li>
+        <li><button class="InlineTab" data-target="p9-comp4">Logo</button></li>
     </ul>
-    <div class="Comparaisons" id="p7-comp1"><img src="img/Projects/Yligen/new_hero.png" alt="Nouveau hero Yligen" class="NewImage">
+    <div class="Comparaisons" id="p9-comp1"><img src="img/Projects/Yligen/new_hero.png" alt="Nouveau hero Yligen" class="NewImage">
         <div class="Overlay"><img src="img/Projects/Yligen/old_hero.png" alt="Ancien hero Yligen" class="OldImage"></div>
         <div class="Slider"></div>
     </div>
-    <div class="Comparaisons" id="p7-comp2"><img src="img/Projects/Yligen/new_form.png" alt="Nouveau formulaire Yligen" class="NewImage">
+    <div class="Comparaisons" id="p9-comp2"><img src="img/Projects/Yligen/new_form.png" alt="Nouveau formulaire Yligen" class="NewImage">
         <div class="Overlay"><img src="img/Projects/Yligen/old_form.png" alt="Ancien formulaire Yligen" class="OldImage"></div>
         <div class="Slider"></div>
     </div>
-    <div class="Comparaisons" id="p7-comp3"><img src="img/Projects/Yligen/new_footer.png" alt="Nouveau footer Yligen" class="NewImage">
+    <div class="Comparaisons" id="p9-comp3"><img src="img/Projects/Yligen/new_footer.png" alt="Nouveau footer Yligen" class="NewImage">
         <div class="Overlay"><img src="img/Projects/Yligen/old_footer.png" alt="Ancien footer Yligen" class="OldImage"></div>
         <div class="Slider"></div>
     </div>
-    <div class="Comparaisons" id="p7-comp4"><img src="img/Projects/Yligen/new_logo.svg" alt="Nouveau logo Yligen" class="NewImage">
+    <div class="Comparaisons" id="p9-comp4"><img src="img/Projects/Yligen/new_logo.svg" alt="Nouveau logo Yligen" class="NewImage">
         <div class="Overlay"><img src="img/Projects/Yligen/old_logo.png" alt="Ancien logo Yligen" class="OldImage"></div>
         <div class="Slider"></div>
     </div>
