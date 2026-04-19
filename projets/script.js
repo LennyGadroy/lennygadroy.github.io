@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    var filterBtns = document.querySelectorAll(".PFB-btn");
+    var filterBtns = document.querySelectorAll(".Filters");
     var blocks = document.querySelectorAll(".ProjectBlock");
-    var countEl = document.getElementById("PFBCount");
+    var countEl = document.getElementById("FiltersCount");
 
     function refreshScrollTrigger() {
         if (typeof ScrollTrigger !== "undefined") {

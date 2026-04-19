@@ -1056,7 +1056,7 @@ main.Projets h2 {
     border: 1px solid rgba(68,119,148,0.15);
 }
  
-.PFB-count {
+.FiltersCount {
     font-family: "myFont", sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
@@ -1065,13 +1065,13 @@ main.Projets h2 {
     min-width: 80px;
 }
  
-.PFB-btns {
+.FiltersButtons {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
 }
  
-.PFB-btn {
+.Filters {
     display: inline-flex;
     align-items: center;
     gap: 7px;
@@ -1087,16 +1087,16 @@ main.Projets h2 {
     transition: all 0.22s ease;
     white-space: nowrap;
 }
-.PFB-btn svg { flex-shrink: 0; stroke: currentColor; }
-.PFB-btn:hover { background: rgba(68,119,148,0.14); border-color: var(--One); color: var(--One); transform: translateY(-1px); }
-.PFB-btn.active {
+.Filters svg { flex-shrink: 0; stroke: currentColor; }
+.Filters:hover { background: rgba(68,119,148,0.14); border-color: var(--One); color: var(--One); transform: translateY(-1px); }
+.Filters.active {
     background: var(--One);
     border-color: var(--One);
     color: #fff;
     box-shadow: 0 4px 14px rgba(68,119,148,0.4);
     transform: translateY(-1px);
 }
-.PFB-btn.active svg { stroke: #fff; }
+.Filters.active svg { stroke: #fff; }
  
 .ProjectMeta {
     display: flex;
@@ -1184,8 +1184,8 @@ main.Projets h2 {
         margin: 0 16px 40px;
         max-width: calc(100% - 32px);
     }
-    .PFB-btns { width: 100%; }
-    .PFB-btn { flex: 1; justify-content: center; font-size: 0.82rem; padding: 8px 12px; }
+    .FiltersButtons { width: 100%; }
+    .Filters { flex: 1; justify-content: center; font-size: 0.82rem; padding: 8px 12px; }
 }
 
 /* ------
