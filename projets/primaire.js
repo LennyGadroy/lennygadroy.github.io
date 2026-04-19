@@ -17,8 +17,7 @@ const PrimaireHTML = `
         </div>
     </div>
     <div class="ProjectMeta">
-        <span class="ProjectTag UI">UI</span>
-        <span class="ProjectTag UX">UX</span>
+        <span class="ProjectTag UI-UX">UI / UX</span>
         <span class="ProjectTag Creation">Création</span>
         <span class="ProjectTag WIP">En cours</span>
     </div>

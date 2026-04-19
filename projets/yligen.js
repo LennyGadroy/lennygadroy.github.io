@@ -17,8 +17,7 @@ const YligenHTML = `
         </div>
     </div>
     <div class="ProjectMeta">
-        <span class="ProjectTag UI">UI</span>
-        <span class="ProjectTag UX">UX</span>
+        <span class="ProjectTag UI-UX">UI / UX</span>
         <span class="ProjectTag Refonte">Refonte complète</span>
         <span class="ProjectTag NI">Nouvelle identité</span>
     </div>

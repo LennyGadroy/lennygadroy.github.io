@@ -1121,17 +1121,11 @@ main.Projets h2 {
     letter-spacing: 0.05em;
     border: 1.5px solid;
 }
-.ProjectTag.UI {
+.ProjectTag.UI-UX {
     background-color: rgba(var(--OneRGB),0.1);
     color: var(--One);
     border-color: rgba(var(--OneRGB),0.3);
-} .ProjectTag.UI::before {content:"🎨 ";}
-
-.ProjectTag.UX {
-    background: rgba(var(--OneRGB),0.1);
-    color: var(--One);
-    border-color: rgba(var(--OneRGB),0.3);
-} .ProjectTag.UX::before {content:"🖼️ ";}
+} .ProjectTag.UI-UX::before {content:"🎨 ";}
 
 .ProjectTag.Refonte {
     background: rgba(var(--ThreeRGB),0.1);
