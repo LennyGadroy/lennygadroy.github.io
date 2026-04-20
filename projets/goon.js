@@ -78,14 +78,21 @@ const GoonHTML = `
             </div>
             <div class="ContentPanel" id="p2-tab3">
                 <div class="ContentCard">
-                    <h4>Lorem</h4>
-                    <p>Lorem</p>
+                    <h4>Un branding sous adrénaline</h4>
+                    <p>GOON étant une application de jeu multi-synchronisée, l'ancienne charte manquait du dynamisme inhérent au monde de l'entertainment.</p>
+                    <p>J'ai donc injecté une toute nouvelle énergie visuelle en choisissant des teintes vives et des typographies plus audacieuses</p>
+                    <p>Le nouveau logo reflète cet esprit "gaming" et festif : il est pensé pour être percutant et mémorisable instantanément, rompant totalement avec la timidité de la version précédente.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p2-tab4">
                 <div class="ContentCard">
-                    <h4>Lorem</h4>
-                    <p>Lorem</p>
+                    <h4>L'immersion au cœur du jeu</h4>
+                    <p>L'interface a été entièrement repensée autour de l'action et de l'immersion :</p>
+                    <ul>
+                        <li><b>Espace de jeu :</b> C'est la métamorphose la plus frappante. L'interface s'efface au profit du jeu : les éléments de réponse et le timer sont mis en exergue, réduisant la charge cognitive des joueurs en pleine partie.</li>
+                        <li><b>Menu & Espace de connexion :</b> Le parcours utilisateur est fluidifié. L'intégration de la nouvelle charte graphique rend l'accueil plus chaleureux et intuitif, invitant immédiatement à lancer une partie.</li>
+                        <li><b>Émotion globale :</b> L'application est passée d'un simple outil fonctionnel à une véritable plateforme de divertissement, où l'excitation du jeu se ressent dès l'écran de connexion.</li>
+                    </ul>
                 </div>
             </div>
             <div class="ContentPanel" id="p2-tab5">
