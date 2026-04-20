@@ -80,14 +80,22 @@ const PortfolioHTML = `
       </div>
       <div class="ContentPanel" id="p1-tab3">
         <div class="ContentCard">
-          <h4>Lorem</h4>
-          <p>Lorem</p>
+          <h4>Vision & Partis pris graphiques</h4>
+          <p>Pour cette troisième itération de mon portfolio, l'objectif était d'affirmer une identité plus mature et distinctive, à la croisée du développement et du design.</p>
+          <p>J'ai opté pour une palette de couleurs plus profonde rehaussée de touches bleutées, afin de créer une atmosphère à la fois technique et créative.</p>
+          <p>Le nouveau logo a été repensé dans une logique minimaliste : il abandonne les fioritures de l'ancienne charte pour se concentrer sur l'essentiel, gagnant ainsi en lisibilité et en impact, quel que soit le support.</p>
         </div>
       </div>
       <div class="ContentPanel" id="p1-tab4">
         <div class="ContentCard">
-          <h4>Lorem</h4>
-          <p>Lorem</p>
+          <h4>Une expérience utilisateur redéfinie</h4>
+          <p>La refonte a radicalement transformé l'expérience utilisateur :</p>
+          <ul>
+            <li><b>Home & Projets :</b> La hiérarchie visuelle guide désormais l'œil naturellement vers les réalisations. Les espaces blancs respirent mieux, mettant en valeur les visuels.</li>
+            <li><b>Skills Shop :</b>L'approche a été repensée pour être plus interactive et engageante, rendant la lecture de mes compétences beaucoup plus ludique.</li>
+            <li><b>CV & Contact :</b> L'architecture de l'information a été épurée. Les formulaires et les informations clés sont plus accessibles, réduisant la friction pour les recruteurs ou les clients.</li>
+            <li><b>Émotion globale :</b> On passe d'un site "vitrine classique" à une véritable expérience immersive qui reflète mon exigence professionnelle.</li>
+          </ul>
         </div>
       </div>
       <div class="ContentPanel" id="p1-tab5">
