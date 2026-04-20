@@ -62,22 +62,22 @@ const CarAddHTML = `
             </div>
         </div>
         <div class="ShowcaseContent">
-            <div class="ContentPanel" id="p10-tab1">
+            <div class="ContentPanel active" id="p10-tab1">
                 <div class="ContentCard">
-                    <h4>Lorem</h4>
-                    <p>Lorem</p>
+                    <h4>en cours...</h4>
+                    <p>en cours...</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p10-tab2">
                 <div class="ContentCard">
-                    <h4>Lorem</h4>
-                    <p>Lorem</p>
+                    <h4>en cours...</h4>
+                    <p>en cours...</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p10-tab3">
                 <div class="ContentCard">
-                    <h4>Lorem</h4>
-                    <p>Lorem</p>
+                    <h4>en cours...</h4>
+                    <p>en cours...</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p10-tab4">
