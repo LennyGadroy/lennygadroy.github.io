@@ -78,13 +78,21 @@ const GeoptimeHTML = `
             <div class="ContentPanel" id="p5-tab3">
                 <div class="ContentCard">
                     <h4>Une nouvelle identité plus moderne</h4>
-                    <p>Côté identité, j'ai travaillé sur une nouvelle palette et un nouveau logo qui évoquent à la fois la précision (géolocalisation) et la modernité : une refonte de l'image autant que du site.</p>
+                    <p>GeopTime nécessite de projeter une image de fiabilité, d'efficacité et de modernité technologique.</p>
+                    <p>L'ancienne charte graphique vieillissante a été remplacée par un design system rigoureux. Les choix chromatiques se sont portés sur des teintes vives associées à des blancs purs pour maximiser le contraste.</p>
+                    <p>Le nouveau logo est plus géométrique et statutaire, ancrant la marque dans l'univers du B2B et des solutions logicielles de pointe.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p5-tab4">
                 <div class="ContentCard">
-                    <h4>Lorem</h4>
-                    <p>Lorem</p>
+                    <h4>L'information au service de l'efficacité</h4>
+                    <p>L'accent a été mis sur la clarté et la conversion :</p>
+                    <ul>
+                        <li><b>Hero Section :</b> Le message de valeur est désormais immédiat. L'ancien header confus a été remplacé par une section d'accroche percutante qui guide directement vers l'appel à l'action.</li>
+                        <li><b>Fonctionnalités :</b> L'UX a fait un bond en avant. Les informations techniques complexes sont maintenant vulgarisées grâce à une iconographie claire et une disposition en grille logique, facilitant la lecture en diagonale.</li>
+                        <li><b>Footer :</b> Transformé en un véritable outil de navigation secondaire, il structure l'information institutionnelle proprement.</li>
+                        <li><b>Émotion globale :</b> Le site inspire confiance et sérieux, transformant la présence en ligne de l'entreprise en un véritable levier commercial.</li>
+                    </ul>
                 </div>
             </div>
             <div class="ContentPanel" id="p5-tab5">
