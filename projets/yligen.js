@@ -40,12 +40,19 @@ const YligenHTML = `
             </div>
             <div class="MenuTab" data-target="p9-tab3">
                 <div class="TabHeader">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3.5"/></svg>
+                    <h3>Identité visuelle</h3>
+                    <span class="Chevron">›</span>
+                </div>
+            </div>
+            <div class="MenuTab" data-target="p9-tab4">
+                <div class="TabHeader">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     <h3>Résultats</h3>
                     <span class="Chevron">›</span>
                 </div>
             </div>
-            <div class="MenuTab" data-target="p9-tab4">
+            <div class="MenuTab" data-target="p9-tab5">
                 <div class="TabHeader">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13 16 8 11 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
                     <h3>Ce que ça m'a apporté</h3>
@@ -71,11 +78,26 @@ const YligenHTML = `
             </div>
             <div class="ContentPanel" id="p9-tab3">
                 <div class="ContentCard">
-                    <h4>Lorem</h4>
-                    <p>Lorem</p>
+                    <h4>S'affranchir des templates standards</h4>
+                    <p>Le passage d'un CMS standardisé à un site développé sur-mesure était l'occasion parfaite pour YLIGEN de s'affranchir des templates visuels génériques.</p>
+                    <p>J'ai conçu une charte graphique sur mesure qui traduit l'ADN unique de la marque.</p>
+                    <p>La palette de couleurs et la typographie ont été modernisées pour apporter une touche de sophistication.</p>
+                    <p>Le logo, subtilement retravaillé, gagne en finesse pour s'intégrer parfaitement à cette nouvelle interface haut de gamme.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p9-tab4">
+                <div class="ContentCard">
+                    <h4>La puissance du sur-mesure</h4>
+                    <p>Le passage au code personnalisé a permis d'optimiser chaque pixel :</p>
+                    <ul>
+                        <li><b>Hero :</b> L'impact visuel est décuplé. Le design respire et le chargement conceptuel est beaucoup plus léger que l'ancienne version bridée par le CMS.</li>
+                        <li><b>Formulaire : </b> L'UX a été totalement repensée. Fini les formulaires froids et rigides : la nouvelle version est découpée intelligemment, invitant l'utilisateur à interagir de manière beaucoup plus fluide.</li>
+                        <li><b>Footer :</b> Épuré et réorganisé, il conclut la visite de la page sur une note structurée et professionnelle.</li>
+                        <li><b>Émotion globale :</b> YLIGEN possède enfin un site qui reflète son ambition : sur-mesure, rapide, et esthétiquement irréprochable.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ContentPanel" id="p9-tab5">
                 <div class="ContentCard">
                     <h4>Libération de ma créativité</h4>
                     <p>Ce projet m'a appris à gérer la tension entre liberté créative et contraintes d'intégration.</p>
