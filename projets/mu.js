@@ -40,12 +40,19 @@ const MuHTML = `
       </div>
       <div class="MenuTab" data-target="p3-tab3">
         <div class="TabHeader">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3.5"/></svg>
+          <h3>Identité visuelle</h3>
+          <span class="Chevron">›</span>
+        </div>
+      </div>
+      <div class="MenuTab" data-target="p3-tab4">
+        <div class="TabHeader">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           <h3>Résultats</h3>
           <span class="Chevron">›</span>
         </div>
       </div>
-      <div class="MenuTab" data-target="p3-tab4">
+      <div class="MenuTab" data-target="p3-tab5">
         <div class="TabHeader">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13 16 8 11 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
           <h3>Ce que ça m'a apporté</h3>
@@ -73,11 +80,25 @@ const MuHTML = `
       </div>
       <div class="ContentPanel" id="p3-tab3">
         <div class="ContentCard">
-          <h4>Lorem</h4>
-          <p>Lorem</p>
+          <h4>Traduire le bien-être visuellement</h4>
+          <p>Mü possédait déjà leur propre identité visuelle, mais celle-ci n'était pas en phase avec l'essence de la marque.</p>
+          <p>Pas une recréation complète, mais "juste" adapté les éléments existants pour incarner la douceur et la confiance de la marque.</p>
+          <p>Notamment comme la charte graphique, qui était approximative, les supports de communication, les cartes de visite, et bien d'autres éléments...</p>
         </div>
       </div>
       <div class="ContentPanel" id="p3-tab4">
+        <div class="ContentCard">
+          <h4>Une navigation apaisée et fluide</h4>
+          <p>La lisibilité et l'accessibilité ont été les maîtres-mots de cette refonte :</p>
+          <ul>
+            <li><b>Home, Bannière & Prestations :</b> Les blocs de texte denses ont laissé place à une structure aérée. L'utilisateur comprend immédiatement l'offre grâce à une hiérarchisation claire et des visuels rassurants.</li>
+            <li><b>Blog & FAQ :</b> L'expérience de lecture a été drastiquement améliorée. L'interlignage, les contrastes et la typographie permettent désormais de consulter les articles sans fatigue visuelle.</li>
+            <li><b>A propos & Contact :</b> L'approche est plus humaine, favorisant la prise de contact sans friction.</li>
+            <li><b>Émotion globale :</b> Le site dégage désormais un sentiment de calme et de professionnalisme, parfaitement aligné avec l'activité de Mü.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ContentPanel" id="p3-tab5">
         <div class="ContentCard">
           <h4>Prise en compte du sujet</h4>
           <p>Ce projet m'a appris à designer pour une émotion précise plutôt que pour un effet visuel.</p>
