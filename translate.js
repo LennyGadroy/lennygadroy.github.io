@@ -185,9 +185,35 @@
     "Le site inspire confiance et sérieux, transformant la présence en ligne de l'entreprise en un véritable levier commercial.": "The site inspires trust and professionalism, transforming the company's online presence into a true commercial lever.",
 
     "Sixième Projet": "Sixth Project",
-    
+    "Nouvelle appli, nouvelle approche": "New app, new approach",
+    "Le marché des applications fitness est saturé : Strava, MyFitnessPal, Nike Training Club.": "The fitness app market is saturated: Strava, MyFitnessPal, Nike Training Club.",
+    "Alors pourquoi créer une nouvelle entrée ? Parce que la majorité de ces apps s'adressent à des athlètes confirmés ou s'éparpillent dans des fonctionnalités superflues.": "So why create a new entry? Because the majority of these apps are aimed at experienced athletes or scatter themselves with superfluous features.",
+    "GymAddict part d'un constat simple : les pratiquants réguliers de salle veulent un outil focalisé, sans friction, qui rende compte de leur progression sans les noyer sous des tableaux de bord complexes.": "GymAddict starts from a simple observation: regular gym-goers want a focused, frictionless tool that tracks their progress without drowning them in complex dashboards.",
+    "Le problème à résoudre n'était pas technique, c'était un problème de clarté et de positionnement.": "The problem to solve wasn't technical, it was a problem of clarity and positioning.",
+    "Conception et UX": "Design and UX",
+    "J'ai commencé par identifier précisément la cible : pas le coureur de marathon, pas le débutant qui teste : l'habitué de salle, entre 2 et 5 séances par semaine, qui veut tracker ses séries, ses charges et sa progression sans sortir de l'application pendant l'entraînement.": "I started by precisely identifying the target audience: not the marathon runner, not the beginner trying it out: the gym regular, working out 2 to 5 times a week, who wants to track their sets, weights, and progress without leaving the app during the workout.",
+    "Cette contrainte d'usage (les mains occupées, la tête ailleurs, peu de temps par interaction) a dicté toutes mes décisions UX : taille des éléments tactiles, réduction du nombre d'actions par écran, lisibilité en conditions d'effort.": "This usage constraint (busy hands, mind elsewhere, little time per interaction) dictated all my UX decisions: size of touch elements, reduction of the number of actions per screen, legibility under physical strain.",
+    "Penser pour l'utilisation": "Thinking for usability",
+    "Ce projet m'a forcé à penser : cas d'utilisation extrême. Designer pour quelqu'un en plein effort physique, c'est designer pour des conditions dégradées d'attention.": "This project forced me to think about extreme use cases. Designing for someone in the midst of physical effort means designing for degraded attention conditions.",
+    "J'ai réalisé que l'accessibilité et l'ergonomie ne sont pas des contraintes optionnelles : elles sont le produit lui-même.": "I realized that accessibility and ergonomics are not optional constraints: they are the product itself.",
+    "J'ai aussi affiné ma capacité à résister aux features supplémentaires : chaque élément ajouté avait besoin d'une justification claire dans le parcours utilisateur.": "I also refined my ability to resist additional features: every added element needed clear justification in the user journey.",
+
     "Septième Projet": "Seventh Project",
-    
+    "Une application personnelle": "A personal application",
+    "Les applications de suivi d'habitudes ne manquent pas : Habitica, Streaks, Done. Pourtant, beaucoup échouent au même endroit : elles gamifient à outrance ou au contraire restent trop austères, et les utilisateurs abandonnent au bout de deux semaines.": "There is no shortage of habit tracking apps: Habitica, Streaks, Done. Yet, many fail in the same place: they over-gamify or, conversely, remain too austere, and users give up after two weeks.",
+    "Le vrai problème n'est pas de tracker des habitudes, c'est de maintenir la motivation dans la durée.": "The real problem isn't tracking habits, it's maintaining motivation over the long term.",
+    "HabitsTracker est né de cette question : comment concevoir une interface qui célèbre la constance sans tomber dans le gadget ?": "HabitsTracker was born from this question: how do we design an interface that celebrates consistency without becoming gimmicky?",
+    "Comment rendre un simple tracker en une expérience agréable ?": "How to turn a simple tracker into a pleasant experience?",
+    "Avant de toucher à la maquette, j'ai réfléchi au modèle mental de l'utilisateur.": "Before touching the mockup, I thought about the user's mental model.",
+    "Quand on suit des habitudes, on pense en jours, en semaines, en streaks : pas en données brutes.": "When tracking habits, we think in days, weeks, streaks: not in raw data.",
+    "Cette observation a orienté directement les choix d'affichage : la visualisation du temps doit être intuitive, quasi-physique.": "This observation directly guided the display choices: the visualization of time must be intuitive, almost physical.",
+    "On doit sentir la progression sans avoir besoin de la lire.": "You should feel the progression without needing to read it.",
+    "J'ai ensuite identifié les moments critiques dans l'expérience : l'onboarding (quelles habitudes créer ?), le check-in quotidien (rapide et satisfaisant), et la vue rétrospective (est-ce que je progresse ?). Chaque wireframe a été évalué à l'aune de ces trois moments.": "I then identified the critical moments in the experience: onboarding (which habits to create?), the daily check-in (quick and satisfying), and the retrospective view (am I progressing?). Every wireframe was evaluated against these three moments.",
+    "La récurrence d'un projet": "The recurrence of a project",
+    "Ce projet m'a appris à designer pour la récurrence : un cas rarement traité en cours.": "This project taught me to design for recurrence : a case rarely covered in classes.",
+    "Un écran qu'on voit une fois doit convaincre ; un écran qu'on voit 300 fois doit rester agréable sans être envahissant.": "A screen seen once must convince; a screen seen 300 times must remain pleasant without being intrusive.",
+    "Cette contrainte m'a poussé à épurer encore plus que d'habitude et à réfléchir à la place du feedback positif dans l'UI : où célèbre-t-on l'utilisateur, combien de fois, à quelle intensité ?": "This constraint pushed me to streamline even more than usual and to think about the place of positive feedback in the UI: where do we celebrate the user, how many times, at what intensity?",
+
     "Huitième Projet": "Eighth Project",
     
     "Neuvième Projet": "Ninth Project",
@@ -216,6 +242,18 @@
     "Ça m'a aussi confronté à la question de la maintenabilité : un design brillant qui est impossible à maintenir par le client n'est pas un bon design.": "It also confronted me with the issue of maintainability: a brilliant design that is impossible for the client to maintain is not a good design.",
     
     "Dixième Projet": "Tenth Project",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+    "Autres": "Other",
+
     "en cours...": "in progress...",
 
     /* ── Albums ── */
