@@ -64,14 +64,20 @@ const HabitsTrackerHTML = `
         <div class="ShowcaseContent">
             <div class="ContentPanel active" id="p7-tab1">
                 <div class="ContentCard">
-                    <h4>en cours...</h4>
-                    <p>en cours...</p>
+                    <h4>Une application personnelle</h4>
+                    <p>Les applications de suivi d'habitudes ne manquent pas : Habitica, Streaks, Done. Pourtant, beaucoup échouent au même endroit : elles gamifient à outrance ou au contraire restent trop austères, et les utilisateurs abandonnent au bout de deux semaines.</p>
+                    <p>Le vrai problème n'est pas de tracker des habitudes, c'est de maintenir la motivation dans la durée.</p>
+                    <p>HabitsTracker est né de cette question : comment concevoir une interface qui célèbre la constance sans tomber dans le gadget ?</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p7-tab2">
                 <div class="ContentCard">
-                    <h4>en cours...</h4>
-                    <p>en cours...</p>
+                    <h4>Comment rendre un simple tracker en une expérience agréable ?</h4>
+                    <p>Avant de toucher à la maquette, j'ai réfléchi au modèle mental de l'utilisateur.</p>
+                    <p>Quand on suit des habitudes, on pense en jours, en semaines, en streaks : pas en données brutes.</p>
+                    <p>Cette observation a orienté directement les choix d'affichage : la visualisation du temps doit être intuitive, quasi-physique.</p>
+                    <p>On doit sentir la progression sans avoir besoin de la lire.</p>
+                    <p>J'ai ensuite identifié les moments critiques dans l'expérience : l'onboarding (quelles habitudes créer ?), le check-in quotidien (rapide et satisfaisant), et la vue rétrospective (est-ce que je progresse ?). Chaque wireframe a été évalué à l'aune de ces trois moments.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p7-tab3">
@@ -88,8 +94,10 @@ const HabitsTrackerHTML = `
             </div>
             <div class="ContentPanel" id="p7-tab5">
                 <div class="ContentCard">
-                    <h4>en cours...</h4>
-                    <p>en cours...</p>
+                    <h4>La récurrence d'un projet</h4>
+                    <p>Ce projet m'a appris à designer pour la récurrence : un cas rarement traité en cours.</p>
+                    <p>Un écran qu'on voit une fois doit convaincre ; un écran qu'on voit 300 fois doit rester agréable sans être envahissant.</p>
+                    <p>Cette contrainte m'a poussé à épurer encore plus que d'habitude et à réfléchir à la place du feedback positif dans l'UI : où célèbre-t-on l'utilisateur, combien de fois, à quelle intensité ?</p>
                 </div>
             </div>
         </div>
