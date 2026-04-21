@@ -64,14 +64,19 @@ const GymAddictHTML = `
         <div class="ShowcaseContent">
             <div class="ContentPanel active" id="p6-tab1">
                 <div class="ContentCard">
-                    <h4>en cours...</h4>
-                    <p>en cours...</p>
+                    <h4>Nouvelle appli, nouvelle approche</h4>
+                    <p>Le marché des applications fitness est saturé : Strava, MyFitnessPal, Nike Training Club.</p>
+                    <p>Alors pourquoi créer une nouvelle entrée ? Parce que la majorité de ces apps s'adressent à des athlètes confirmés ou s'éparpillent dans des fonctionnalités superflues.</p>
+                    <p>GymAddict part d'un constat simple : les pratiquants réguliers de salle veulent un outil focalisé, sans friction, qui rende compte de leur progression sans les noyer sous des tableaux de bord complexes.</p>
+                    <p>Le problème à résoudre n'était pas technique, c'était un problème de clarté et de positionnement.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p6-tab2">
                 <div class="ContentCard">
-                    <h4>en cours...</h4>
-                    <p>en cours...</p>
+                    <h4>Conception et UX</h4>
+                    <p>J'ai commencé par identifier précisément la cible : pas le coureur de marathon, pas le débutant qui teste : l'habitué de salle, entre 2 et 5 séances par semaine, qui veut tracker ses séries, ses charges et sa progression sans sortir de l'application pendant l'entraînement.</p>
+                    <p>Cette contrainte d'usage (les mains occupées, la tête ailleurs, peu de temps par interaction) a dicté toutes mes décisions UX : taille des éléments tactiles, réduction du nombre d'actions par écran, lisibilité en conditions d'effort.</p>
+                    <p>Le zoning a posé les grands blocs fonctionnels. Les wireframes ont surtout servi à tester la rapidité des flux critiques : démarrer une séance, logger un exercice, passer au suivant. Chaque friction supplémentaire était un problème à éliminer.</p>
                 </div>
             </div>
             <div class="ContentPanel" id="p6-tab3">
@@ -88,8 +93,10 @@ const GymAddictHTML = `
             </div>
             <div class="ContentPanel" id="p6-tab5">
                 <div class="ContentCard">
-                    <h4>en cours...</h4>
-                    <p>en cours...</p>
+                    <h4>Penser pour l'utilisation</h4>
+                    <p>Ce projet m'a forcé à penser : cas d'utilisation extrême. Designer pour quelqu'un en plein effort physique, c'est designer pour des conditions dégradées d'attention.</p>
+                    <p>J'ai réalisé que l'accessibilité et l'ergonomie ne sont pas des contraintes optionnelles : elles sont le produit lui-même.</p>
+                    <p>J'ai aussi affiné ma capacité à résister aux features supplémentaires : chaque élément ajouté avait besoin d'une justification claire dans le parcours utilisateur.</p>
                 </div>
             </div>
         </div>
