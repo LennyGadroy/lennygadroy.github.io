@@ -243,7 +243,7 @@ p {
     transform: translateY(-2px);
 }
 
-.Hidden{display: none;}
+.Hidden{display: none !important;}
 
 @media (max-width: 950px) {
     .NavLinks {
@@ -628,10 +628,8 @@ main.Skills .Merge {
 .ProjectSection {
     max-width: 1200px;
     margin-bottom: 70px;
-    background: var(--PureWhite);
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(var(--PureBlackRGB), 0.05);
     margin-bottom: 50px;
 }
 
@@ -684,6 +682,7 @@ main.Skills .Merge {
     font-size: 0.95rem;
     line-height: 1.5;
     margin: 0;
+    text-transform: none;
 }
 
 .ProjectCard:hover .ProjectImage img {

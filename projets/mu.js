@@ -1,5 +1,5 @@
 const MuHTML = `
-<div class="ProjectBlock" data-category="refonte" data-tags="refonte ni ui ux" id="Mü">
+<div class="ProjectBlock" data-category="refonte" data-tags="refonte ui ux" id="Mü">
   <div class="Projects">
     <div class="Container">
       <div class="Project">
@@ -19,7 +19,6 @@ const MuHTML = `
   <div class="ProjectMeta">
     <span class="ProjectTag UI-UX">UI / UX</span>
     <span class="ProjectTag Refonte">Refonte complète</span>
-    <span class="ProjectTag NI">Nouvelle identité</span>
   </div>
   <h2>Refonte visuelle complète et optimisation de l'UI et l'UX :</h2>
   <div class="ProjectShowcase">
