@@ -111,10 +111,11 @@ const PortfolioHTML = `
   <ul class="InlineMenu">
     <li><button class="InlineTab active" data-target="p1-comp1">Home</button></li>
     <li><button class="InlineTab" data-target="p1-comp2">Page des projets</button></li>
-    <li><button class="InlineTab" data-target="p1-comp3">Skills shop</button></li>
-    <li><button class="InlineTab" data-target="p1-comp4">Page CV</button></li>
-    <li><button class="InlineTab" data-target="p1-comp5">Page de contact</button></li>
-    <li><button class="InlineTab" data-target="p1-comp6">Logo</button></li>
+    <li><button class="InlineTab" data-target="p1-comp3">Page des albums</button></li>
+    <li><button class="InlineTab" data-target="p1-comp4">Skills shop</button></li>
+    <li><button class="InlineTab" data-target="p1-comp5">Page CV</button></li>
+    <li><button class="InlineTab" data-target="p1-comp6">Page de contact</button></li>
+    <li><button class="InlineTab" data-target="p1-comp7">Logo</button></li>
   </ul>
   <div class="Comparaisons" id="p1-comp1"><img src="img/Projects/Portfolio/new_home.png" alt="Nouvelle version de la page d'accueil du portfolio" class="NewImage">
     <div class="Overlay"><img src="img/Projects/Portfolio/old_home.png" alt="Ancienne version de la page d'accueil" class="OldImage"></div>
@@ -124,19 +125,23 @@ const PortfolioHTML = `
     <div class="Overlay"><img src="img/Projects/Portfolio/old_projets.png" alt="Ancienne version de la page projets" class="OldImage"></div>
     <div class="Slider"></div>
   </div>
-  <div class="Comparaisons" id="p1-comp3"><img src="img/Projects/Portfolio/new_skills.png" alt="Nouvelle version du skills shop" class="NewImage">
+  <div class="Comparaisons" id="p1-comp3"><img src="img/Projects/Portfolio/new_albums.png" alt="Nouvelle version de la page albums" class="NewImage">
+    <div class="Overlay"><img src="img/Projects/Portfolio/old_albums.png" alt="Ancienne version de la page albums" class="OldImage"></div>
+    <div class="Slider"></div>
+  </div>
+  <div class="Comparaisons" id="p1-comp4"><img src="img/Projects/Portfolio/new_skills.png" alt="Nouvelle version du skills shop" class="NewImage">
     <div class="Overlay"><img src="img/Projects/Portfolio/old_skills.png" alt="Ancienne version du skills shop" class="OldImage"></div>
     <div class="Slider"></div>
   </div>
-  <div class="Comparaisons" id="p1-comp4"><img src="img/Projects/Portfolio/new_cv.png" alt="Nouvelle version de la page CV" class="NewImage">
+  <div class="Comparaisons" id="p1-comp5"><img src="img/Projects/Portfolio/new_cv.png" alt="Nouvelle version de la page CV" class="NewImage">
     <div class="Overlay"><img src="img/Projects/Portfolio/old_cv.png" alt="Ancienne version de la page CV" class="OldImage"></div>
     <div class="Slider"></div>
   </div>
-  <div class="Comparaisons" id="p1-comp5"><img src="img/Projects/Portfolio/new_contact.png" alt="Nouvelle version de la page contact" class="NewImage">
+  <div class="Comparaisons" id="p1-comp6"><img src="img/Projects/Portfolio/new_contact.png" alt="Nouvelle version de la page contact" class="NewImage">
     <div class="Overlay"><img src="img/Projects/Portfolio/old_contact.png" alt="Ancienne version de la page contact" class="OldImage"></div>
     <div class="Slider"></div>
   </div>
-  <div class="Comparaisons" id="p1-comp6"><img src="img/Projects/Portfolio/new_logo.svg" alt="Nouveau logo GL" class="NewImage">
+  <div class="Comparaisons" id="p1-comp7"><img src="img/Projects/Portfolio/new_logo.svg" alt="Nouveau logo GL" class="NewImage">
     <div class="Overlay"><img src="img/Projects/Portfolio/old_logo.svg" alt="Ancien logo GL" class="OldImage"></div>
     <div class="Slider"></div>
   </div>
