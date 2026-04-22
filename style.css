@@ -641,21 +641,58 @@ main.Skills .Merge {
     gap: 20px;
 }
 
-.ProjectGrid img {
-    max-width: 100%;
-    height: auto;
+.Left, .Middle, .Right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ProjectImage {
+    position: relative;
+    overflow: hidden;
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
-.ProjectGrid img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
+.ProjectImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.ProjectGrid img ~img {
-    margin-top: 20px;
+.ProjectOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--FourRGB), 0.85); 
+    color: var(--PureWhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    opacity: 0; 
+    transform: translateY(15px); 
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; 
+}
+
+.ProjectOverlay p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.ProjectCard:hover .ProjectImage img {
+    transform: scale(1.05);
+}
+
+.ProjectCard:hover .ProjectOverlay {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .ListContainer {
