@@ -243,6 +243,8 @@ p {
     transform: translateY(-2px);
 }
 
+.Hidden{display: none;}
+
 @media (max-width: 950px) {
     .NavLinks {
         display: none;
@@ -345,6 +347,7 @@ main.Projets section {
     width: 100%;
     min-height: 100vh;
     height: auto;
+    margin: 0 auto;
 }
 
 .Hero {
@@ -620,6 +623,39 @@ main.Index .Word.Revealed {
 main.Projets .Merge,
 main.Skills .Merge {
     margin-top: 100px;
+}
+
+.ProjectSection {
+    max-width: 1200px;
+    margin-bottom: 70px;
+    background: var(--PureWhite);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(var(--PureBlackRGB), 0.05);
+    margin-bottom: 50px;
+}
+
+.ProjectGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ProjectGrid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.ProjectGrid img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
+}
+
+.ProjectGrid img ~img {
+    margin-top: 20px;
 }
 
 .ListContainer {
