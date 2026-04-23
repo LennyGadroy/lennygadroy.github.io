@@ -1,7 +1,7 @@
 const headerHTML = `
 <header class="MainHeader">
     <nav class="NavBar">
-        <a class="NavLogo" href="/index" aria-label="Retour à l'accueil"><img src="assets/icon.svg" alt="Logo de Lenny Gadroy" /></a>
+        <a class="NavLogo" href="/index" aria-label="Retour à l'accueil"><img src="/assets/icon.svg" alt="Logo de Lenny Gadroy" /></a>
         <ul class="NavLinks">
             <li><a href="/index">Accueil</a></li>
             <li class="Dropdown">

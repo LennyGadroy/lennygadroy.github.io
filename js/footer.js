@@ -33,7 +33,7 @@ const footerHTML = `
     <div class="WipContent">
         <div class="WipTitle">🚧 Portfolio en construction</div>
         <div class="WipText">Je travaille actuellement sur cette nouvelle version. Mon ancien portfolio reste consultable !</div>
-        <a href="Archives/v2/index.html" class="BtnSolid WipBtn">Voir l'ancienne version</a>
+        <a href="/Archives/v2/index.html" class="BtnSolid WipBtn">Voir l'ancienne version</a>
     </div>
 </div>
 `;
