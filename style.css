@@ -327,18 +327,6 @@ p {
     font-size: 0.85rem;
 }
 
-@media (max-width: 768px) {
-    .FooterContainer {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .FooterLinks a:hover {
-        padding-left: 0;
-        color: var(--One);
-    }
-}
-
 /* ------
   Index Page
 ------ */
@@ -634,9 +622,22 @@ main.Skills .Merge {
 }
 
 .ProjectGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    column-count: 3;
+    column-gap: 20px;
     gap: 20px;
+}
+
+.ProjectCard {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.ProjectCard img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
 
 .Left, .Middle, .Right {
@@ -1243,19 +1244,6 @@ main.Projets h2 {
     font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
 }
- 
-@media (max-width: 600px) {
-    .ProjectsFilterBar {
-        border-radius: 16px;
-        padding: 14px 18px;
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 0 16px 40px;
-        max-width: calc(100% - 32px);
-    }
-    .FiltersButtons { width: 100%; }
-    .Filters { flex: 1; justify-content: center; font-size: 0.82rem; padding: 8px 12px; }
-}
 
 /* ------
   Albums Page
@@ -1345,12 +1333,6 @@ main.Projets h2 {
     margin: 100px 0;
 }
 
-@media (max-width: 768px) {
-    .AlbumSection {
-        padding: 20px;
-    }
-}
-
 /* ------
   Reals Page
 ------ */
@@ -1368,12 +1350,6 @@ main.Projets h2 {
 
 .LogoItem .SubTitle {
     margin-top: 0;
-}
-
-@media (max-width: 900px) {
-    .LogoGrid {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* ------
@@ -1457,12 +1433,6 @@ main.Skills {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
-}
-
-@media (max-width: 900px) {
-    .ShopLayout {
-        grid-template-columns: 1fr;
-    }
 }
 
 .Panel {
@@ -2034,12 +2004,6 @@ main.Contact {
     gap: 2rem;
 }
 
-@media (max-width: 768px) {
-    .ContactGrid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .ContactCol {
     display: flex;
     flex-direction: column;
@@ -2449,6 +2413,8 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     main.Index .Project .Item h1 {font-size: 60px;}
     .ProjectShowcase {flex-direction: column;}
     .ShowcaseMenu {min-width: 100%;}
+    .LogoGrid {grid-template-columns: 1fr;}
+    .ShopLayout {grid-template-columns: 1fr;}
 }
 
 @media (max-width: 768px) {
@@ -2468,6 +2434,18 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     .MenuTab { padding: 14px 18px; }
     .TabHeader h3 { font-size: 1.05rem; }
     main.Projets .Projects { gap: 10vh; padding: 5vh 0; }
+    .ProjectGrid {column-count: 2;}
+    .ContactGrid {grid-template-columns: 1fr;}
+    .FooterContainer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .FooterLinks a:hover {
+        padding-left: 0;
+        color: var(--One);
+    }
+    .AlbumSection {padding: 20px;}
 }
 
 @media (max-width: 640px) {
@@ -2491,6 +2469,16 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
         font-size: clamp(1.8rem, 8vw, 2.5rem);
         text-align: center;
     }
+    .ProjectsFilterBar {
+        border-radius: 16px;
+        padding: 14px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 16px 40px;
+        max-width: calc(100% - 32px);
+    }
+    .FiltersButtons { width: 100%; }
+    .Filters { flex: 1; justify-content: center; font-size: 0.82rem; padding: 8px 12px; }
 }
 
 @media (max-width: 600px) {
@@ -2513,6 +2501,7 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     .MenuTab { padding: 12px 14px; }
     .TabHeader svg { width: 18px; height: 18px; min-width: 18px; }
     .Create {display: flex; flex-direction: column; text-align: center; gap: 10px;}
+    .ProjectGrid {column-count: 1;}
 }
 
 /* ------
