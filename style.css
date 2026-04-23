@@ -664,7 +664,7 @@ main.Skills .Merge {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(var(--FourRGB), 0.85); 
+    background-color: rgba(var(--ThreeRGB), 0.85); 
     color: var(--PureWhite);
     display: flex;
     align-items: center;
@@ -788,6 +788,9 @@ main.Skills .Merge {
 /* ------
   Projets Page
 ------ */
+.SubPage {margin-bottom: 100px;}
+.SubPage .ProjectBlock .Projects .Container~.Container {display: none;}
+
 main.Projets .Spacer {
     height: 50vh;
     display: flex;
