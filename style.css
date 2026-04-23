@@ -640,12 +640,6 @@ main.Skills .Merge {
   border-radius: 12px;
 }
 
-.Left, .Middle, .Right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .ProjectImage {
     position: relative;
     overflow: hidden;
