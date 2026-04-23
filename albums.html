@@ -14,6 +14,8 @@
     <meta property="og:title" content="Albums Photos | Portfolio de Lenny Gadroy">
     <meta property="og:description" content="Découvrez la galerie photographique de Lenny Gadroy : concerts, paysages, automobile et portraits. Mon regard créatif au-delà du design d'interface.">
     <meta property="og:image" content="https://lennygadroy.github.io/assets/og-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Lenny Gadroy Portfolio">
 
@@ -21,10 +23,25 @@
     <meta name="twitter:title" content="Albums Photos | Portfolio de Lenny Gadroy">
     <meta name="twitter:description" content="Découvrez la galerie photographique de Lenny Gadroy : concerts, paysages, automobile et portraits. Mon regard créatif au-delà du design d'interface.">
     <meta name="twitter:image" content="https://lennygadroy.github.io/assets/og-preview.png">
+    <meta name="twitter:site" content="@LennyGdr19">
+    <meta name="twitter:creator" content="@LennyGdr19">
 
     <link rel="canonical" href="https://lennygadroy.github.io/albums">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css" as="style">
     <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Albums Photos",
+        "description": "Galerie photographique de Lenny Gadroy : concerts, paysages, automobile et portraits.",
+        "author": {
+            "@type": "Person",
+            "name": "Lenny Gadroy"
+        }
+    }
+    </script>
 </head>
 <body>
     <div id="HeaderPlaceHolder"></div><script src="js/header.js"></script>
