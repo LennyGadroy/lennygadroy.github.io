@@ -68,8 +68,19 @@
     "Identité visuelle": "Visual Identity",
     "Résultats": "Results",
     "Ce que ça m'a apporté": "What it brought me",
+    "UI/UX Design · Webdesign · Identité visuelle": "UI/UX Design · Web Design · Visual Identity",
+    "Brief :": "Brief :",
+    "Objectif :": "Goal :", "Objectifs :": "Goals :",
+    "Valeurs :": "Values :",
+    "Livrables :": "Deliverables :",
+    "Projets similaires": "Similar projects",
+    "Vous pourriez aussi aimer": "You might also like",
     
-    "Premier Projet": "First Project",
+"Refonte Portfolio v3": "Redesign Portfolio v3",
+    "Création d'un portfolio professionnel pour présenter mes compétences et mes réalisations.": "Creation of a professional portfolio to showcase my skills and achievements.",
+    "Transformer un simple catalogue en outil de conversion, capable de décrocher des entretiens.": "Transforming a simple catalogue into a conversion tool, capable of securing interviews.",
+    "Innovation, créativité, professionnalisme.": "Innovation, creativity, professionalism.",
+    "Design complet du portfolio, contenu optimisé pour le référencement.": "Complete portfolio design, SEO-optimized content.",
     "Vision des éléments": "Vision of the elements",
     "Un portfolio, c'est le projet le plus difficile à designer : tu es à la fois le client, l'utilisateur et le designer.": "A portfolio is the hardest project to design: you are simultaneously the client, the user, and the designer.",
     "La v2 souffrait d'une identité visuelle générique, d'une navigation peu intuitive et d'une hiérarchie de l'information bancale. Les projets noyaient le reste du contenu.": "The v2 suffered from a generic visual identity, unintuitive navigation, and a shaky information hierarchy. The projects drowned out the rest of the content.",
@@ -97,7 +108,7 @@
     "C'est là que la discipline de méthode compte vraiment. J'ai aussi compris que designer pour soi est un exercice d'ego : il faut savoir se mettre à la place de l'autre (recruteur, client potentiel) et non pas de soi.": "This is where methodological discipline really counts. I also understood that designing for oneself is an exercise in ego: you have to know how to put yourself in the other person's shoes (recruiter, potential client) and not your own.",
     'La contrainte de "se vendre sans se survendre" a affiné mon sens de la hiérarchie visuelle.': 'The constraint of "selling yourself without overselling yourself" refined my sense of visual hierarchy.',
     
-    "Deuxième Projet": "Second Project",
+"Refonte Goon v3": "Redesign Goon v3",
     "Améliorer l'expérience des joueurs": "Improving the player experience",
     "GOON existait déjà sous une première forme fonctionnelle mais visuellement datée et techniquement limitée : une seule session de jeu à la fois, pas de gestion des scores en temps réel, une identité visuelle qui ne reflétait pas l'énergie d'un blindtest multijoueur.": "GOON already existed in an initial functional form, but was visually dated and technically limited: only one game session at a time, no real-time score management, and a visual identity that didn't reflect the energy of a multiplayer blind test.",
     "Le défi : refonte complète de l'expérience des joueurs, identité, interface et architecture technique, pour que le produit soit à la hauteur de ce qu'il promettait.": "The challenge: a complete overhaul of the player experience, identity, interface, and technical architecture, so that the product lived up to its promise.",
@@ -120,7 +131,7 @@
     "Ce projet m'a confronté pour la première fois à la complexité d'une interface temps réel : les états de l'UI (en attente, en jeu, fin de manche, bonus actif…) doivent tous être anticipés dès le wireframe.": "This project confronted me for the first time with the complexity of a real-time interface: UI states (waiting, playing, end of round, active bonus...) all need to be anticipated straight from the wireframe.",
     "J'ai également appris à coordonner le design avec des contraintes back-end concrètes (Socket.io, latence réseau), cela m'a rendu bien plus pragmatique dans mes choix UI.": "I also learned to coordinate design with concrete back-end constraints (Socket.io, network latency), which made me much more pragmatic in my UI choices.",
     
-    "Troisième Projet": "Third Project",
+"Refonte Mü v2": "Redesign Mü v2",
     "Une bonne forme mais une mauvaise forme": "Good substance, bad form",
     "Mü-Être est une marque dans le bien-être et le développement personnel.": "Mü-Être is a brand in wellness and personal development.",
     "Le site existant posait un problème fondamental : l'identité visuelle ne reflétait pas la douceur et la confiance que la marque cherchait à transmettre.": "The existing website had a fundamental problem: the visual identity did not reflect the gentleness and confidence that the brand sought to convey.",
@@ -146,7 +157,7 @@
     "Ce projet m'a appris à designer pour une émotion précise plutôt que pour un effet visuel.": "This project taught me to design for a specific emotion rather than a visual effect.",
     "Sur un site bien-être, la sobre efficacité vaut mieux qu'une mise en page spectaculaire.": "On a wellness website, sober efficiency is better than a spectacular layout.",
     
-    "Quatrième Projet": "Fourth Project",
+"Refonte Primaire v2": "Redesign Primaire v2",
     "Une base à revoir..": "A foundation to review..",
     "Primaire est un projet de création intégrale pour une marque e-commerce. Point de départ quasi nul : un site existant mais dépourvu d'identité établie.": "Primaire is an integral creation project for an e-commerce brand. The starting point was almost zero: an existing website but lacking an established identity.",
     "Le challenge d'une création from scratch, c'est l'absence de repères, tout est à inventer, ce qui est autant une liberté qu'une responsabilité.": "The challenge of creating from scratch is the lack of reference points; everything has to be invented, which is as much a freedom as it is a responsibility.",
@@ -159,7 +170,7 @@
     "Travailler sur une création pure m'a obligé à structurer ma propre méthode de brief : quand il n'y a pas de client qui t'impose des contraintes, tu dois te les donner toi-même.": "Working on a pure creation forced me to structure my own briefing method: when there is no client imposing constraints on you, you have to set them for yourself.",
     "J'ai aussi approfondi les spécificités UX du e-commerce, les parcours d'achat ont leurs propres règles, distinctes d'un site vitrine.": "I also deepened my knowledge of e-commerce UX specificities; purchasing journeys have their own rules, distinct from a showcase website.",
     
-    "Cinquième Projet": "Fifth Project",
+"Création GeopTime": "Creation GeopTime",
     "Un site inexistant...": "A non-existent website...",
     "GeopTime est une entreprise spécialisée dans la gestion du temps et de la localisation.": "GeopTime is a company specialized in time and location management.",
     "L'objectif : créer un site qui inspire confiance d'emblée et positionne clairement leur offre.": "The goal: to create a website that immediately inspires trust and clearly positions their offer.",
@@ -184,7 +195,7 @@
     "Transformé en un véritable outil de navigation secondaire, il structure l'information institutionnelle proprement.": "Transformed into a true secondary navigation tool, it cleanly structures institutional information.",
     "Le site inspire confiance et sérieux, transformant la présence en ligne de l'entreprise en un véritable levier commercial.": "The site inspires trust and professionalism, transforming the company's online presence into a true commercial lever.",
 
-    "Sixième Projet": "Sixth Project",
+"Création GymAddict": "Creation GymAddict",
     "Nouvelle appli, nouvelle approche": "New app, new approach",
     "Le marché des applications fitness est saturé : Strava, MyFitnessPal, Nike Training Club.": "The fitness app market is saturated: Strava, MyFitnessPal, Nike Training Club.",
     "Alors pourquoi créer une nouvelle entrée ? Parce que la majorité de ces apps s'adressent à des athlètes confirmés ou s'éparpillent dans des fonctionnalités superflues.": "So why create a new entry? Because the majority of these apps are aimed at experienced athletes or scatter themselves with superfluous features.",
@@ -198,7 +209,7 @@
     "J'ai réalisé que l'accessibilité et l'ergonomie ne sont pas des contraintes optionnelles : elles sont le produit lui-même.": "I realized that accessibility and ergonomics are not optional constraints: they are the product itself.",
     "J'ai aussi affiné ma capacité à résister aux features supplémentaires : chaque élément ajouté avait besoin d'une justification claire dans le parcours utilisateur.": "I also refined my ability to resist additional features: every added element needed clear justification in the user journey.",
 
-    "Septième Projet": "Seventh Project",
+"Création HabitsTracker": "Creation HabitsTracker",
     "Une application personnelle": "A personal application",
     "Les applications de suivi d'habitudes ne manquent pas : Habitica, Streaks, Done. Pourtant, beaucoup échouent au même endroit : elles gamifient à outrance ou au contraire restent trop austères, et les utilisateurs abandonnent au bout de deux semaines.": "There is no shortage of habit tracking apps: Habitica, Streaks, Done. Yet, many fail in the same place: they over-gamify or, conversely, remain too austere, and users give up after two weeks.",
     "Le vrai problème n'est pas de tracker des habitudes, c'est de maintenir la motivation dans la durée.": "The real problem isn't tracking habits, it's maintaining motivation over the long term.",
@@ -214,9 +225,9 @@
     "Un écran qu'on voit une fois doit convaincre ; un écran qu'on voit 300 fois doit rester agréable sans être envahissant.": "A screen seen once must convince; a screen seen 300 times must remain pleasant without being intrusive.",
     "Cette contrainte m'a poussé à épurer encore plus que d'habitude et à réfléchir à la place du feedback positif dans l'UI : où célèbre-t-on l'utilisateur, combien de fois, à quelle intensité ?": "This constraint pushed me to streamline even more than usual and to think about the place of positive feedback in the UI: where do we celebrate the user, how many times, at what intensity?",
 
-    "Huitième Projet": "Eighth Project",
+"Création Noevell": "Creation Noevell",
     
-    "Neuvième Projet": "Ninth Project",
+"Refonte Yligen v2": "Redesign Yligen v2",
     "Une base à améliorer..": "A foundation to improve..",
     "YLIGEN avait un site sur Odoo — fonctionnel mais rigide, avec une identité visuelle générique et des limites importantes côté personnalisation.": "YLIGEN had a site on Odoo — functional but rigid, with a generic visual identity and significant limitations regarding customization.",
     "L'enjeu : refondre l'identité complète et migrer vers un site codé en HTML/CSS/JS pour gagner en liberté créative, tout en restant compatible avec leur écosystème Odoo.": "The challenge: to rebuild the complete identity and migrate to a website coded in HTML/CSS/JS to gain creative freedom, while remaining compatible with their Odoo ecosystem.",
@@ -241,18 +252,7 @@
     "Travailler avec Odoo implique de comprendre son architecture — impossible de designer sans comprendre ce que le CMS peut ou ne peut pas accueillir.": "Working with Odoo means understanding its architecture — it's impossible to design without understanding what the CMS can or cannot accommodate.",
     "Ça m'a aussi confronté à la question de la maintenabilité : un design brillant qui est impossible à maintenir par le client n'est pas un bon design.": "It also confronted me with the issue of maintainability: a brilliant design that is impossible for the client to maintain is not a good design.",
     
-    "Dixième Projet": "Tenth Project",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
-    "Autres": "Other",
+"Création CarAdd Studio": "Creation CarAdd Studio",
 
     "en cours...": "in progress...",
 
