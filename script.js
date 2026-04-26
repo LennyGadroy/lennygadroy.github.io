@@ -39,17 +39,17 @@
     nav.setAttribute('role', 'navigation');
     nav.setAttribute('aria-label', 'Navigation mobile');
     nav.innerHTML =
-      '<a href="index.html">Accueil</a>' +
+      '<a href="/index">Accueil</a>' +
       '<div class="MobileNavDivider"></div>' +
       '<span style="padding:6px 16px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">Réalisations</span>' +
       '<div class="MobileNavSub">' +
-        '<a href="projets.html">Projets</a>' +
-        '<a href="designs.html">Designs</a>' +
-        '<a href="albums.html">Albums</a>' +
+        '<a href="/projets">Projets</a>' +
+        '<a href="/designs">Designs</a>' +
+        '<a href="/albums">Albums</a>' +
       '</div>' +
       '<div class="MobileNavDivider"></div>' +
-      '<a href="skills.html">Compétences</a>' +
-      '<a href="cv.html">Curriculum</a>' +
+      '<a href="/skills">Compétences</a>' +
+      '<a href="/cv">Curriculum</a>' +
       '<div class="MobileNavDivider"></div>' +
       '<div class="MobileNavCTA"><a href="contact.html" class="BtnSolid">Me contacter</a></div>';
     document.body.appendChild(nav);
