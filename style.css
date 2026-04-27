@@ -2987,25 +2987,117 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
 }
 
 /* Promenade */
-.Promenade {max-width: 1200px;margin: 0 auto;}
-
-.Promenade h1, .Promenade h6 {
-    text-transform: uppercase;
+.Promenade {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
 }
-.PromenadeHero h6 {
-    font-size: .7rem;
+
+.Promenade h1 {
+    font-family: "MyFont", sans-serif;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 900;
+    color: var(--Three);
+    line-height: 1.1;
+    margin-bottom: 32px;
+    letter-spacing: -0.03em;
+    max-width: 900px;
+    text-align: center;
+}
+
+.Promenade h2 {
+    font-family: "MyFont", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--Three);
+    margin-top: 80px;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.Promenade h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--One);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+.Promenade h2:hover::after {width: 120px;}
+
+.Promenade h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.25rem;
     font-weight: 700;
-    letter-spacing: .2em;
-    color: var(--One);
+    color: var(--Two);
+    background-color: rgba(var(--OneRGB), 0.05);
+    padding: 16px 20px;
+    margin-top: 48px;
     margin-bottom: 20px;
-    display: block;
-    opacity: 0;
-    transform: translateY(16px);
-    animation: revealUp .6s var(--ease-out) .1s forwards
+    border-left: 4px solid var(--One);
+    border-radius: 0 8px 8px 0;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
 }
 
-.Promenade h4, .Promenade p {
+.Promenade h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--One);
+    margin-bottom: 16px;
+    display: block;
+    line-height: 1;
+    text-align: center;
+}
+
+.Promenade p {
     text-transform: none !important;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    font-weight: 400;
+    color: rgba(var(--FourRGB), 0.85);
+    margin-bottom: 24px;
+    letter-spacing: 0.2px;
+}
+
+.Promenade ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 32px;
+}
+
+.Promenade li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    font-weight: 400;
+    color: rgba(var(--FourRGB), 0.85);
+    margin-bottom: 16px;
+    position: relative;
+    letter-spacing: 0.2px;
+}
+
+.Promenade ul li {padding-left: 28px;}
+
+.Promenade ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 12px;
+    height: 2px;
+    background-color: var(--One);
+    border-radius: 2px;
 }
 
 .SourcesBlock {
