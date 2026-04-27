@@ -2985,3 +2985,82 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
         width: auto;
     }
 }
+
+/* Promenade */
+.Promenade {max-width: 1200px;margin: 0 auto;}
+
+.Promenade h1, .Promenade h6 {
+    text-transform: uppercase;
+}
+.PromenadeHero h6 {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    color: var(--One);
+    margin-bottom: 20px;
+    display: block;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: revealUp .6s var(--ease-out) .1s forwards
+}
+
+.Promenade h4, .Promenade p {
+    text-transform: none !important;
+}
+
+.SourcesBlock {
+    padding: 40px;
+    margin-top: 32px;
+}
+
+.SourcesBlock h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--One);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    margin-bottom: 24px
+}
+
+.SourceGroup {margin-bottom: 20px}
+
+.SourceGroup h3 {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--Two);
+    margin-bottom: 10px
+}
+
+.SourceLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.SourceLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    border-radius: 50px;
+    border: 1.5px solid rgba(var(--OneRGB), .2);
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--Two);
+    text-decoration: none;
+    transition: .2s;
+    background: rgba(var(--OneRGB), .04)
+}
+
+.SourceLink:hover {background: rgba(var(--OneRGB), .1)}
+
+.SourceLink svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round
+}
