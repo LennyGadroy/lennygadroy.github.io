@@ -95,6 +95,7 @@
     "Espace habitudes": "Habits area",
     "Espace séries": "Streaks area",
     "Espace succès": "Achievements area",
+    "Espace des graphiques": "Graphs area",
     "Espace studio": "Studio area",
 
     "Projets similaires": "Similar projects",
