@@ -1365,8 +1365,33 @@ main.Projets h2 {
 
 .ProjectBloc {
     max-width: 820px;
-    margin: 0 auto 64px;
-    padding: 0 32px;
+    margin: 0 auto 32px;
+    padding: 32px;
+    background: var(--PureWhite);
+    border-radius: 16px;
+    border: 1px solid rgba(var(--FourRGB), 0.08);
+    box-shadow: 0 2px 8px rgba(var(--PureBlackRGB), 0.04);
+    transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
+                box-shadow 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
+                border-color 0.25s ease;
+    animation: projectBlocIn 0.55s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+}
+
+.ProjectBloc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(var(--PureBlackRGB), 0.1);
+    border-color: rgba(var(--OneRGB), 0.25);
+}
+
+@keyframes projectBlocIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
         
 .ProjectBloc h2 {
@@ -2743,7 +2768,8 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     .FooterLinks a:hover {padding-left: 0;color: var(--One);}
     .AlbumSection {padding: 20px;}
     .Intro { grid-template-columns: 1fr; gap: 24px; }
-    .Title, .Intro, .ProjectBloc, hr, .Label { padding: 0 20px; }
+    .Title, .Intro, hr, .Label { padding: 0 20px; }
+    .ProjectBloc { padding: 20px; margin-left: 20px; margin-right: 20px; max-width: calc(100% - 40px); }
 }
 
 @media (max-width: 640px) {
