@@ -2899,6 +2899,10 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
   Dark Mode
 ------ */
 [data-theme="dark"] body {background-color: #0c1c2c; color: #ddeaf4;}
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {color: var(--One) !important;}
+[data-theme="dark"] .Promenade h4, [data-theme="dark"] .Promenade h6, [data-theme="dark"] p, [data-theme="dark"] .Promenade li, [data-theme="dark"] .Promenade a, [data-theme="dark"] .H2Chevron {color: #ddeaf4 !important;}
+[data-theme="dark"] .Promenade h2::after {background-color: #ddeaf4;}
+[data-theme="dark"] .Promenade hr::before {background: linear-gradient(to right, transparent, rgba(221, 234, 244,0.3) 20%, rgba(221, 234, 244,0.3) 80%, transparent);}
 
 
 
@@ -3030,6 +3034,15 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
 }
 .Promenade h2:hover::after {width: 120px;}
 
+.Promenade > h2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    user-select: none;
+}
+
 .Promenade h4 {
     font-family: "Montserrat", sans-serif;
     font-size: 1.25rem;
@@ -3117,6 +3130,13 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     background-image: linear-gradient(rgba(var(--OneRGB), .12), rgba(var(--OneRGB), .12));
 }
 
+.Promenade a.SourceLink:hover {
+    color: var(--One);
+    background-size: 100% 100%;
+    background-image: linear-gradient(rgba(var(--OneRGB), .12), rgba(var(--OneRGB), .12));
+    transform: translateY(-4px);
+}
+
 .Promenade hr {
     position: relative;
     border: none;
@@ -3139,15 +3159,6 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     height: 1px;
     background: linear-gradient(to right, transparent, rgba(68,119,148,0.3) 20%, rgba(68,119,148,0.3) 80%, transparent);
     transform: translateY(-50%);
-}
-
-.Promenade > h2 {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
-    user-select: none;
 }
 
 #ReadingProgress {
