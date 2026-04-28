@@ -335,6 +335,180 @@ hr {
     font-size: 0.85rem;
 }
 
+.FooterAccent {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--Two) 20%, var(--One) 50%, var(--Two) 80%, transparent);
+    margin-bottom: 60px;
+    opacity: 0.6;
+}
+
+.FooterBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(var(--OneRGB), 0.12);
+    border: 1px solid rgba(var(--OneRGB), 0.3);
+    color: var(--One);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.FooterBadgeDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+    animation: FooterPulse 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes FooterPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5); }
+    70%  { box-shadow: 0 0 0 7px rgba(74, 222, 128, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+.FooterDesc {
+    margin-bottom: 20px;
+}
+
+.FooterCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--PureWhite);
+    background-color: rgba(var(--OneRGB), 0.15);
+    border: 1px solid rgba(var(--OneRGB), 0.35);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+}
+
+.FooterCta svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.25s ease;
+}
+
+.FooterCta:hover {
+    background-color: var(--One);
+    border-color: var(--One);
+    transform: translateY(-2px);
+}
+
+.FooterCta:hover svg {
+    transform: translateX(3px);
+}
+
+.FooterLinkArrow {
+    display: inline-block;
+    margin-right: 7px;
+    color: var(--One);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    font-style: normal;
+}
+
+.FooterLinks a:hover .FooterLinkArrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.FooterSocialLinks a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.FooterIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background-color: rgba(var(--OneRGB), 0.1);
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+.FooterIcon svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--One);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.FooterSocialLinks a:hover .FooterIcon {
+    background-color: var(--One);
+}
+
+.FooterSocialLinks a:hover .FooterIcon svg {
+    stroke: var(--PureWhite);
+}
+
+.FooterBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.FooterBackTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(var(--PureWhiteRGB), 0.15);
+    background-color: rgba(var(--PureWhiteRGB), 0.05);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.FooterBackTop svg {
+    width: 16px;
+    height: 16px;
+    stroke: #A0B3C1;
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s ease;
+}
+
+.FooterBackTop:hover {
+    background-color: var(--One);
+    border-color: var(--One);
+    transform: translateY(-3px);
+}
+
+.FooterBackTop:hover svg {
+    stroke: var(--PureWhite);
+}
+
 /* ------
   Index Page
 ------ */
@@ -2743,6 +2917,7 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     .ShowcaseMenu {min-width: 100%;}
     .LogoGrid {grid-template-columns: 1fr;}
     .ShopLayout {grid-template-columns: 1fr;}
+    .FooterContainer {grid-template-columns: 1.6fr 1fr 1fr;}
 }
 
 @media (max-width: 768px) {
@@ -2818,6 +2993,7 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     .LangToggle  { bottom: 78px; left: 20px; }
     .RelatedGrid { grid-template-columns: 1fr; }
     .RelatedProjects { padding: 0 20px; }
+    .FooterBottom {flex-direction: column-reverse;gap: 16px;text-align: center;}
 }
 
 @media (max-width: 500px) {
