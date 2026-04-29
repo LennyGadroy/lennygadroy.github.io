@@ -1296,9 +1296,10 @@ main.Projets ul li.active .InlineTab {
     margin-left: 20px;
 }
 
-main.Projets h2 {
+main.Projets h2, main.Projets h4 {
     text-align: center;
     color: var(--One);
+    font-family: "myFont", sans-serif;
 }
 
 .ProjectsFilterBar {
@@ -1577,7 +1578,6 @@ main.Projets h2 {
     font-size: clamp(1.4rem, 3vw, 1.9rem);
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--One);
     margin-bottom: 20px;
     letter-spacing: -0.01em;
 }
