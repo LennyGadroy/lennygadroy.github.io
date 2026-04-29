@@ -2683,7 +2683,8 @@ textarea.FormInput+.FormLabel {
 }
 
 .FlipWrapper {
-    height: 50px;
+    --flip-h: 50px;
+    height: var(--flip-h);
     overflow: hidden;
     display: inline-block;
     vertical-align: middle;
@@ -2695,12 +2696,13 @@ textarea.FormInput+.FormLabel {
 }
 
 .FlipItem {
-    height: 50px;
+    height: var(--flip-h, 50px);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     padding: 4px 14px;
+    white-space: nowrap;
 }
 
 .FlipTrack {
@@ -2723,21 +2725,21 @@ textarea.FormInput+.FormLabel {
 
     0%,
     20% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 
     33%,
     53% {
-        transform: translateY(-50px);
+        transform: translateY(calc(var(--flip-h, 50px) * -1));
     }
 
     66%,
     86% {
-        transform: translateY(-100px);
+        transform: translateY(calc(var(--flip-h, 50px) * -2));
     }
 
     100% {
-        transform: translateY(-150px);
+        transform: translateY(calc(var(--flip-h, 50px) * -3));
     }
 }
 
@@ -2947,26 +2949,53 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     .ProjectBloc { padding: 20px; margin-left: 20px; margin-right: 20px; max-width: calc(100% - 40px); }
 }
 
+/* Tablette : transition progressive avant le basculement colonne */
+@media (max-width: 768px) {
+    .ListContainer {
+        gap: 1rem;
+    }
+    .ListText {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        white-space: normal;
+        word-break: break-word;
+    }
+    .List {
+        font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+}
+
 @media (max-width: 640px) {
     .ListContainer {
         flex-direction: column;
         gap: 0.5rem;
-        overflow: hidden;
+        overflow: visible;
+        width: 100%;
     }
     .ListText {
         position: relative !important;
         top: auto !important;
         transform: none !important;
         white-space: normal;
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        word-break: break-word;
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
         text-align: center;
-        padding: 0 20px;
+        padding: 0 16px;
     }
     .List {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: clamp(1.3rem, 5vw, 1.8rem);
         text-align: center;
+        overflow-wrap: break-word;
+        width: 100%;
+    }
+    /* Réduire la plage d'animation scroll sur petits écrans */
+    @supports (animation-timeline: scroll()) {
+        .List li {
+            animation-range: cover calc(50% - 5rem) calc(50% + 5rem);
+        }
     }
     .ProjectsFilterBar {
         border-radius: 16px;
@@ -3002,7 +3031,9 @@ main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
     .TabHeader h3 { font-size: 0.95rem; }
     .MenuTab { padding: 12px 14px; }
     .TabHeader svg { width: 18px; height: 18px; min-width: 18px; }
-    .Create {display: flex; flex-direction: column; text-align: center; gap: 10px;}
+    .Create {display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;}
+    .FlipWrapper { --flip-h: 40px; }
+    .FlipItem { padding: 4px 12px; }
     .ProjectGrid {column-count: 1;}
 }
 
