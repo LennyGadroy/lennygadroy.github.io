@@ -513,7 +513,7 @@ hr {
   Index Page
 ------ */
 main.Index section,
-main.Projets section {
+main.Projets section:not(.TopBanner) {
     width: 100%;
     min-height: 100vh;
     height: auto;
@@ -1303,7 +1303,7 @@ main.Projets h2 {
 
 .ProjectsFilterBar {
     position: sticky;
-    top: 74px;
+    top: 90px;
     z-index: 500;
     display: flex;
     align-items: center;
@@ -1572,12 +1572,12 @@ main.Projets h2 {
     to {opacity: 1; transform: translateY(0);}
 }
         
-.ProjectBloc h2 {
+.ProjectBloc h4 {
     font-family: "myFont", sans-serif;
     font-size: clamp(1.4rem, 3vw, 1.9rem);
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--Four);
+    color: var(--One);
     margin-bottom: 20px;
     letter-spacing: -0.01em;
 }
