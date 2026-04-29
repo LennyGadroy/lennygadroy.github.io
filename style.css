@@ -1657,6 +1657,36 @@ main.Projets h2, main.Projets h4 {
     gap: 20px;
 }
 
+.ProjectGallery2 {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.ProjectGalleryRow2 {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.ProjectGallery1 {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.ProjectGallery1>img {transition: transform 0.3s ease, box-shadow 0.3s ease;}
+
+.ProjectGallery1>img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
+}
+
 .ProjectGallery img {
     width: 100%;
     height: 100%;
