@@ -5,7 +5,7 @@ const footerHTML = `
         <div class="FooterCol FooterColBrand">
             <h3 class="FooterLogo">Lenny Gadroy</h3>
             <span class="FooterBadge">
-                <span class="FooterBadgeDot"></span>Disponible pour des missions
+                <span class="FooterBadgeDot"></span>Disponible pour des opportunités
             </span>
             <p class="FooterDesc">Étudiant passionné par l'UI/UX Design, créant des expériences digitales fluides et mémorables.</p>
             <a href="/contact" class="FooterCta">Me contacter
