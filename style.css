@@ -63,7 +63,10 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
 }
+
+img:hover {transform: scale(1.03);}
 
 p {
     font-weight: 500;
@@ -696,7 +699,7 @@ main.Index section.Projects {
 
 main.Index section.Projects .Container {
     width: 125%;
-    height: 250px;
+    height: 350px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -728,7 +731,7 @@ main.Index .Project .Item {
     align-items: center;
 }
 
-main.Index .Project .Item h1 {
+main.Index .Project .Item h4 {
     font-size: 140px;
     text-transform: uppercase;
 }
@@ -783,87 +786,80 @@ main.Index .Word.Revealed {
     color: var(--PureWhite);
 }
 
-    .LastProject {
-      width: 100%;
-      background-color: var(--PureWhite);
-      padding: 80px 40px 80px;
-    }
+.LastProject {
+    width: 100%;
+    background-color: var(--PureWhite);
+    padding: 80px 40px 80px;
+}
  
-    .LastGrid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
- 
-    .LastLeft {
-      display: flex;
-      flex-direction: column;
-    }
- 
-    .LastTitle {
-      font-family: "myFont", sans-serif;
-      font-size: clamp(2.2rem, 4vw, 3.8rem);
-      font-weight: 900;
-      color: var(--Three);
-      margin: 0;    
-    }
- 
-    .LastSub {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--Four);
-      margin: 0 0 20px;
-    }
- 
-    .LastDesc {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1rem;
-      font-weight: 500;
-      line-height: 1.75;
-      color: var(--Four);
-    }
-
-    .LastLeft .BtnOutline, .LastLeft .BtnSolid {
-      align-self: flex-start;
-      margin-top: 4px;
-      font-size: 0.8rem;
-      padding: 10px 22px;
-      margin-top: 20px;
-    }
- 
-    .LastRight {
-      position: relative;
-      border-radius: 6px;
-      overflow: hidden;
-      aspect-ratio: 1 / 1;
-    }
- 
-    .LastRight img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
- 
-    .LastRight:hover img {
-      transform: scale(1.03);
-    }
-
-.Merge {
-    max-width: 900px;
+.LastGrid {
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+ 
+.LastLeft {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.LastTitle {
     font-family: "myFont", sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    font-weight: 900;
+    color: var(--Three);
+    margin: 0;    
+}
+ 
+.LastSub {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--Four);
+    margin: 0 0 20px;
+}
+ 
+.LastDesc {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.75;
+    color: var(--Four);
 }
 
-main.Projets .Merge,
-main.Skills .Merge {
-    margin-top: 100px;
+.LastLeft .BtnOutline, .LastLeft .BtnSolid {
+    align-self: flex-start;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    padding: 10px 22px;
+    margin-top: 20px;
+}
+ 
+.LastRight {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+ 
+.LastRight img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+main.Index section.Merge, 
+main.Projets .sectionMerge, 
+main.Skills section.Merge {
+    max-width: 900px;
+    margin: 10rem auto 0;
+    padding: 0 20px;
+    font-family: "myFont", sans-serif;
 }
 
 .ProjectSection {
@@ -931,10 +927,6 @@ main.Skills .Merge {
     line-height: 1.5;
     margin: 0;
     text-transform: none;
-}
-
-.ProjectCard:hover .ProjectImage img {
-    transform: scale(1.05);
 }
 
 .ProjectCard:hover .ProjectOverlay {
@@ -1753,11 +1745,6 @@ main.Projets h2, main.Projets h4 {
 
 .ProjectGallery1>img {transition: transform 0.3s ease, box-shadow 0.3s ease;}
 
-.ProjectGallery1>img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
-}
-
 .ProjectGallery img {
     width: 100%;
     height: 100%;
@@ -1871,7 +1858,6 @@ main.Projets h2, main.Projets h4 {
     letter-spacing: 0.08em;
 }
  
-.RelatedCard:hover .RelatedImage img { transform: scale(1.06); }
 .RelatedCard:hover .RelatedOverlay   { opacity: 1; }
  
 .RelatedMeta { padding: 0 2px; }
@@ -1981,11 +1967,6 @@ main.Projets h2, main.Projets h4 {
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-}
-
-.AlbumGrid img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 25px rgba(var(--PureBlackRGB), 0.15);
 }
 
 .Albums .Create {
@@ -3018,11 +2999,9 @@ textarea.FormInput+.FormLabel {
 
 main.Index .Project .Item:not(.ItemText) { overflow: hidden; border-radius: 6px; }
 main.Index .Project .Item:not(.ItemText) img {transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94); will-change: transform;}
-main.Index .Project .Item:not(.ItemText):hover img { transform: scale(1.06); }
 
 .AlbumGrid a { display: block; overflow: hidden; border-radius: 8px; position: relative; }
 .AlbumGrid a img { transition: transform 0.4s ease; display: block; }
-.AlbumGrid a:hover img { transform: scale(1.04); }
 .AlbumGrid a::after {
     content: "Voir →"; position: absolute; inset: 0;
     background: rgba(68,119,148,0.55); color: #fff;
