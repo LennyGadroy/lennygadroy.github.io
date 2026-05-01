@@ -3030,6 +3030,118 @@ main.Index .Project .Item:not(.ItemText) img {transition: transform 0.5s cubic-b
     cursor: pointer; font-family: "Montserrat", sans-serif; font-size: 0.95rem;
 }
 
+.Talk {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--Three) 0%, var(--Four) 65%);
+    padding: 110px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.TalkContainer {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+ 
+.TalkBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background-color: rgba(var(--OneRGB), 0.12);
+    border: 1px solid rgba(var(--OneRGB), 0.32);
+    color: #7fbcd2;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    padding: 6px 16px;
+    border-radius: 50px;
+}
+ 
+.TalkBadge::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #4ade80;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+    animation: FooterPulse 2s infinite;
+    flex-shrink: 0;
+}
+ 
+.TalkTitle {
+    font-family: "myFont", sans-serif;
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-weight: 900;
+    color: var(--PureWhite);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+ 
+.TalkSub {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #90afc2;
+    line-height: 1.65;
+    max-width: 500px;
+    text-transform: none;
+}
+ 
+.TalkCTA {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+ 
+.Talk .BtnSolid {
+    font-size: 1rem;
+    padding: 12px 28px;
+}
+ 
+.Talk .BtnOutline {
+    font-size: 1rem;
+    padding: 12px 28px;
+    color: var(--PureWhite);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+ 
+.Talk .BtnOutline:hover {
+    background-color: var(--PureWhite);
+    color: var(--Four);
+    border-color: var(--PureWhite);
+}
+
+.TalkDeco {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        radial-gradient(ellipse 55% 80% at 50% 50%, rgba(var(--OneRGB), 0.17) 0%, transparent 70%),
+        radial-gradient(ellipse 30% 40% at 20% 80%, rgba(var(--TwoRGB), 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 25% 35% at 80% 15%, rgba(var(--OneRGB), 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.SourceLink svg {
+    width: 12px;
+    height: 12px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round
+}
+
 /* ------
   Responsive Design
 ------ */
@@ -3129,7 +3241,6 @@ main.Index .Project .Item:not(.ItemText) img {transition: transform 0.5s cubic-b
         overflow-wrap: break-word;
         width: 100%;
     }
-    /* Réduire la plage d'animation scroll sur petits écrans */
     @supports (animation-timeline: scroll()) {
         .List li {
             animation-range: cover calc(50% - 5rem) calc(50% + 5rem);
@@ -3161,6 +3272,9 @@ main.Index .Project .Item:not(.ItemText) img {transition: transform 0.5s cubic-b
     .RelatedGrid { grid-template-columns: 1fr; }
     .RelatedProjects { padding: 0 20px; }
     .FooterBottom {flex-direction: column-reverse;gap: 16px;text-align: center;}
+    .Talk {padding: 72px 24px;}
+    .TalkCTA {flex-direction: column; align-items: stretch; width: 100%;}
+    .Talk .BtnSolid, .Talk .BtnOutline {text-align: center;}
 }
 
 @media (max-width: 500px) {
