@@ -825,9 +825,8 @@ main.Index .Word.Revealed {
 .LastDesc {
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.75;
     color: var(--Four);
+    margin: 0 0 10px;
 }
 
 .LastLeft .BtnOutline, .LastLeft .BtnSolid {
